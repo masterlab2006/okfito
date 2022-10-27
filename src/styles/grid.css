@@ -1,0 +1,53 @@
+.inform-cards .inform-cards__col {
+    padding: 0;
+}
+
+.inform-cards .inform-cards__col.col-16 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.inform-cards .inform-cards__row {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gnom-list__img {
+    height: 7.125em;
+}
+.right-gnom__img {
+	height: 6.2em;
+}
+.gnom-list__points,
+.inner-list {
+	padding-left: 0;
+}
+
+@media screen and (min-width: 48rem) {
+	.gnom-list__img {
+		height: 7.125em;
+	}
+    .inform-cards .inform-cards__col.col-sm-8 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    .inform-cards .inform-cards__col.col-sm-4 {
+        flex: 0 0 25%;
+        max-width: 25%;
+	}
+	
+}
+
+@media screen and (min-width: 64rem){
+	.gnom-list__img {
+		height: 15.75em;
+	}
+	.right-gnom__img {
+		height: 14.6em;
+	}
+}

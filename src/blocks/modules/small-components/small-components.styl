@@ -1,0 +1,145 @@
+.fl-price-wrap
+	display flex
+	align-items baseline
+	margin-bottom em(20)
+
+	+lg-block()
+		margin-bottom em(25)
+
+	[data-type="black"]
+		color #4E4E4E
+		font-size (14/16em)
+		text-decoration line-through
+		display inline-block
+		vertical-align baseline
+		margin-right 0.5em
+
+		+md-block()
+			font-size 1em
+		
+		+lg-block()
+			white-space nowrap
+
+	[data-type="base"]
+		color #FF0000
+		font-size em(20)
+		font-weight 700
+		line-height 1.2
+
+		+md-block()
+			font-size em(28)
+		
+		+lg-block()
+			white-space nowrap
+
+.sm-visible
+	display block !important
+
+	+md-block()
+		display none !important
+
+.md-visible
+	display none !important
+
+	+md-block()
+		display block !important
+	
+	+lg-block()
+		display none !important
+
+.lg-visible
+	display none !important
+
+	+lg-block()
+		display block !important
+
+
+.sm-hidden
+	display: none
+
+	+md-block()
+		display block
+
+.md-hidden
+	
+	+md-block()
+		display none
+	
+	+lg-block()
+		display block
+
+.lg-hidden
+	
+	+lg-block()
+		display none
+
+.md-lg-visible
+	display none !important
+
+	+md-block()
+		display block !important
+
+.md-nowrap
+	+md-block()
+		white-space nowrap
+
+.fixed-button
+	display none
+
+	+md-block()	
+		display block
+		bottom 120px
+
+.animation-spin--1
+	animation spin 25s linear infinite
+
+.animation-spin--2
+	animation spinreverse 30s linear infinite
+
+.animation-spin--3
+	animation spin 35s linear infinite
+
+
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@keyframes spinreverse { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
+
+
+.fl-nowrap
+	white-space: nowrap
+
+.fl-nowrap-md-sm
+	white-space: nowrap
+
+	+lg-block()
+		white-space: normal
+
+.fl-nowrap-sm
+	white-space: nowrap
+
+	+md-block()
+		white-space: normal
+
+
+.fl-nowrap--md
+
+	+md-block()
+		white-space: nowrap
+
+.fl-block-md
+	+md-block()
+		display block
+
+.fl-md-br
+	width 0
+	height 0
+	display none
+	font-size 0
+	line-height 0
+
+	+md-block()
+		display block
+	
+	+lg-block()
+		display none

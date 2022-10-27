@@ -1,0 +1,145 @@
+.inform-cards .inform-cards__col {
+    padding: 0;
+}
+
+.inform-cards .inform-cards__col.col-16 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.inform-cards .inform-cards__row {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gnom-list__img {
+    height: 7.125em;
+}
+.right-gnom__img {
+	height: 6.2em;
+}
+.gnom-list__points,
+.inner-list {
+	padding-left: 0;
+}
+
+.bioproducts .sticker {
+	padding-top: 0.2em;
+}
+
+.bioproducts .sticker-eq {
+    margin-left: -0.65em;
+}
+
+.bioproducts .sticker-num__text {
+	font-size: 0.4em;
+	padding-top: 0.8em;
+	line-height: 1;
+	text-align: center;
+}
+
+.bioproducts .sticker-num__text:last-child {
+	padding-top: 1em;
+}
+
+.bioproducts .sticker-num {
+	line-height: 1;
+}
+
+/* .right-gnom__descr-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9em;
+} */
+.gnom-list__point-descr {
+    min-height: 2.5em;
+}
+
+.circle-small__text {
+	font-family: 'Roboto', sans-serif!important;
+	font-size: 10px!important;
+}
+
+.circle__bold {
+	font-size: 14px!important;
+}
+
+.circle__big {
+	font-family: 'Roboto', sans-serif!important;
+	font-size: 22px!important;
+}
+
+@media screen and (min-width: 48rem) {
+	.gnom-list__img {
+		height: 7.125em;
+	}
+    .inform-cards .inform-cards__col.col-sm-8 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    .inform-cards .inform-cards__col.col-sm-4 {
+        flex: 0 0 25%;
+        max-width: 25%;
+	}
+	.circle-small__text {
+		font-size:20px!important;
+		margin: 4px 0!important;
+	}
+	.circle__big {
+		font-family: 'Roboto', sans-serif!important;
+		font-size: 40px!important;
+	}
+	.circle__bold {
+		font-size: 22px!important;
+	}
+}
+
+@media screen and (min-width: 64rem){
+	.gnom-list__img {
+		height: 15.75em;
+	}
+	.right-gnom__img {
+		height: 14.6em;
+	}
+
+	.bioproducts .sticker {
+		padding: 0.7em 0.8em 0 0.5em;
+	}
+	.bioproducts .sticker-eq {
+		margin-left: -0.2em;
+    	margin-right: 0em;
+	}
+	.bioproducts .sticker-num__text {
+		font-size: 0.8em;
+		padding-top: 0;
+		line-height: 1;
+		margin-left:-1.8em;
+	}
+	.bioproducts .sticker-num__text:last-child {
+		padding-top: 1.2em;
+	}
+	.bioproducts .sticker-num {
+		line-height: 1.4;
+		margin-top: -0.15em;
+	}
+	.bioproducts .sticker--2{
+		padding: 1.75em 1.5em 1.3em;
+    }
+
+    .gnom-list__point-descr {
+        min-height: 3em;
+    }
+    
+    /* .right-gnom__descr-title {
+        font-family: 'Roboto', sans-serif;
+        font-size: 2.5em;
+    } */
+
+    .gnom-list__point .icon{
+        width: 2.7em;
+    }
+}
