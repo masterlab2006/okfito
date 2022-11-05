@@ -1,0 +1,161 @@
+.about
+    padding em(30) em(20)
+
+    +md-block()
+        padding em(70) em(50)
+
+    +lg-block()
+        padding em(74) 0 em(100)
+
+    &__inner
+
+        +md-block()
+            position relative
+
+        +lg-block()
+            min-height em(690)
+
+    &__header
+        font-weight: 400;
+        font-size: em(24)
+        line-height: 100%;
+        text-align center
+        font-family $ff2
+        margin-bottom (20/24em)
+
+        +md-block()
+            font-size: em(60)
+            line-height: 80%;           
+            margin-bottom (50/60em)
+
+        +lg-block()
+            margin 0 0 (36/60em) (313/60em)
+            text-align: left
+            width (414/60em)
+            position relative
+            z-index 1
+
+    &__info
+
+        margin 0 0 em(20)
+
+        +md-block()
+            display flex
+            flex-direction: row-reverse
+            align-items: center            
+            margin 0 0 em(30)
+
+        +lg-block()
+            display block
+            margin 0 0 em(50) em(313)
+            width em(430)
+
+        &__img-wrap
+
+            +lg-block()
+                position absolute
+                right 0
+                top 0
+                left 0
+                // width em(1032)
+                height em(690)
+
+        &__img
+            width em(146)
+            height em(200)
+            background-image url(../img/content/about/about-sm.jpg)
+            background-repeat no-repeat
+            background-size contain
+            margin 0 auto em(20)
+            
+            +md-block()
+                width em(324)
+                min-width em(324)
+                max-width em(324)
+                height em(443)
+                background-image url(../img/content/about/about-md.jpg)
+                flex-basis: em(324)
+                margin 0
+
+            +lg-block()
+                width em(425)
+                min-width em(425)
+                max-width em(425)
+                height em(580)
+                position absolute
+                right em(608)
+                top 0
+                background-image url(../img/content/about/about-lg.jpg)
+        
+        &__img2
+            display none
+
+            +lg-block()
+                display block
+                width em(959)
+                height em(615)
+                position absolute
+                right 0
+                bottom 0
+                background-image url(../img/content/about/about2-lg.jpg)
+                background-repeat no-repeat
+                background-size contain
+                width 50%
+
+        &__text
+            font-weight: 700;
+            font-size: em(12)
+            line-height: 130%;
+            text-align: center;
+            color: #658961;
+
+            +md-block()
+                font-size: em(24)
+                line-height: 150%;
+                text-align left
+                padding-right (36/24em)
+                position relative
+
+                &:before
+                    font-size em(16)
+                    width em(74)
+                    height em(58)
+                    margin 0 auto em(30)
+                    content ''
+                    display block
+                    background embedurl('../img/content/about/q.svg') 0 0 no-repeat
+                    background-size contain
+
+            +lg-block()
+                font-size em(20)
+                padding 0
+                position relative
+
+                &:before
+                    font-size em(16)
+                    width em(74)
+                    height em(58)
+                    margin 0
+                    position absolute
+                    left em(-112)
+                    top em(-14)
+
+    &__desc
+
+        +lg-block()
+            width em(580)
+            margin-left em(200)
+            position relative
+            z-index 1
+
+        p
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 150%;
+            color: #000000;
+
+            +md-block()
+                font-size em(18)
+
+        p + p
+            margin-top 2em

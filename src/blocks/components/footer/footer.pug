@@ -1,0 +1,22 @@
+footer.footer
+    .footer__form-wrap
+        .footer__form-title Заполните форму, чтобы скачать 3D-модель панно
+        form(action="#").form
+            .form__item
+                input(type="text", name="name", placeholder="ВАШЕ ИМЯ", required)
+                .form__note * Заполните поле «Ваше имя»
+            .form__item
+                input(type="text", name="byuro", placeholder="НАЗВАНИЕ БЮРО", required)
+                .form__note * Заполните поле «Название бюро»
+            .form__item
+                input(type="number", name="inn", placeholder="ИНН", required)
+                .form__note * Заполните поле «ИНН»
+            .form__item.form__item--btn
+                input(type="submit", value="скачать", placeholder="скачать").btn
+    
+    .share
+        .share__title Мы в социальных сетях
+        .share__items
+            a(href="#", target="_blank").share__item.share__item--inst &nbsp;
+            a(href="#", target="_blank").share__item.share__item--vk &nbsp;
+            a(href="#", target="_blank").share__item.share__item--fb &nbsp;

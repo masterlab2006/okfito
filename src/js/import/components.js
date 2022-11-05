@@ -1,1 +1,1 @@
-// import "%components%/advent-calendar/advent-calendar.js";
+import "%components%/slider/slider.js";

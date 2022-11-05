@@ -1,0 +1,66 @@
+.checklist
+    padding em(50) em(20)
+    background url('../img/content/checklist/checklist-sm.jpg') 0 bottom no-repeat
+    background-size cover
+
+    +md-block()
+        background url('../img/content/checklist/checklist-md.jpg') 0 bottom no-repeat
+        background-size cover
+        padding em(100) em(50)
+
+    +lg-block()
+        background url('../img/content/checklist/checklist-lg.jpg') 0 bottom no-repeat
+        background-size cover
+        min-height: em(690)
+        display flex
+        flex-direction: column
+        justify-content: center
+        padding 0
+
+    &__wrap
+        +lg-block()
+            max-width: em(940)
+            margin 0 auto
+
+    &__header
+        font-weight: 700;
+        font-size: em(18)
+        line-height: 130%;
+        color #fff
+        text-align center
+        margin-bottom (20/18em)
+
+        +md-block()
+            font-size em(36)
+            margin-bottom (30/36em)
+
+        +lg-block()
+            font-size em(40)
+            margin-bottom (30/40em)
+
+    &__title
+        font-weight: 600;
+        font-size: em(12)
+        line-height: 150%;
+        color #fff
+        text-align center
+        margin-bottom (20/12em)
+
+        +md-block()
+            font-size em(24)
+            margin-bottom (30/24em)
+
+        +lg-block()
+            margin-bottom (15/24em)
+
+.form.form--checklist
+
+    +lg-block()
+        max-width em(860)
+
+        .form__item + .form__item:not(.form__item--btn)
+        .form__item:not(.form__item--btn)
+            margin em(15)
+
+        .form__item--btn
+            margin-top em(35)

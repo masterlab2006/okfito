@@ -1,0 +1,99 @@
+.section--description
+    +lg-block()
+        display flex
+
+.slider__wrap
+    +lg-block()
+        max-width: 50%
+
+.slider
+    &__img
+        display block
+        width 100%
+        height em(200)
+
+        +md-block()
+            height em(540)
+        
+        +lg-block()
+            height auto
+
+    .swiper-pagination-bullet
+        --swiper-pagination-bullet-inactive-color #fff
+        opacity 1
+    
+    .swiper-pagination-bullet-active
+        --swiper-theme-color #ABABAB
+
+    &.swiper-horizontal>.swiper-pagination-bullets
+        bottom 12px
+
+        +md-block()
+            bottom 24px
+
+
+.description
+    
+    padding em(20) em(20) em(50) 
+
+    +md-block()
+        padding: em(50) em(50) em(100)
+
+    +lg-block()
+        width em(662)
+        max-width em(662)
+        padding: 0
+        margin auto auto auto em(138)
+
+    p
+        font-weight: 400;
+        font-size: em(12)
+        line-height: 150%;
+        color #000
+        margin-bottom (20/12em)
+
+        +md-block()
+            font-size em(18)
+            line-height 150%
+            margin-bottom (30/18em)
+
+        +lg-block()
+            &:last-child
+                margin-bottom 0
+
+    &__header
+        font-size em(20)
+        font-family $ff2
+        font-weight 400
+        line-height 100%
+        color #000
+        margin-bottom 1em
+        position relative
+        padding-left (67/20em)
+
+        +md-block()
+            font-size em(40)
+            padding-left (159/40em)
+            margin-bottom (30/40em)
+
+        +lg-block()
+            padding-left (95/40em)
+
+        &:before
+            font-size 1em
+            position absolute
+            content ''
+            display block
+            height 1px
+            width em(27)
+            background-color #000
+            top 50%
+            left em(10)
+
+            +md-block()
+                font-size (16/40em)
+                width em(65)
+                left em(64)
+            
+            +lg-block()
+                left 0

@@ -4,10 +4,22 @@ block variables
 	- const title = "Okfito"
 
 block content
+	include ../../blocks/components/menu/menu
+	+menu({
+		class:'panel-top'
+	})
 	include ../../blocks/components/intro/intro	
+	+menu({
+		class:'panel-fix'
+	})
+	include ../../blocks/components/about/about	
+	include ../../blocks/components/slider/slider
+	include ../../blocks/components/checklist/checklist
+	include ../../blocks/components/footer/footer
 		
 block scripts
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js")
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 	//- script(src="https://cdn.jsdelivr.net/npm/luxon@3.0.4/build/global/luxon.min.js")
 
 	//- link(rel="stylesheet" href="./styles/swiper-bundle.min.css")

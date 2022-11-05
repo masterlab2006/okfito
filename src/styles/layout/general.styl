@@ -17,8 +17,62 @@ h1, h2, h3, h4, h5, h6, ul
         font-size calc(100vw/120)
 
 .fl_start_lp
-    background #FAFAFA
-    overflow hidden
+    background #fff
+    // overflow hidden
     padding 0 
-    font-family Gotham, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji
+    font-family: 'Montserrat', sans-serif;
     position relative
+    color #000
+
+.picture--sm
+    +md-block()
+        display none!important
+
+.picture--md
+    display none!important
+
+    +md-block()
+        display block!important
+    
+    +lg-block()
+        display none!important
+
+.picture--lg
+    display none!important
+
+    +lg-block()
+        display block!important
+
+input[type="text"]
+input[type="number"]
+    background: #FFFFFF;
+    border: 1px solid #AFAFAF;
+    width 100%
+    font-size em(10)
+    padding 0 (10/10em) 0 (30/10em)
+    border-radius: (12/10em)
+    height (40/10em)
+    line-height (40/10em)
+    outline none
+    font-weight 600
+    font-family $ff
+
+    +md-block()
+        font-size em(22)
+        height (70/22em)
+        border-radius: (20/22em)
+        padding 0 (20/22em) 0 (54/22em)
+
+.error
+    input[type="text"]
+    input[type="number"]
+        background: #FFEAEA;
+        border: 1px solid #FFB7B7;
+
+.md-nowrap
+
+    +md-block()
+        white-space: nowrap
+    
+    +lg-block()
+        white-space: normal

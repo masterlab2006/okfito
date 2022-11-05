@@ -1,0 +1,167 @@
+.footer
+    padding em(30) em(20) em(222)
+    background url('../img/content/footer/footer-sm.jpg') 0 bottom no-repeat
+    background-size contain
+
+    +md-block()
+        background none
+        position relative
+        z-index 0
+        padding em(100) em(60) em(184)
+
+    +lg-block()
+        padding em(100) em(330) em(200)
+
+    &:before
+        +md-block()
+            position absolute
+            left 0
+            top 0
+            right 0
+            bottom 0
+            display block
+            background: url('../img/content/footer/footer-left-md.jpg') 0 0 no-repeat
+            background-size em(280) em(320)
+            content ''
+            z-index -1
+
+        +lg-block()
+            background: url('../img/content/footer/footer-left-lg.jpg') 0 0 no-repeat
+            background-size em(600) em(700)
+
+    &:after
+        +md-block()
+            position absolute
+            left 0
+            top 0
+            right 0
+            bottom 0
+            display block
+            background: url('../img/content/footer/footer-right-md.jpg') 100% 100% no-repeat
+            background-size em(380) em(370)
+            content ''
+            z-index -1
+
+        +lg-block()
+            background: url('../img/content/footer/footer-right-lg.jpg') 100% 100% no-repeat
+            background-size em(800) em(600)
+
+    &__form-wrap
+        margin-bottom em(50)
+
+        +md-block()
+            margin 0 em(100) em(100)
+
+        +lg-block()
+            margin 0 0 em(100)
+
+    &__form-title
+        font-size: em(18)
+        line-height: 130%;
+        text-align center
+        font-weight 700
+        margin-bottom (20/18em)
+
+        +md-block()
+            font-weight: 600;
+            font-size: em(24)
+            line-height: 150%;
+            margin-bottom (30/24em)
+
+        +lg-block()
+            margin-bottom (50/24em)
+    
+.form
+    display block
+    max-width: em(220)
+    margin 0 auto
+
+    +md-block()
+        max-width em(400)
+    
+    +lg-block()
+        max-width none
+        display flex
+        flex-wrap: wrap
+        justify-content: space-between
+
+    &__item
+        position relative
+
+        +lg-block()
+            width: em(400)
+            max-width: em(400)
+            min-width: em(400)
+
+        &--btn
+            text-align center
+            margin-top em(30)
+
+            +md-block()
+                margin-top em(50)
+
+            +lg-block()
+                // margin-top em(50)
+                margin-left auto
+                margin-right auto
+
+        & + &:not(.form__item--btn)
+            margin-top em(20)
+
+            +md-block()
+                margin-top em(30)
+
+            +lg-block()
+                margin-top 0
+
+    &__note
+        position absolute
+        font-size em(8)
+        color #000
+        left (30/8em)
+        top 100%
+        margin-top (4/8em)
+        display none
+
+        +md-block()
+            font-size em(10)
+            margin-top (10/10em)
+
+.share
+    &__title
+        text-align center
+        font-family $ff2
+        font-size: em(24)
+        line-height: 100%;      
+        margin-bottom (20/24em)
+
+        +md-block()
+            font-size em(60)
+            margin-bottom (50/60em)
+
+    &__items
+        display flex
+        flex-wrap: wrap
+        justify-content: center
+
+    &__item
+        width em(56)
+        height em(56)
+        background-position 0 0
+        background-size contain
+        background-repeat no-repeat
+        margin em(6)
+        color #fff
+        text-indent: -10000px
+
+        +md-block()
+            width em(102)
+            height em(102)
+            margin em(19)
+
+        &--inst
+            background-image embedurl('../img/content/footer/inst.svg')
+        &--vk
+            background-image embedurl('../img/content/footer/vk.svg')
+        &--fb
+            background-image embedurl('../img/content/footer/fb.svg')

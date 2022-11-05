@@ -1,0 +1,32 @@
+mixin menu(data)
+    .panel(class=data.class)
+        .panel__inner
+            .panel__menu-btn
+
+            .panel__logo
+                a(href="/")
+                    include logo.svg
+
+            ul.panel__menu
+                li
+                    a(href="#about") о компании
+                li
+                    a(href="#projects") наши проекты
+                li
+                    a(href="#panno") готовые панно
+                li
+                    a(href="#calculator") калькулятор стоимости
+                li
+                    a(href="#checklist") чек-лист по уходу
+
+            .panel__right
+                .panel__phone
+                    a(href="tel:+74995530845") +7 (499) 553 08 45
+                
+                .panel__contacts
+                    .panel__mess
+                        a(href="#") 
+                            include call.svg
+                        a(href="#") 
+                            include tg.svg
+                    .panel__time 9:00-21:00

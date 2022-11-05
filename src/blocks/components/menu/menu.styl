@@ -1,0 +1,262 @@
+.panel
+    position absolute
+    left 0
+    right 0
+    top 0
+    min-height: em(60)
+    z-index 2
+    width 100%
+
+    +md-block()
+        min-height: em(106)
+
+    +lg-block()
+        display flex
+        justify-content: center
+        padding em(94) 0 0 0
+
+    &__inner
+        display flex
+        justify-content: space-between
+
+        +lg-block()
+            align-items: flex-start
+
+    &__right
+        display flex
+
+        +md-block()
+            flex-grow: 1
+
+        +lg-block()
+            flex-direction: column
+            align-items: flex-end
+    
+    &__contacts
+        display flex
+
+        +lg-block()
+            align-items: center
+            padding-top em(18)
+
+    &__menu-btn
+        background embedurl('../img/content/menu/menu.svg') center center no-repeat
+        background-size em(30) auto
+        width em(70)
+        height em(60)
+        cursor pointer
+
+        +md-block()
+            background-size em(44) auto
+            width em(144)
+            height em(106)
+
+        +lg-block()
+            display none
+
+    &__logo
+        margin em(13) 0 0 em(8)
+
+        +md-block()
+            display none
+
+        +lg-block()
+            display block
+            margin 0
+
+        svg
+            display block
+            height auto
+
+            +lg-block()
+                width: em(183)
+
+    &__mess
+        display flex
+        padding em(21) em(20) 0 em(10)
+
+        +md-block()
+            padding em(36) em(30) 0 em(10)
+
+        +lg-block()
+            padding 0
+
+        a
+            svg
+                width em(20)
+                height auto
+                display block
+
+                +md-block()
+                    width em(40)
+                
+                +lg-block()
+                    width em(30)
+        
+        a:hover
+            svg
+                path
+                    fill #64A060
+                    transition: all 0.4s
+
+        a + a
+            margin-left em(8)
+
+            +md-block()
+                margin-left em(15)
+    
+    &__time
+        display none
+
+        +md-block()
+            display block
+            font-size em(20)
+            color rgba(#fff, 0.7)
+            padding (44/20em) (50/20em) 0 0
+
+        +lg-block()
+            font-size 1em
+            padding 0 0 0 em(15)
+    
+    &__phone
+        display none
+        
+        +md-block()
+            display block
+            font-weight 600
+            font-size em(26)
+            color rgba(#fff, 1)
+            padding (39/26em) 0 0 (30/26em)
+            flex-grow: 1
+
+        +lg-block()
+            font-weight 700
+            padding (18/26em) 0 0 0
+
+        a
+            color #fff
+            text-decoration none
+
+    &__menu
+        display none
+
+        +lg-block()
+            display flex
+            padding em(26) em(38) 0
+
+        li
+            padding 0 em(15) 1em
+
+            a
+                font-weight: 600;
+                font-size 1em
+                line-height: em(20)
+                color #fff
+                text-decoration none
+                text-transform uppercase
+                position relative
+                padding-bottom em(12)
+            
+                &:after
+                    opacity 0
+                    position absolute
+                    left 0
+                    right 0
+                    bottom 0
+                    height 1px
+                    content ''
+                    display block
+                    background-color #fff
+                    transition: all 0.4s
+
+            a:hover
+                &:after
+                    opacity 1
+
+.panel-fix
+    position: sticky
+    padding 0
+    background-color #fff
+    top 0
+    border-bottom 1px solid #DCDCDC
+
+    +lg-block()
+        padding 0
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+        min-height: em(80)
+
+    .panel__inner
+        +lg-block()
+            min-width em(1620)
+
+    .panel__menu-btn
+        background embedurl('../img/content/menu/menu-green.svg') center center no-repeat
+        background-size em(30) auto
+    
+    .panel__logo
+        +lg-block()
+            display none
+        svg
+            path
+                fill #64A060
+
+    .panel__mess
+        a
+            svg
+                path
+                    fill #64A060
+
+        a:hover
+            svg
+                path
+                    fill #40763D
+                    transition: all 0.4s
+
+    .panel__phone
+
+        +lg-block()
+            padding-right (30/26em)
+            padding-top (28/26em)
+
+        a
+            color #64A060
+            transition: all 0.4s
+
+            &:hover
+                color #40763D
+    
+    .panel__time
+        color #64A060
+
+        +lg-block()
+            padding-left (32/20em)
+            font-size em(20)
+
+    .panel__menu
+        +lg-block()
+            padding em(30) 0 0 em(44)
+
+        li
+            a
+                +lg-block()
+                    color #64A060
+
+                    &:after
+                        background-color #64A060
+
+    .panel__right
+
+        +lg-block()
+            flex-direction: row
+            flex-grow: 0
+            align-items: flex-start
+
+    .panel__mess
+        a
+            svg
+                width em(40)
+                height em(40)
+
+    .panel__contacts
+        +lg-block()
+            padding-top em(20)

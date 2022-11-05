@@ -1,17 +1,79 @@
 
 .intro
 
-	min-height em(550)
 	background url(../img/content/intro/intro-sm.jpg) center center no-repeat
 	background-size cover
 	position relative
 	z-index 1
 
 	+md-block()
-		min-height em(900)
 		background url(../img/content/intro/intro-md.jpg) center center no-repeat
 		background-size cover
 	
 	+lg-block()
 		background url(../img/content/intro/intro-lg.jpg) center center no-repeat
 		background-size cover
+
+	&__inner
+		display flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		min-height: em(550)
+		padding em(30) em(20) 0
+
+		+md-block()
+			padding em(60) em(50) 0
+			min-height: em(900)
+
+	&__logo
+		display none
+
+		+md-block()
+			width em(184)
+			height em(62)
+			background embedurl('../img/content/intro/logo.svg') 0 0 no-repeat
+			background-size contain
+			display block
+			margin-bottom em(40)
+
+		+lg-block()
+			display none
+	
+	&__name
+		text-align center
+		color #fff
+		font-size em(34)
+		text-shadow: 0px 0px 12.6087px rgba(0, 0, 0, 0.5);
+		font-family $ff2
+		font-weight 600
+		margin-bottom (30/34em)
+		
+		+md-block()
+			font-size em(80)
+			font-weight 400
+			line-height 80%
+			margin-bottom 0.5em
+
+		+lg-block()
+			line-height 100%
+			max-width: (960/80em)
+	
+	&__slog
+		text-align center
+		color #fff
+		font-size em(12)
+		text-shadow: 0px 0px 12.6087px rgba(0, 0, 0, 0.5);
+		font-weight 600
+		line-height 1.5
+		text-transform uppercase
+		margin-bottom (30/12em)
+		padding: 0 1em
+
+		+md-block()
+			font-size em(24)
+			line-height (36/24em)
+			margin-bottom (40/24em)
+
+		+lg-block()
+			max-width: (650/24em)

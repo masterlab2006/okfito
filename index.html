@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/lp.min.css?v=0">
+    <link rel="stylesheet" href="styles/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles/styles_new.css">
+    <link rel="stylesheet" href="styles/styles_new2.css">
+    <title>Любая звезда на ваше мероприятие</title>
+	<script
+    id="alfa-payment-script"
+    type="text/javascript"
+    src="https://testpay.alfabank.ru/assets/alfa-payment.js">
+</script>
+</head>
+<body>
+<header>
+    <div class="flex flex_nowrap items_center justify_between header">
+        <div class="flex header__logo-wrapper">
+            <button class="header__menu-button">
+                <svg class="header__menu-button-icon">
+                    <use class="header__menu-button-line" xlink:href="img/sprites/sprite.svg#menu-line"></use>
+                </svg>
+                <svg class="header__menu-button-icon">
+                    <use xlink:href="img/sprites/sprite.svg#menu-line"></use>
+                </svg>
+                <svg class="header__menu-button-icon">
+                    <use xlink:href="img/sprites/sprite.svg#menu-line"></use>
+                </svg>
+            </button>
+            <a class="header__logo-link">
+                <svg class="header__logo">
+                    <use xlink:href="img/sprites/sprite.svg#logo"></use>
+                </svg>
+            </a>
+        </div>
+        <div class="flex items_center header__menu-wrapper">
+            <ul class="flex flex_nowrap header__menu-list">
+                <li class="header__menu-list-item">
+                    <a class="header__menu-list-link" data-anchor="service">Услуги</a>
+                </li>
+                <li class="header__menu-list-item" style="display: none;">
+                    <a class="header__menu-list-link" data-anchor="ticket">Афиша</a>
+                </li>
+                <li class="header__menu-list-item">
+                    <a class="header__menu-list-link" data-anchor="perks">Преимущества</a>
+                </li>
+                <li class="header__menu-list-item">
+                    <a class="header__menu-list-link" data-anchor="about">О компании</a>
+                </li>
+                <li class="header__menu-list-item">
+                    <a href="tel: +79122626517" class="header__menu-list-link"><b>+7 912 262 65 17</b></a>
+                </li>
+            </ul>
+        </div>
+        <a href="tel: +79122626517" class="header__phone-link_mobile">
+            <span class="header__phone-link-value">
+                +7 912 262 65 17
+            </span>
+            <svg class="header__phone-link-icon">
+                <use xlink:href="img/sprites/sprite.svg#phone"></use>
+            </svg>
+        </a>
+    </div>
+</header>
+<main data-scroll-container>
+    <section class="section section_main" data-scroll-section id="main">
+        <div class="flex flex_column items_center justify_center main__wrapper" id="main_wrapper">
+            <div class="main__title-wrapper">
+                <h1 class="main__title animate__title" data-scroll data-scroll-speed="6">
+                    <span class="letter"><span>Хотите </span></span>
+                    <span class="letter"><span>ярких </span></span>
+                    <span class="letter"><span>эмоций?</span></span>
+                </h1>
+            </div>
+            <h2 class="main__subtitle" data-scroll data-scroll-speed="1">
+                <span class="letter"><span>Любая </span></span>
+                <span class="letter"><span>звезда </span></span>
+                <span class="letter"><span>на </span></span>
+                <span class="letter"><span>ваше </span></span>
+                <span class="letter"><span>мероприятие</span></span>
+            </h2>
+            <button class="main__button trigger-button">
+                <span class="main__button__bg"></span>
+                <span class="main__button__value" data-text="Заказать">Заказать</span>
+            </button>
+        </div>
+        <div class="flex items_center justify_center main__video-background-wrapper">
+            <video autoplay controls="true" muted loop playsinline class="main__video-background">
+                <source src="video/background-video.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+    <section class="section section_inverse section_service" data-scroll-section id="service">
+        <div class="container">
+            <div class="flex service__wrapper">
+                <div class="flex flex_column service__effects-wrapper" id="service__effects-wrapper">
+
+                    <div class="flex flex_column effects__title-wrapper" data-scroll data-scroll-speed="-1">
+                        <h2 class="effects__title">Организация</h2>
+                        <h2 class="effects__subtitle">Выступлений</h2>
+                    </div>
+                    <div class="flex items_center justify_center effects__image-wrapper">
+                        <img src="img/person.webp" alt="Service person image" class="effects__image">
+                    </div>
+                    <div class="flex effects__footer-wrapper" data-scroll data-scroll-speed="-1" style="z-index: 1000;">
+                        <h2 class="effects__footer-text">Звёзд</h2>
+                    </div>
+                    <div class="layered-animations" id="layered-animations">
+                        <span class="shape-wrap" data-scroll data-scroll-speed="-2" data-scroll-parent="#layered-animations">
+                            <svg class="shape">
+                                <use xlink:href="img/sprites/sprite.svg#shape1"></use>
+                            </svg>
+                        </span>
+                        <span class="shape-wrap" data-scroll data-scroll-speed="-2" data-scroll-parent="#layered-animations">
+                            <svg class="shape">
+                                <use xlink:href="img/sprites/sprite.svg#shape2"></use>
+                            </svg>
+                        </span>
+                        <span class="shape-wrap" data-scroll data-scroll-speed="-2" data-scroll-parent="#layered-animations">
+<!--                            <svg class="shape">-->
+<!--                                <use xlink:href="img/sprites/sprite.svg#shape3"></use>-->
+<!--                            </svg>-->
+                            <img class="shape" src="img/svg/shape3.svg" alt="">
+                        </span>
+                        <span class="shape-wrap" data-scroll data-scroll-speed="-2" data-scroll-parent="#layered-animations">
+                            <svg class="shape">
+                                <use xlink:href="img/sprites/sprite.svg#shape4"></use>
+                            </svg>
+                        </span>
+                        <span class="shape-wrap" data-scroll data-scroll-speed="-2" data-scroll-parent="#layered-animations">
+                            <svg class="shape">
+                                <use xlink:href="img/sprites/sprite.svg#shape5"></use>
+                            </svg>
+                        </span>
+                        <span class="shape-wrap" data-scroll data-scroll-speed="-2" data-scroll-parent="#layered-animations">
+                            <svg class="shape">
+                                <use xlink:href="img/sprites/sprite.svg#shape6"></use>
+                            </svg>
+                        </span>
+                        <span class="shape-wrap" data-scroll data-scroll-speed="-2" data-scroll-parent="#layered-animations">
+                            <svg class="shape">
+                                <use xlink:href="img/sprites/sprite.svg#shape7"></use>
+                            </svg>
+                        </span>
+                        <span class="shape-wrap" data-scroll data-scroll-speed="-2" data-scroll-parent="#layered-animations">
+                            <svg class="shape">
+                                <use xlink:href="img/sprites/sprite.svg#shape8"></use>
+                            </svg>
+                        </span>
+                        <span class="shape-wrap" data-scroll data-scroll-speed="-2" data-scroll-parent="#layered-animations">
+                            <svg class="shape">
+                                <use xlink:href="img/sprites/sprite.svg#shape9"></use>
+                            </svg>
+                        </span>
+                        <span class="shape-wrap">
+                            <svg class="shape">
+                                <use xlink:href="img/sprites/sprite.svg#shape10"></use>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="flex flex_column service__info-wrapper" data-scroll data-scroll-speed="1">
+                    <p class="info__text">Привезем на ваше мероприятие звезду любого масштаба. Просто скажите: когда,
+                        где и в какое время нужно быть артисту. Проведем переговоры, учтем всё: от райдера до логистики.
+                        В нашей базе не только певцы и музыканты, но и другие медийные персоны: ведущие, спортсмены,
+                        блогеры. Работаем без посредников и можем предложить вам выгодные цены и лучшие условия.<br>
+                        Затрудняетесь с концепцией мероприятия? Мы составим смету, подготовим презентацию, подберем
+                        несколько вариантов оформления.
+                    </p>
+                </div>
+                <div class="flex service__action-wrapper" data-scroll data-scroll-speed="-2">
+                    <div class="flex action__info-wrapper">
+                        <h4 class="action__info-title">Наши</h4>
+                        <h4 class="action__info-subtitle">Услуги</h4>
+                    </div>
+                    <button class="action__button trigger-button">
+                        <span class="bg"></span>
+                        <span class="text" data-text="Оставить заявку">
+                            Оставить заявку
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<section class="section ticket section_inverse" data-scroll-section id="ticket" style="display: none;">
+        <div class="ticket__slider-wrap">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="ticket__wrap">
+                            <div class="ticket__left" data-scroll data-scroll-speed="-1">
+                                <div class="ticket__lable">Афиша</div>
+                                <div class="ticket__header">
+                                    <div class="ticket__title">Форум</div>
+                                    <div class="ticket__date">18 мая 2022г.</div>
+                                </div>
+                                <div class="ticker__name">FourRoom – Форум для специалистов Event&Wedding индустрии Уральского региона</div>
+                                <div class="ticker__price">5400 ₽</div>
+                                <div class="ticker__location">Center Club, ул. Бориса Ельцина, 3, Екатеринбург (этаж 1)</div>
+                                <div class="ticker__desc">
+                                    <div class="ticker__desc__p">
+                                        Форум «FourRoom» создан для развития профессионального event-сообщества.
+                                    </div>
+                                    <div class="ticker__desc__p">
+                                        Сейчас очень важно быть открытыми, впитывать новые знания, общаться с теми, кто на одной волне и равняться на тех, кто уже действует, создает и меняет.
+                                    </div>
+                                    <div class="ticker__desc__p ticker__desc__p--b">Форум объединяет всех, кто создает события!</div>
+                                </div>
+                            </div>
+                            <div class="ticket__right">
+                                <img src="img/ticket-img-1.jpg" alt="" >
+                                <div class="ticker__btn-wrap">
+                                    <div class="ticker__btn js-trigger-button" data-text="Купить билет">Купить билет</div>
+                                    <div class="ticker__btn-bg"></div>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+					<!--
+                    <div class="swiper-slide">
+                        <div class="ticket__wrap">
+                            <div class="ticket__left" data-scroll data-scroll-speed="-1">
+                                <div class="ticket__lable">Афиша</div>
+                                <div class="ticket__header">
+                                    <div class="ticket__title">Форум</div>
+                                    <div class="ticket__date">18 мая 2022г.</div>
+                                </div>
+                                <div class="ticker__name">FourRoom – Форум для специалистов Event&Wedding индустрии Уральского региона</div>
+                                <div class="ticker__price">5400 ₽</div>
+                                <div class="ticker__location">Center Club, ул. Бориса Ельцина, 3, Екатеринбург (этаж 1)</div>
+                                <div class="ticker__desc">
+                                    Форум «FourRoom» создан для развития профессионального event-сообщества.<br />Сейчас очень важно быть открытыми, впитывать новые знания, общаться с теми, кто на одной волне и равняться на тех, кто уже действует, создает и меняет.<br /><b>Форум объединяет всех, кто создает события!</b>
+                                </div>
+                            </div>
+                            <div class="ticket__right">
+                                <img src="img/ticket-img-1.jpg" alt="" >
+                                <div class="ticker__btn-wrap">
+                                    <div class="ticker__btn js-trigger-button" data-text="Купить билет">Купить билет</div>
+                                    <div class="ticker__btn-bg"></div>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+					-->
+                </div>
+                <div class="swiper-button-prev" data-scroll data-scroll-speed="-1"></div>
+                <div class="swiper-button-next" data-scroll data-scroll-speed="-1"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section_about" data-scroll-section id="perks"> 
+        <div class="about__info-slider">
+            <div class="flex flex_column info-slide">
+                <h3 class="info-slide__title"><span class="letter"><span>Опыт и</span></span> <span class="letter"><span>профессионализм</span></span></h3>
+                <span class="info-slide__subtitle">Мы давно в ивент-индустрии и умеем решать задачи любого уровня сложности</span>
+            </div>
+        </div>
+        <div class="flex flex_column items_center about__photo-wrapper about__photo-wrapper_left">
+            <div class="about__photo-cover"
+                 data-element="1"
+                 data-position="left"
+                 data-orientation="vertical"
+                 data-scroll data-scroll-speed="-1"></div>
+            <div class="about__photo-cover"
+                 data-element="2"
+                 data-position="left"
+                 data-orientation="horizontal"
+                 data-scroll
+                 data-scroll-speed="1"></div>
+        </div>
+        <div class="flex flex_column about__photo-wrapper about__photo-wrapper_right">
+            <div class="about__photo-cover"
+                 data-element="3"
+                 data-position="right"
+                 data-orientation="horizontal"
+                 style="text-align: right; margin-left: 20px;"
+                 data-scroll
+                 data-scroll-speed="-1"></div>
+            <div class="about__photo-cover"
+                 data-element="4"
+                 data-position="right"
+                 data-orientation="vertical"
+                 style="transform: translateX(-48px)"
+                 data-scroll
+                 data-scroll-speed="1"></div>
+        </div>
+        <div class="about__content-wrapper">
+            <div class="flex flex_column about__content-wrapper-header">
+                <svg class="content-slider__header-icon">
+                    <use xlink:href="img/sprites/sprite.svg#circle_bordered-primary"></use>
+                </svg>
+                <h4 class="content-slider-header__title">Наши</h4>
+                <h4 class="content-slider-header__subtitle">Проекты</h4>
+            </div>
+            <div class="content-slider">
+                <div class="content-slide">
+<!--                    <img class="content-slide__image" src="img/artist_vertical-1.webp" alt="Artist photo 1">-->
+                </div>
+            </div>
+            <div class="flex flex_nowrap items_center justify_end content-slider__controls-wrapper">
+                <button class="content-slider__button content-slider__button_prev">
+                    <svg class="content-slider__button-icon">
+                        <use xlink:href="img/sprites/sprite.svg#arrow_left"></use>
+                    </svg>
+                </button>
+                <button class="content-slider__button content-slider__button_next">
+                    <svg class="content-slider__button-icon">
+                        <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section data-scroll-section id="about" class="section_footer">
+        <div class="flex flex_column footer">
+            <div class="flex footer__top"  data-scroll data-scroll-speed="1" data-scroll-parent="#footer">
+                <svg class="footer__logo">
+                    <use xlink:href="img/sprites/sprite.svg#logo_cut"></use>
+                </svg>
+                <h2 class="footer__title animate__title">
+                    <div>
+                        <span class="letter"><span>Сделаем </span></span>
+                        <span class="letter"><span>любое </span></span>
+                        <span class="letter"><span>событие </span></span>
+                        <span class="letter"><span>по-настоящему </span></span>
+                        <span class="letter"><span>ярким. </span></span>
+                    </div>
+                    <div class="footer__title_specific">
+                        <span class="letter"><span>С нами </span></span>
+                        <span class="letter"><span>звёзды </span></span>
+                        <span class="letter"><span>ближе</span></span>
+                    </div>
+                </h2>
+            </div>
+            <div class="flex footer__medium" >
+                <div class="footer__image-wrapper" id="footer__image-wrapper" >
+                    <img src="img/footer_background.webp" alt="" class="footer__image" data-scroll data-scroll-speed="-7" data-scroll-parent="#footer__image-wrapper">
+                </div>
+                <div class="footer__text-wrapper" data-scroll data-scroll-speed="3" data-scroll-parent="#footer">
+                    <p class="footer__text">За 18 лет в ивент-индустрии мы успели многое. Создавали камерные проекты:
+                        частные события, ламповые вечеринки. Воплощали в жизнь глобальные мероприятия: концерты, форумы,
+                        региональные съезды крупных компаний и торговых сетей. У нас за плечами десятки Дней городов, сотни
+                        профессиональных праздников для заказчиков разных уровней.
+                        Свое дело мы знаем, любим и подходим к нему ответственно. Решаем вопросы быстро. Честны и открыты на
+                        каждом этапе сотрудничества. Ценим и бережем каждого клиента, понимая, что эмоции - один из самых
+                        важных и хрупких "товаров".
+                    </p>
+                </div>
+                <div class="flex footer__form-wrapper" data-scroll data-scroll-speed="3" data-scroll-parent="#footer">
+                    <div class="flex form__title-wrapper">
+                        <h4 class="footer__form-title">Оставить заявку</h4>
+                        <svg class="footer__title-icon">
+                            <use xlink:href="img/sprites/sprite.svg#arrow_bordered-primary"></use>
+                        </svg>
+                    </div>
+                    <form class="flex flex_column footer-form">
+                        <input name="title" type="hidden" value="Заполнена форма Оставить заявку в подвале" class="title" id="footer-title" required>
+                        <input placeholder="Ваше имя" name="name" type="text" class="footer-input" id="footer-name">
+                        <input placeholder="Ваш телефон" name="phone" type="tel" class="footer-input" id="footer-phone" required>
+                        <input placeholder="Ваша почта" name="email" type="email" class="footer-input" id="footer-email" required>
+                        <input type="hidden" name="comment" value="" id="footer-comment">
+                        <label class="privacy-policy">
+                            <input type="checkbox" checked id="footer-checkbox" required>
+                            <span>Я согласен с <ins>&nbsp;</ins> <a href="files/privacy_policy.pdf" target="_blank">политикой конфиденциальности</a></span>
+                        </label>
+                        <button class="footer-form__button">
+                            <span class="text" data-text="Отправить заявку">
+                                Отправить заявку
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="flex footer__bottom">
+                <div class="flex footer-bottom__info-wrapper">
+                    <span class="footer__copy"><b class="min-width-120">© 2022 impresario-group.ru</b> Все права защищены <ins class="delimiter"></ins></span>
+					<span class="footer__copy">
+						<a href="#" target="_blank" class="footer__policy-link">Политика конфиденциальности</a><ins class="delimiter"></ins>
+					</span>
+					
+					<div class="left-10 family-font-main">
+						<div class="color-white white-space"> 
+						ООО "Импресарио групп" ИНН/ОГРН: <a class="color-white">9701175855</a>/1217700185560
+						</div>
+						<div class="color-white white-space"> 
+						105082, г. Москва, ул. Бакунинская, д. 69, стр. 1, антр. 1-го эт., помещ. I, ком. 16, офис 36/7 
+						</div>
+					</div>
+					
+                </div>
+                <div class="flex footer-bottom__contact-wrapper">
+                    <a href="tel: +79122626517" class="footer-bottom__phone-link">
+                        <svg class="footer-bottom__phone-icon">
+                            <use xlink:href="img/sprites/sprite.svg#phone"></use>
+                        </svg>
+                        +7 912 262 65 17
+                    </a>
+                    <ul class="footer__social-list">
+                        <li class="footer__social-list-item">
+                            <a href="#" class="footer__social-list-link">
+                                <svg class="footer-bottom__phone-icon">
+                                    <use xlink:href="img/sprites/sprite.svg#social_vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <!--<li class="footer__social-list-item">
+                            <a href="#" class="footer__social-list-link">
+                                <svg class="footer-bottom__phone-icon">
+                                    <use xlink:href="img/sprites/sprite.svg#social_instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__social-list-item">
+                            <a href="#" class="footer__social-list-link">
+                                <svg class="footer-bottom__phone-icon">
+                                    <use xlink:href="img/sprites/sprite.svg#social_facebook"></use>
+                                </svg>
+                            </a>
+                        </li>-->
+                        <li class="footer__social-list-item">
+                            <a href="#" class="footer__social-list-link">
+                                <svg class="footer-bottom__phone-icon">
+                                    <use xlink:href="img/sprites/sprite.svg#social_youtube"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<div class="flex items_center justify_center modal__wrapper">
+    <div class="flex modal__body">
+        <button class="modal__close-button"></button>
+        <div class="modal__title-wrapper visible">
+            <h3 class="modal__title">Оставить заявку</h3>
+        </div>
+        <form class="flex form1 flex_column modal__form visible">
+            <input name="title" type="hidden" value="Заполнена форма Заказать в шапке" class="title" id="modal-title" required>
+            <input placeholder="Ваше имя" name="name" type="text" class="modal-input" id="modal-name">
+            <input placeholder="Ваш телефон" name="phone" type="tel" class="modal-input" id="modal-phone" required >
+            <input placeholder="Ваша почта" name="phone" type="email" class="modal-input" id="modal-email" required>
+            <textarea placeholder="Сообщение" name="comment" type="email" class="modal-input modal-input_textarea" id="modal-comment"></textarea>
+            <label class="privacy-policy">
+                <input type="checkbox" checked id="modal-checkbox" name="privacypolicy" required value="Я согласен с политикой конфиденциальности">
+                <span>Я согласен с <ins>&nbsp;</ins> <a href="files/privacy_policy.pdf" target="_blank">политикой конфиденциальности</a></span>
+            </label>
+            <button type="submit" class="modal-form__button">
+                <span class="text" data-text="Отправить заявку">
+                    Отправить заявку
+                </span>
+            </button>
+        </form>
+        <div class="flex form1 flex_column items_center modal__thx-wrapper">
+            <svg class="modal__thx-logo">
+                <use xlink:href="img/sprites/sprite.svg#logo_cut-inverse"></use>
+            </svg>
+            <span class="modal__thx-title">Спасибо!</span>
+            <span class="modal__thx-subtitle">Мы свяжемся с Вами в <br> ближайшее время.</span>
+        </div>
+
+
+        <form class="ticket__form form2">
+            <div class="ticket__form__item">
+                <div class="ticket__form-title">Форум</div>
+                <div class="ticker__form__name">FourRoom – Форум для специалистов Event&Wedding индустрии Уральского региона</div>
+                <div class="ticker__form__inner">
+                    <div class="ticket__form__amount">1 билет</div>
+                    <div class="ticket__form__price">5400 ₽</div>
+                </div>
+            </div>
+            <div class="ticket__form__item2">
+                <div class="ticket__form-title2">Введите кол-во билетов для покупки</div>
+                <input type="text" class="ticket__form--text change__price" placeholder="1" value="1">
+                <div class="ticket__form__total">
+                    Итого:
+                    <div class="ticket__form__sum">5400 ₽</div>
+                </div>
+            </div>
+
+            <div class="ticket__form__item3">
+                <label class="privacy-policy">
+                    <input type="checkbox" checked id="modal-checkbox" name="privacypolicy" required value="Я согласен с условиями оферты">
+                    <span>Я согласен с <ins>&nbsp;</ins> <a href="files/oferta.pdf" target="_blank">условиями оферты</a></span>
+                </label>
+				<a type="submit" class="modal-form__button modal-form__button2" href="">
+					<span class="text" data-text="Купить"> 
+						Купить
+					</span>
+				</a>			
+			  
+				<div class="payCost" style="display: none;">5400</div>
+				<div style="display: none;">Покупка билетов</div>
+				<div class="orderNumber" style="display: none;">1</div>
+				<div
+					style="margin: 0 0 0 auto; display: none;"
+					id="alfa-payment-button"
+					data-token="vfajvg12bfcatdsipaufih9tor"
+					data-return-url="https://impresario-group.ru/success.html"
+					data-fail-url="https://impresario-group.ru/fail.html"
+					data-language="ru"
+					data-stages="1"
+					data-amount-format="rubli"
+					data-amount-selector=".payCost"
+					data-description-selector=".description"
+					data-order-number-selector='.orderNumber'
+					data-button-text = "Купить"
+				>
+				</div>
+            </div>
+
+            
+        </form>
+
+    </div>
+    <span class="modal__outer"></span>
+</div>
+
+<script defer src="js/swiper-bundle.min.js"></script>
+<script defer src="js/main2.js"></script>
+<script defer src="js/vendor.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+<script>
+
+//var MD5 = function(d){var r = M(V(Y(X(d),8*d.length)));return r.toLowerCase()};function M(d){for(var _,m="0123456789ABCDEF",f="",r=0;r<d.length;r++)_=d.charCodeAt(r),f+=m.charAt(_>>>4&15)+m.charAt(15&_);return f}function X(d){for(var _=Array(d.length>>2),m=0;m<_.length;m++)_[m]=0;for(m=0;m<8*d.length;m+=8)_[m>>5]|=(255&d.charCodeAt(m/8))<<m%32;return _}function V(d){for(var _="",m=0;m<32*d.length;m+=8)_+=String.fromCharCode(d[m>>5]>>>m%32&255);return _}function Y(d,_){d[_>>5]|=128<<_%32,d[14+(_+64>>>9<<4)]=_;for(var m=1732584193,f=-271733879,r=-1732584194,i=271733878,n=0;n<d.length;n+=16){var h=m,t=f,g=r,e=i;f=md5_ii(f=md5_ii(f=md5_ii(f=md5_ii(f=md5_hh(f=md5_hh(f=md5_hh(f=md5_hh(f=md5_gg(f=md5_gg(f=md5_gg(f=md5_gg(f=md5_ff(f=md5_ff(f=md5_ff(f=md5_ff(f,r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+0],7,-680876936),f,r,d[n+1],12,-389564586),m,f,d[n+2],17,606105819),i,m,d[n+3],22,-1044525330),r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+4],7,-176418897),f,r,d[n+5],12,1200080426),m,f,d[n+6],17,-1473231341),i,m,d[n+7],22,-45705983),r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+8],7,1770035416),f,r,d[n+9],12,-1958414417),m,f,d[n+10],17,-42063),i,m,d[n+11],22,-1990404162),r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+12],7,1804603682),f,r,d[n+13],12,-40341101),m,f,d[n+14],17,-1502002290),i,m,d[n+15],22,1236535329),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+1],5,-165796510),f,r,d[n+6],9,-1069501632),m,f,d[n+11],14,643717713),i,m,d[n+0],20,-373897302),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+5],5,-701558691),f,r,d[n+10],9,38016083),m,f,d[n+15],14,-660478335),i,m,d[n+4],20,-405537848),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+9],5,568446438),f,r,d[n+14],9,-1019803690),m,f,d[n+3],14,-187363961),i,m,d[n+8],20,1163531501),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+13],5,-1444681467),f,r,d[n+2],9,-51403784),m,f,d[n+7],14,1735328473),i,m,d[n+12],20,-1926607734),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+5],4,-378558),f,r,d[n+8],11,-2022574463),m,f,d[n+11],16,1839030562),i,m,d[n+14],23,-35309556),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+1],4,-1530992060),f,r,d[n+4],11,1272893353),m,f,d[n+7],16,-155497632),i,m,d[n+10],23,-1094730640),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+13],4,681279174),f,r,d[n+0],11,-358537222),m,f,d[n+3],16,-722521979),i,m,d[n+6],23,76029189),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+9],4,-640364487),f,r,d[n+12],11,-421815835),m,f,d[n+15],16,530742520),i,m,d[n+2],23,-995338651),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+0],6,-198630844),f,r,d[n+7],10,1126891415),m,f,d[n+14],15,-1416354905),i,m,d[n+5],21,-57434055),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+12],6,1700485571),f,r,d[n+3],10,-1894986606),m,f,d[n+10],15,-1051523),i,m,d[n+1],21,-2054922799),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+8],6,1873313359),f,r,d[n+15],10,-30611744),m,f,d[n+6],15,-1560198380),i,m,d[n+13],21,1309151649),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+4],6,-145523070),f,r,d[n+11],10,-1120210379),m,f,d[n+2],15,718787259),i,m,d[n+9],21,-343485551),m=safe_add(m,h),f=safe_add(f,t),r=safe_add(r,g),i=safe_add(i,e)}return Array(m,f,r,i)}function md5_cmn(d,_,m,f,r,i){return safe_add(bit_rol(safe_add(safe_add(_,d),safe_add(f,i)),r),m)}function md5_ff(d,_,m,f,r,i,n){return md5_cmn(_&m|~_&f,d,_,r,i,n)}function md5_gg(d,_,m,f,r,i,n){return md5_cmn(_&f|m&~f,d,_,r,i,n)}function md5_hh(d,_,m,f,r,i,n){return md5_cmn(_^m^f,d,_,r,i,n)}function md5_ii(d,_,m,f,r,i,n){return md5_cmn(m^(_|~f),d,_,r,i,n)}function safe_add(d,_){var m=(65535&d)+(65535&_);return(d>>16)+(_>>16)+(m>>16)<<16|65535&m}function bit_rol(d,_){return d<<_|d>>>32-_}
+
+$( document ).ready(function() {
+	var recipt = '{"items":[{"name":"Участие в Форуме FourRoom","quantity":1,"sum":5400,"payment_method":"full_payment","payment_object":"payment","tax":"none"}]}';
+	
+	var value = 'impresariogroup:5400.00:0:'+recipt+':OWcFW2Mcg1eR2m7oH9VV'; 
+	
+	var result = '';
+	
+	$.ajax({
+		type: 'POST',
+		async: false,
+		cache: false,
+		timeout: 30000,
+		url: '/md5.php',
+		data: {
+			md5: value
+		},
+		success: function (data) {
+			result = data;
+		}
+	});
+							
+
+	$( ".modal-form__button2" ).attr("href", "https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=impresariogroup&InvoiceID=0&Culture=ru&Encoding=utf-8&Description=%D0%9F%D0%BE%D0%BA%D1%83%D0%BF%D0%BA%D0%B0%20%D0%B1%D0%B8%D0%BB%D0%B5%D1%82%D0%BE%D0%B2&Receipt=" + encodeURI(recipt) + "&OutSum=5400.00" + "&SignatureValue="+result);
+	  
+	$( ".change__price" ).keyup(function() {
+	  $( ".ticket__form__sum" ).html(5400 * $(this).val() + " ₽"); 
+	  
+	  var recipt = '{"items":[{"name":"Участие в Форуме FourRoom","quantity":'+$(this).val()+',"sum":'+5400 * $(this).val()+',"payment_method":"full_payment","payment_object":"payment","tax":"none"}]}';
+
+	  var value = 'impresariogroup:'+5400 * $(this).val()+'.00:0:'+recipt+':OWcFW2Mcg1eR2m7oH9VV';
+
+	$.ajax({
+		type: 'POST',
+		async: false,
+		cache: false,
+		timeout: 30000,
+		url: '/md5.php',
+		data: {
+			md5: value
+		},
+		success: function (data) {
+			result = data;
+		}
+	});
+
+	  $( ".modal-form__button2" ).attr("href", "https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=impresariogroup&InvoiceID=0&Culture=ru&Encoding=utf-8&Description=%D0%9F%D0%BE%D0%BA%D1%83%D0%BF%D0%BA%D0%B0%20%D0%B1%D0%B8%D0%BB%D0%B5%D1%82%D0%BE%D0%B2&Receipt=" + encodeURI(recipt) + "&OutSum="+5400 * $(this).val()+".00" + "&SignatureValue="+result);
+	});
+});
+
+//$( document ).ready(function() {
+//	$( ".change__price" ).keyup(function() {
+//	
+//	  $( ".ticket__form__sum" ).html(5700 * $(this).val() + " ₽");
+//	
+//	  $( ".payCost" ).html(5700 * $(this).val() + " ₽");
+//	});
+//});
+
+//$( document ).ready(function() {
+//	let date = new Date();
+//	$(".orderNumber").html(date.getTime());
+//	
+//	setInterval(function () {
+//	var m = document.getElementsByClassName("alfa-payment__rbs-iframe")[0];
+//	if(m != undefined)
+//	{
+//		var t = document.getElementsByClassName("alfa-payment__rbs-iframe")[0].contentDocument.body;
+//	
+//		if(t != undefined)
+//		{
+//				if(t.getElementsByTagName("div")[0])
+//				{
+//					if(t.getElementsByTagName("div")[0].innerText == 'Оплата успешно проведена!')
+//					{
+//						$(".alfa-payment__rbs-frame-modal").css('height', 'unset'); 
+//					}
+//				}
+//		}
+//	}
+//
+//	}, 100);
+//});
+
+
+</script>
+
+</body>
+</html>
