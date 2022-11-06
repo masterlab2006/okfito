@@ -1,0 +1,398 @@
+.calculator
+
+    &__header
+        font-style: normal;
+        font-weight: 400;
+        font-size: em(24)
+        line-height: 100%;
+        font-family $ff2
+        text-align center
+        margin-bottom (20/24em)
+    
+    &__subtitle
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        text-align center
+        margin-bottom (20/24em)
+        margin 0 (20/12em) (20/12em)
+
+    &__inner
+        background-color #E7EEE9
+        padding em(26) em(20) em(44)
+
+    &__left
+        margin-bottom em(30)
+
+    &__right
+        background-color #2B2C3C
+        border-radius: em(12)
+        color #fff
+        padding em(30) em(36) em(40)
+
+    &__row--btn
+        text-align center
+
+    &__size
+
+        display flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-bottom em(30)
+
+        &__item
+            flex 0 0 em(80)
+
+        &__title
+            font-style: normal;
+            font-weight: 600;
+            font-size: 10px;
+            line-height: 150%;
+            text-align center
+
+        input[type="text"]
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1em
+            line-height: 150%;
+            text-align center
+            color #000
+            max-width: em(80)
+            height em(30)
+            padding 0
+        
+        &__note
+            flex-basis: 100%
+            font-style: normal;
+            font-weight: 400;
+            font-size: em(8)
+            line-height: 150%;
+            text-align center
+            margin (10/8em) 0 0 0
+
+    &__delivery
+        display flex
+        justify-content: space-between
+        margin-bottom em(30)
+
+        &__title
+            font-style: normal;
+            font-weight: 500;
+            font-size: em(10)
+            line-height: 150%;
+            position relative
+            padding 0 0 0 (30/10em)
+            width (132/10em)
+            cursor pointer
+
+            &:before
+                content ''
+                display block
+                position absolute
+                border-radius: 50%
+                font-size (16/10em)
+                width em(20)
+                height em(20)
+                border 2px solid #BABABA
+                background-color #fff
+                left 0
+                top 0
+
+    &__mox
+
+        padding-bottom em(10)
+
+        &__title
+            font-style: normal;
+            font-weight: 500;
+            font-size: em(10)
+            line-height: 150%;
+            margin-bottom (14/10em)
+
+        &__item
+            display flex
+            margin-bottom em(20)
+
+        &__left
+            width em(85)
+            min-width em(85)
+            max-width em(85)
+            margin 0 em(15) 0 0
+
+        &__right
+            flex-grow: 1
+
+        &__inner
+            position relative
+            padding 0 em(10)
+
+            &:before
+                position absolute
+                left 0
+                top -2px
+                height 4px
+                content ''
+                background-color #64A060
+                width 20px
+                border-radius: 2px
+
+            &:after
+                position absolute
+                right 0
+                top 0
+                height 2px
+                content ''
+                background-color #BABABA
+                width 20px
+                border-radius: 2px
+
+        &__img
+            width em(85)
+            height em(62)
+            background-position 0 0
+            background-repeat no-repeat
+            background-size cover
+            border-radius: em(12)
+            position relative
+
+            &:before
+            &:after
+                position absolute
+                content ''
+                display block
+                border-radius: 50%
+                left 50%
+                transform: translateX(-50%)
+                transition: all 0.4s
+
+            &:before
+                width em(20)
+                height em(20)
+                background-color #fff
+                border: 2px solid #BABABA;
+                bottom em(-10)
+            
+            &:after
+                width em(10)
+                height em(10)
+                background-color #fff
+                bottom em(-5)
+
+            &.active
+                &:before
+                    border-color #64A060
+                &:after
+                    background-color #64A060
+
+            &--1
+                background-image url(../img/content/calculator/img-1-sm.png)            
+            &--2
+                background-image url(../img/content/calculator/img-2-sm.png)
+            &--3
+                background-image url(../img/content/calculator/img-3-sm.png)
+
+        &__value
+            font-weight: 600;
+            font-size: em(10)
+            line-height: 150%;
+            text-align: center;
+            position absolute
+            top (14/10em)
+            display none
+
+
+        .ui-slider-horizontal
+            border none
+            height 2px
+            background-color #BABABA
+        
+        .ui-slider-horizontal .ui-slider-handle
+            width em(20)
+            height em(20)
+            border-radius: 50%
+            background-color #64A060
+            border none
+            top em(-10)
+            outline: none
+
+            &.inactive
+                background-color #BABABA
+
+            &:before
+                font-weight: 600;
+                font-size: em(10)
+                line-height: 150%;
+                text-align: center;
+                position absolute
+                bottom (-19/10em)
+                content attr(data-value)
+                color #000
+                font-family $ff
+                width 5em
+                text-align center
+                transform: translateX(-50%)
+                margin 0 0 0 (10/10em)
+
+        .ui-slider-horizontal .ui-slider-range-min
+            border none
+            height 4px 
+            background-color #64A060
+            margin-top -2px
+
+    &__more
+
+        padding: 0 0 em(40)
+
+        &__header
+            font-weight: 700;
+            font-size: em(12)
+            line-height: 150%;
+            text-align center
+            text-transform uppercase
+            margin-bottom (24/12em)
+
+        &__items
+            // flex-wrap: wrap
+            // display flex
+            // justify-content: space-between
+            // align-items: flex-start
+            columns 2
+            margin-bottom em(20)
+
+        &__item
+            font-weight: 500;
+            font-size: em(10)
+            line-height: 150%;
+            padding (5/10em) 0 (5/10em) (30/10em)
+            position relative
+            width (132/10em)
+            min-width (132/10em)
+            max-width (132/10em)
+
+            &:before
+            &:after
+                position absolute
+                content ''
+                display block
+                border-radius: 50%
+                transition: all 0.4s
+                font-size (16/10em)                
+                top 50%
+                transform: translateY(-50%)
+
+            &:before
+                width em(20)
+                height em(20)
+                background-color #fff
+                border: 2px solid #BABABA;
+                left 0
+            
+            &:after
+                width em(10)
+                height em(10)
+                background-color #fff
+                left em(5)
+                z-index 1
+
+            &.active
+                &:before
+                    border-color #64A060
+                &:after
+                    background-color #64A060
+        
+        &__value
+            font-weight: 600;
+            font-size: em(10)
+            line-height: 150%;
+            text-align: center;
+            position absolute
+            top (14/10em)
+            display none
+
+        &__inner
+            position relative
+            padding 0 em(10)
+
+            &:before
+                position absolute
+                left 0
+                top -2px
+                height 4px
+                content ''
+                background-color #64A060
+                width 20px
+                border-radius: 2px
+
+            &:after
+                position absolute
+                right 0
+                top 0
+                height 2px
+                content ''
+                background-color #BABABA
+                width 20px
+                border-radius: 2px
+
+        .ui-slider-horizontal
+            border none
+            height 2px
+            background-color #BABABA
+        
+        .ui-slider-horizontal .ui-slider-handle
+            width em(20)
+            height em(20)
+            border-radius: 50%
+            background-color #64A060
+            border none
+            top em(-10)
+            outline: none
+
+            &.inactive
+                background-color #BABABA
+
+            &:before
+                font-weight: 600;
+                font-size: em(10)
+                line-height: 150%;
+                text-align: center;
+                position absolute
+                bottom (-19/10em)
+                content attr(data-value)
+                color #000
+                font-family $ff
+                width 5em
+                text-align center
+                transform: translateX(-50%)
+                margin 0 0 0 (10/10em)
+
+        .ui-slider-horizontal .ui-slider-range-min
+            border none
+            height 4px 
+            background-color #64A060
+            margin-top -2px
+
+    &__title
+        font-weight: 600;
+        font-size: em(14)
+        line-height: 150%;
+        margin-bottom (6/14em)
+
+    &__total
+        font-weight: 700;
+        font-size: em(30)
+        line-height: 150%;
+        color #64A060
+        margin-bottom (16/30em)
+
+        &--white
+            color #fff
+
+    &__note
+        margin (8/10em) 0 3em
+        font-weight: 500;
+        font-size: em(10)
+        line-height: 150%;
+        padding 0 0 0 (50/10em)
+        background embedurl('../img/content/calculator/icon-1.svg') 0 (8/10em) no-repeat
+        background-size (27/10em) auto

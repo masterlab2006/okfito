@@ -152,16 +152,30 @@
         background-repeat no-repeat
         margin em(6)
         color #fff
-        text-indent: -10000px
+        border 1px solid #658961
+        border-radius: 50%
+        display flex
+        align-items: center
+        justify-content: center
+        transition all 0.4s
+
+        svg
+            display block
+            height auto
+            width em(24)
+
+            +md-block()
+                width em(44)
+
+        &:hover
+            background-color #658961
+            
+            svg
+                path
+                    fill #fff
+                    transition all 0.4s
 
         +md-block()
             width em(102)
             height em(102)
             margin em(19)
-
-        &--inst
-            background-image embedurl('../img/content/footer/inst.svg')
-        &--vk
-            background-image embedurl('../img/content/footer/vk.svg')
-        &--fb
-            background-image embedurl('../img/content/footer/fb.svg')

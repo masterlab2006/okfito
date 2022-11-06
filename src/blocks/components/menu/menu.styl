@@ -203,6 +203,9 @@
     .panel__mess
         a
             svg
+                +md-block()
+                    width em(40)
+                    height em(40)
                 path
                     fill #64A060
 
@@ -250,12 +253,6 @@
             flex-direction: row
             flex-grow: 0
             align-items: flex-start
-
-    .panel__mess
-        a
-            svg
-                width em(40)
-                height em(40)
 
     .panel__contacts
         +lg-block()

@@ -1,0 +1,94 @@
+section.section--calculator
+    .calculator
+        h2.calculator__header Узнайте ориентировочную стоимость озеленения
+        .calculator__subtitle Выберите для себя оптимальное решение и&nbsp;мы&nbsp;рассчитаем приблизительную стоимость всего проекта.#[br]Точная стоимость проекта возможна после выезда нашего специалиста.
+        .calculator__inner
+            .calculator__left
+                .calculator__row
+                    .calculator__size
+                        .calculator__size__item
+                            .calculator__size__title Ширина, м
+                            .calculator__size__input
+                                input(type="text", placeholder="0м")
+                        .calculator__size__item
+                            .calculator__size__title Длина, м
+                            .calculator__size__input
+                                input(type="text", placeholder="0м")
+                        .calculator__size__item
+                            .calculator__size__title Плащадь, м2
+                            .calculator__size__input
+                                input(type="text", placeholder="0м2")
+                        .calculator__size__note Впишите размеры длины и ширины для рассчёта площади
+                    .calculator__delivery
+                        .calculator__delivery__item
+                            .calculator__delivery__title(data-price="1500")  Выезд замерщика по&nbsp;Москве #[b 1&nbsp;500&nbsp;руб.]
+                        .calculator__delivery__item
+                            .calculator__delivery__title(data-price="3500")  Выезд замерщика по&nbsp;МО&nbsp;до&nbsp;50&nbsp;км #[b 3&nbsp;500&nbsp;руб.]
+
+                .calculator__row
+                    .calculator__mox
+                        .calculator__mox__item
+                            .calculator__mox__left
+                                .calculator__mox__img.calculator__mox__img--1
+                            .calculator__mox__right
+                                .calculator__mox__title Пластовый мох
+                                .calculator__mox__inner
+                                    .calculator__mox__input
+                                    .calculator__mox__value 0
+
+                        .calculator__mox__item
+                            .calculator__mox__left
+                                .calculator__mox__img.calculator__mox__img--2
+                            .calculator__mox__right
+                                .calculator__mox__title Ягель мох
+                                .calculator__mox__inner
+                                    .calculator__mox__input
+                                    .calculator__mox__value 0
+
+                        .calculator__mox__item
+                            .calculator__mox__left
+                                .calculator__mox__img.calculator__mox__img--3
+                            .calculator__mox__right
+                                .calculator__mox__title Кочки мох
+                                .calculator__mox__inner
+                                    .calculator__mox__input
+                                    .calculator__mox__value 0
+
+                .calculator__row
+                    .calculator__more
+                        .calculator__more__header выберите Вид растений
+                        .calculator__more__items
+                            .calculator__more__item Папортник (3&nbsp;подвида)
+                            .calculator__more__item Тики
+                            .calculator__more__item Мигферн
+                            .calculator__more__item Николи
+                            .calculator__more__item Туя
+                            .calculator__more__item Пендула
+                            .calculator__more__item Тополь
+                            .calculator__more__item Эвкалипт (3&nbsp;подвида)
+                            .calculator__more__item Плющ хэдера
+                            .calculator__more__item Питоспорум
+                            .calculator__more__item Амарант (5&nbsp;цветов)
+                            .calculator__more__item Парвафолия
+                            .calculator__more__item Диосми
+                            .calculator__more__item Беар грас
+                            .calculator__more__item Лаванда
+                        .calculator__more__inner
+                            .calculator__more__input
+                            .calculator__more__value 0
+                .calculator__row.calculator__row--btn.sm-visible
+                    a(href="#").btn Рассчитать стоимость
+
+            .calculator__right
+                .calculator__row
+                    .calculator__title Сумма
+                    .calculator__total #[span.totalSum 0] ₽
+                .calculator__row
+                    .calculator__title Площадь
+                    .calculator__total.calculator__total--white #[span.totalSquare 0] м#[sup 2]
+                .calculator__row
+                    .calculator__note В стоимость входит#[br]3 варианта эскиза макета#[br]3 000 ₽.#[br](при заключении договора сумма возвращается)
+                .calculator__row.sm-hidden
+                    a(href="#").btn Рассчитать стоимость
+                .calculator__row.calculator__row--btn
+                    a(href="#").btn заказать проект
