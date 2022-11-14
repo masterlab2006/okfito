@@ -1,0 +1,119 @@
+.panno
+
+    +md-block()
+        padding-bottom em(100)
+
+    &__header
+        font-style: normal;
+        font-weight: 400;
+        font-size: em(24)
+        line-height: 100%;
+        text-align: center;
+        color: #000000;
+        font-family $ff2
+        margin-bottom (20/24em)
+
+        +md-block()
+            font-size: em(60)
+            line-height: 80%;
+            margin-bottom (50/60em)
+
+    &__items
+        display flex
+        flex-wrap: wrap
+
+    &__item
+        width em(159)
+        max-width em(159)
+        min-width em(159)
+        margin-bottom em(2)
+        position relative
+
+        +md-block()
+            width em(380)
+            max-width em(380)
+            min-width em(380)
+            margin-bottom em(8)
+
+        &:nth-child(odd)
+            margin-right auto
+
+        &__img
+            display block
+            width em(159)
+            max-width: 100%
+            height auto
+
+            +md-block()
+                width em(380)
+
+        &__inner
+            position absolute
+            left 0
+            right 0
+            top 0
+            bottom 0
+            padding em(26)
+            display flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            opacity 0
+            transition all 0.4s
+            background-color rgba(#000,0.5)
+
+        &__title
+            font-size 1em
+            line-height 120%
+            color #fff
+            font-style: normal;
+            text-align: center;
+            margin-bottom em(30)
+
+            +md-block()
+                font-size: em(30)
+                margin-bottom (50/30em)
+
+        &__btn-wrap
+            text-align center
+
+            +lg-block()
+                position absolute
+                left 0
+                top em(144)
+                left 0
+                right 0
+
+        &__btn
+            display: inline-flex
+            font-style: normal;
+            font-weight: 600;
+            font-size: em(8)
+            line-height: (12/8em)
+            align-items: center;
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            min-height: 4em
+            min-width: 12em
+            justify-content: center
+            align-items: center
+            border-radius: 1.2em
+            background-color transparent
+            transition: all 0.4s
+            text-decoration none
+            border 2px solid #fff
+
+            +md-block()
+                font-size 1em
+                min-width: em(250)
+                min-height: em(70)
+
+            &:hover
+                background-color #64A060
+                border-color #64A060
+
+.panno__item
+    &:hover
+        .panno__item__inner
+            opacity 1

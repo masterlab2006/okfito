@@ -1,0 +1,182 @@
+.ready-made
+
+    padding: em(20) em(20) em(20)
+
+    +md-block()
+        padding 0
+        margin-bottom em(50)
+
+    &__header
+        font-style: normal;
+        font-weight: 400;
+        font-size: em(24)
+        line-height: 100%;
+        text-align center
+        margin-bottom (20/24em)
+        font-family $ff2
+
+        +md-block()
+            font-size em(60)
+            margin-bottom 0.5em
+
+    &__subtitle
+        font-style: normal;
+        font-weight: 400;
+        font-size: em(12)
+        line-height: 150%;
+        text-align center
+        margin-bottom (20/12em)
+
+        +md-block()
+            font-size em(20)
+            margin-bottom (54/20em)
+            padding-left 2.5em
+            padding-right 2.5em
+        
+        +lg-block()
+            padding 0
+            max-width: (1000/20em)
+            margin-left auto
+            margin-right auto
+
+    &__items
+
+        +md-block()
+            display flex
+            flex-wrap: wrap
+
+        +lg-block()
+            max-width em(1552)
+            margin 0 auto
+
+    &__item
+
+        margin-bottom em(30)
+
+        +md-block()
+            margin-bottom em(50)
+            flex-basis: em(379)
+            flex-shrink: 1
+            flex-grow: 0
+
+            +lg-block()
+                flex-basis: em(358)
+                margin 0 em(15) em(50)
+                cursor pointer
+                position relative
+
+            &:nth-child(odd)
+                margin-right auto
+
+        &__picture
+            display block
+
+        &__img-wrap
+
+            margin-bottom em(10)
+
+            +md-block()
+                margin-bottom em(20)
+
+            +lg-block()
+                position relative
+
+            &:before
+                +lg-block()
+                    content ''
+                    position absolute
+                    left 0
+                    right 0
+                    top 0
+                    bottom 0
+                    opacity 0
+                    transition: all 0.2s
+                    background-color rgba(#000, 0.5)
+
+        &__img
+            width 100%
+            height auto
+            max-width 100%
+            display block
+
+        &__title
+            font-style: normal;
+            font-weight: 500;
+            font-size: em(12)
+            line-height: (15/12em)
+            text-align center
+            margin-bottom (10/12em)
+
+            +md-block()
+                font-size: em(24)
+                line-height: (29/24em)
+                margin-bottom (20/24em)
+
+        &__price
+            font-style: normal;
+            font-weight: 700;
+            font-size: em(24)
+            line-height: 100%;
+            text-align: center;
+            color: #64A060;
+            margin-bottom (10/24em)
+
+            +md-block()
+                font-size: em(36)
+                margin-bottom (20/36em)
+
+            +lg-block()
+                margin-bottom 0
+
+        &__btn-wrap
+            text-align center
+
+            +lg-block()
+                position absolute
+                left 0
+                top em(144)
+                left 0
+                right 0
+
+        &__btn
+            display: inline-flex
+            font-style: normal;
+            font-weight: 600;
+            font-size: em(10)
+            line-height: (12/10em)
+            align-items: center;
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            min-height: 4em
+            min-width: 18em
+            justify-content: center
+            align-items: center
+            border-radius: 1.2em
+            background-color #64A060
+            transition: all 0.4s
+            text-decoration none
+
+            +md-block()
+                font-size 1em
+                min-height: em(70)
+                min-width: em(300)
+
+            +lg-block()
+                min-height: em(70)
+                min-width: em(250)
+                border-radius: em(20)
+                border: 2px solid #fff
+                background-color transparent
+                opacity 0
+                
+            &:hover
+                background-color #40763D
+                border-color #40763D
+
+.ready-made__item
+    &:hover
+        .ready-made__item__btn
+        .ready-made__item__img-wrap:before
+            +lg-block()
+                opacity 1

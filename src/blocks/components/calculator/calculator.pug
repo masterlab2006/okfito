@@ -1,10 +1,10 @@
 section.section--calculator
     .calculator
         h2.calculator__header Узнайте ориентировочную стоимость озеленения
-        .calculator__subtitle Выберите для себя оптимальное решение и&nbsp;мы&nbsp;рассчитаем приблизительную стоимость всего проекта.#[br]Точная стоимость проекта возможна после выезда нашего специалиста.
+        .calculator__subtitle Выберите для себя оптимальное решение и&nbsp;мы&nbsp;рассчитаем приблизительную стоимость всего проекта.#[br]Точная стоимость проекта возможна после выезда нашего&nbsp;специалиста.
         .calculator__inner
             .calculator__left
-                .calculator__row
+                .calculator__row.calculator__row--size-delivery
                     .calculator__size
                         .calculator__size__item
                             .calculator__size__title Ширина, м
@@ -27,32 +27,34 @@ section.section--calculator
 
                 .calculator__row
                     .calculator__mox
-                        .calculator__mox__item
-                            .calculator__mox__left
-                                .calculator__mox__img.calculator__mox__img--1
-                            .calculator__mox__right
-                                .calculator__mox__title Пластовый мох
-                                .calculator__mox__inner
-                                    .calculator__mox__input
-                                    .calculator__mox__value 0
+                        .calculator__mox__header выберите Вид покрытия
+                        .calculator__mox__items
+                            .calculator__mox__item
+                                .calculator__mox__left
+                                    .calculator__mox__img.calculator__mox__img--1
+                                .calculator__mox__right
+                                    .calculator__mox__title Пластовый мох
+                                    .calculator__mox__inner
+                                        .calculator__mox__input
+                                        .calculator__mox__value 0
 
-                        .calculator__mox__item
-                            .calculator__mox__left
-                                .calculator__mox__img.calculator__mox__img--2
-                            .calculator__mox__right
-                                .calculator__mox__title Ягель мох
-                                .calculator__mox__inner
-                                    .calculator__mox__input
-                                    .calculator__mox__value 0
+                            .calculator__mox__item
+                                .calculator__mox__left
+                                    .calculator__mox__img.calculator__mox__img--2
+                                .calculator__mox__right
+                                    .calculator__mox__title Ягель мох
+                                    .calculator__mox__inner
+                                        .calculator__mox__input
+                                        .calculator__mox__value 0
 
-                        .calculator__mox__item
-                            .calculator__mox__left
-                                .calculator__mox__img.calculator__mox__img--3
-                            .calculator__mox__right
-                                .calculator__mox__title Кочки мох
-                                .calculator__mox__inner
-                                    .calculator__mox__input
-                                    .calculator__mox__value 0
+                            .calculator__mox__item
+                                .calculator__mox__left
+                                    .calculator__mox__img.calculator__mox__img--3
+                                .calculator__mox__right
+                                    .calculator__mox__title Кочки мох
+                                    .calculator__mox__inner
+                                        .calculator__mox__input
+                                        .calculator__mox__value 0
 
                 .calculator__row
                     .calculator__more
@@ -80,15 +82,15 @@ section.section--calculator
                     a(href="#").btn Рассчитать стоимость
 
             .calculator__right
-                .calculator__row
+                .calculator__row.calculator__row--total
                     .calculator__title Сумма
                     .calculator__total #[span.totalSum 0] ₽
-                .calculator__row
+                .calculator__row.calculator__row--square
                     .calculator__title Площадь
-                    .calculator__total.calculator__total--white #[span.totalSquare 0] м#[sup 2]
+                    .calculator__total.calculator__total--white #[span.totalSquare 0] м²
                 .calculator__row
-                    .calculator__note В стоимость входит#[br]3 варианта эскиза макета#[br]3 000 ₽.#[br](при заключении договора сумма возвращается)
-                .calculator__row.sm-hidden
+                    .calculator__note В стоимость входит 3&nbsp;варианта&nbsp;эскиза макета 3&nbsp;000 ₽.#[br](при заключении договора сумма возвращается)
+                .calculator__row.calculator__row--btn.calculator__row--btn-first.sm-hidden
                     a(href="#").btn Рассчитать стоимость
                 .calculator__row.calculator__row--btn
                     a(href="#").btn заказать проект

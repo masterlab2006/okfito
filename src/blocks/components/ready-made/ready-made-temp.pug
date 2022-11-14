@@ -1,0 +1,19 @@
+mixin ready-made(data)
+    .ready-made__item
+        .ready-made__item__img-wrap
+            picture.ready-made__item__picture.ready-made__item__picture--sm.picture--sm
+                source(type="image/webp", data-srcset=data.sm + ".webp")
+                source(type="image/jpg", data-srcset=data.sm + "." + data.img_format)
+                img(data-src=data.sm + "." + data.img_format, alt=data.alt).ready-made__item__img
+            picture.ready-made__item__picture.ready-made__item__picture--md.picture--md
+                source(type="image/webp", data-srcset=data.md + ".webp")
+                source(type="image/jpg", data-srcset=data.md + "." + data.img_format)
+                img(data-src=data.md + "." + data.img_format, alt=data.alt).ready-made__item__img
+            picture.ready-made__item__picture.ready-made__item__picture--lg.picture--lg
+                source(type="image/webp", data-srcset=data.lg + ".webp")
+                source(type="image/jpg", data-srcset=data.lg + "." + data.img_format)
+                img(data-src=data.lg + "." + data.img_format, alt=data.alt).ready-made__item__img
+        .ready-made__item__title!=data.title
+        .ready-made__item__price!=data.price
+        .ready-made__item__btn-wrap
+            a.ready-made__item__btn(href=data.btn_link)!=data.btn

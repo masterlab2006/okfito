@@ -1,5 +1,9 @@
 .calculator
 
+    +lg-block()
+        background-color #E7EEE9
+        padding em(80) em(200)
+
     &__header
         font-style: normal;
         font-weight: 400;
@@ -8,6 +12,10 @@
         font-family $ff2
         text-align center
         margin-bottom (20/24em)
+
+        +md-block()
+            font-size em(60)
+            margin-bottom 0.5em
     
     &__subtitle
         font-style: normal;
@@ -18,12 +26,35 @@
         margin-bottom (20/24em)
         margin 0 (20/12em) (20/12em)
 
+        +md-block()
+            font-size em(20)
+            margin-bottom (30/20em)
+
+        +lg-block()
+            margin-bottom 4em
+
     &__inner
         background-color #E7EEE9
         padding em(26) em(20) em(44)
 
+        +md-block()
+            padding em(50) em(50) em(100)
+        
+        +lg-block()
+            padding 0
+            display flex
+            justify-content: space-between
+
     &__left
         margin-bottom em(30)
+
+        +md-block()
+            margin-bottom em(60)
+
+        +lg-block()
+            flex-grow: 1
+            margin-right 3em
+            margin-bottom 0
 
     &__right
         background-color #2B2C3C
@@ -31,8 +62,43 @@
         color #fff
         padding em(30) em(36) em(40)
 
-    &__row--btn
-        text-align center
+        +md-block()
+            border-radius: em(20)
+            padding em(70) em(116) em(70) em(70)
+            display flex
+            flex-wrap: wrap
+
+        +lg-block()
+            max-width: em(465)
+            flex-grow: 1
+            flex-direction: column
+            padding em(60)
+            justify-content: center
+
+    &__row
+        &--btn
+            text-align center
+
+            +md-block()
+                margin-left auto
+                margin-right auto
+
+        &--btn-first
+            +md-block()
+                margin-bottom em(30)
+
+        &--total
+        &--square
+            flex-basis: 50%
+
+            +lg-block()
+                flex-basis auto
+
+        &--size-delivery
+            +lg-block()
+                display flex
+                justify-content: space-between
+
 
     &__size
 
@@ -41,26 +107,47 @@
         justify-content: space-between
         margin-bottom em(30)
 
+        +md-block()
+            margin-bottom em(50)
+
+        +lg-block()
+            min-width: em(650)
+            max-width: em(650)
+
         &__item
             flex 0 0 em(80)
+
+            +md-block()
+                flex-basis: em(186)
 
         &__title
             font-style: normal;
             font-weight: 600;
-            font-size: 10px;
+            font-size: em(10)
             line-height: 150%;
             text-align center
+
+            +md-block()
+                font-size 1em
+                text-align left
+                margin-bottom em(10)
 
         input[type="text"]
             font-style: normal;
             font-weight: 500;
             font-size: 1em
-            line-height: 150%;
+            line-height: em(30)
             text-align center
             color #000
             max-width: em(80)
             height em(30)
             padding 0
+
+            +md-block()
+                font-size em(30)
+                height (50/30em)
+                line-height (50/30em)
+                max-width: (196/30em)
         
         &__note
             flex-basis: 100%
@@ -71,10 +158,20 @@
             text-align center
             margin (10/8em) 0 0 0
 
+            +md-block()
+                font-size 1em
+                margin-top em(20)
+
     &__delivery
         display flex
         justify-content: space-between
         margin-bottom em(30)
+
+        +md-block()
+            margin-bottom em(50)
+
+        +lg-block()
+            flex-direction: column
 
         &__title
             font-style: normal;
@@ -86,22 +183,73 @@
             width (132/10em)
             cursor pointer
 
+            +md-block()
+                font-size 1em
+                width em(280)
+                padding 0 0 0 em(56)
+
             &:before
+            &:after
+                position absolute
                 content ''
                 display block
-                position absolute
-                border-radius: 50%
-                font-size (16/10em)
+                border-radius: 0%
+                transition: all 0.4s
+                font-size (16/10em)                
+                top em(4)
                 width em(20)
                 height em(20)
-                border 2px solid #BABABA
-                background-color #fff
                 left 0
-                top 0
+
+                +md-block()
+                    font-size 1em
+                    width em(30)
+                    height em(30)
+
+            &:before
+                background-color #fff
+                border: 2px solid #BABABA;
+            
+            &:after
+                z-index 1
+                background-repeat no-repeat
+                background-position 50% 50%
+                background-size em(10) auto
+                background-image embedurl('../img/content/calculator/check.svg')
+                opacity 0
+
+                +md-block()
+                    background-size em(15) auto
+
+            &.active
+            &:hover
+                &:before
+                    border-color #64A060
+                    background-color #64A060
+                &:after
+                    opacity 1
 
     &__mox
 
         padding-bottom em(10)
+
+        +md-block()
+            padding-bottom em(40)
+        
+        +lg-block()
+            padding-bottom em(100)
+
+        &__header
+            font-weight: 700;
+            font-size: em(12)
+            line-height: 150%;
+            text-align center
+            text-transform uppercase
+            margin-bottom (16/12em)
+
+            +md-block()
+                font-size em(18)
+                margin-bottom (20/18em)
 
         &__title
             font-style: normal;
@@ -110,9 +258,32 @@
             line-height: 150%;
             margin-bottom (14/10em)
 
+            +md-block()
+                font-size 1em
+                margin-bottom em(42)
+            
+            +lg-block()
+                text-align center
+                margin 0
+                padding em(26) 0
+
+        &__items
+
+            +lg-block()
+                display flex
+                justify-content: space-between
+
         &__item
             display flex
             margin-bottom em(20)
+
+            +md-block()
+                margin-bottom em(26)
+
+            +lg-block()
+                flex 0 0 em(310)
+                margin 0
+                flex-direction: column
 
         &__left
             width em(85)
@@ -120,12 +291,21 @@
             max-width em(85)
             margin 0 em(15) 0 0
 
+            +md-block()
+                width em(250)
+                min-width em(250)
+                max-width em(250)
+                margin 0 em(30) 0 0
+
         &__right
             flex-grow: 1
 
         &__inner
             position relative
             padding 0 em(10)
+
+            +lg-block()
+                padding 0 em(20) 0 em(10)
 
             &:before
                 position absolute
@@ -137,6 +317,10 @@
                 width 20px
                 border-radius: 2px
 
+                +md-block()
+                    height 6px
+                    top -3px
+
             &:after
                 position absolute
                 right 0
@@ -147,6 +331,9 @@
                 width 20px
                 border-radius: 2px
 
+                +md-block()
+                    height 3px
+
         &__img
             width em(85)
             height em(62)
@@ -155,6 +342,15 @@
             background-size cover
             border-radius: em(12)
             position relative
+
+            +md-block()
+                width em(250)
+                height em(130)
+                border-radius: em(20)
+            
+            +lg-block()
+                width em(310)
+                height em(130)
 
             &:before
             &:after
@@ -172,12 +368,23 @@
                 background-color #fff
                 border: 2px solid #BABABA;
                 bottom em(-10)
+
+                +md-block()
+                    width em(30)
+                    height em(30)
+                    border: 4px solid #BABABA;
+                    bottom em(-15)
             
             &:after
                 width em(10)
                 height em(10)
                 background-color #fff
                 bottom em(-5)
+
+                +md-block()
+                    width em(14)
+                    height em(14)
+                    bottom em(-7)
 
             &.active
                 &:before
@@ -186,11 +393,23 @@
                     background-color #64A060
 
             &--1
-                background-image url(../img/content/calculator/img-1-sm.png)            
+                background-image url(../img/content/calculator/img-1-sm.png)
+                +md-block()
+                    background-image url(../img/content/calculator/img-1-md.png)
+                +lg-block()
+                    background-image url(../img/content/calculator/img-1-lg.png)
             &--2
                 background-image url(../img/content/calculator/img-2-sm.png)
+                +md-block()
+                    background-image url(../img/content/calculator/img-2-md.png)
+                +lg-block()
+                    background-image url(../img/content/calculator/img-2-lg.png)
             &--3
                 background-image url(../img/content/calculator/img-3-sm.png)
+                +md-block()
+                    background-image url(../img/content/calculator/img-3-md.png)
+                +lg-block()
+                    background-image url(../img/content/calculator/img-3-lg.png)
 
         &__value
             font-weight: 600;
@@ -206,6 +425,9 @@
             border none
             height 2px
             background-color #BABABA
+
+            +md-block()
+                height 3px
         
         .ui-slider-horizontal .ui-slider-handle
             width em(20)
@@ -215,6 +437,11 @@
             border none
             top em(-10)
             outline: none
+
+            +md-block()
+                width em(30)
+                height em(30)
+                top em(-15)
 
             &.inactive
                 background-color #BABABA
@@ -234,15 +461,25 @@
                 transform: translateX(-50%)
                 margin 0 0 0 (10/10em)
 
+                +md-block()
+                    font-size em(18)
+
         .ui-slider-horizontal .ui-slider-range-min
             border none
             height 4px 
             background-color #64A060
             margin-top -2px
 
+            +md-block()
+                height 6px
+                margin-top -3px
+
     &__more
 
         padding: 0 0 em(40)
+
+        +lg-block()
+            padding 0
 
         &__header
             font-weight: 700;
@@ -252,54 +489,70 @@
             text-transform uppercase
             margin-bottom (24/12em)
 
+            +md-block()
+                font-size em(18)
+                margin-bottom (24/18em)
+
         &__items
-            // flex-wrap: wrap
-            // display flex
-            // justify-content: space-between
-            // align-items: flex-start
             columns 2
             margin-bottom em(20)
+
+            +md-block()
+                margin-bottom em(42)
+
+            +lg-block()
+                columns 3
 
         &__item
             font-weight: 500;
             font-size: em(10)
             line-height: 150%;
-            padding (5/10em) 0 (5/10em) (30/10em)
             position relative
             width (132/10em)
             min-width (132/10em)
             max-width (132/10em)
+            padding (5/10em) 0
+            padding-left 0
+            display flex
+            align-items: center
+            cursor pointer
+
+            +md-block()
+                font-size 1em
+                line-height em(30)
+                width auto
+                min-width 0
+                max-width none
+                padding em(5) 0
 
             &:before
-            &:after
-                position absolute
-                content ''
                 display block
-                border-radius: 50%
+                content ''
                 transition: all 0.4s
-                font-size (16/10em)                
-                top 50%
-                transform: translateY(-50%)
-
-            &:before
+                font-size (16/10em)
                 width em(20)
                 height em(20)
                 background-color #fff
                 border: 2px solid #BABABA;
-                left 0
-            
-            &:after
-                width em(10)
-                height em(10)
-                background-color #fff
-                left em(5)
-                z-index 1
+                background-repeat no-repeat
+                background-position 50% 50%
+                background-size em(10) auto
+                margin: 0 em(10) 0 0
+
+                +md-block()
+                    font-size 1em
+                    width em(30)
+                    height em(30)
 
             &.active
+            &:hover
                 &:before
                     border-color #64A060
-                &:after
                     background-color #64A060
+                    background-image embedurl('../img/content/calculator/check.svg')
+
+                    +md-block()
+                        background-size em(15) auto
         
         &__value
             font-weight: 600;
@@ -322,7 +575,10 @@
                 content ''
                 background-color #64A060
                 width 20px
-                border-radius: 2px
+                border-radius: 2px 0 0 2px
+
+                +md-block()
+                    height 6px
 
             &:after
                 position absolute
@@ -334,10 +590,16 @@
                 width 20px
                 border-radius: 2px
 
+                +md-block()
+                    height 3px
+
         .ui-slider-horizontal
             border none
             height 2px
             background-color #BABABA
+
+            +md-block()
+                height 3px
         
         .ui-slider-horizontal .ui-slider-handle
             width em(20)
@@ -347,6 +609,11 @@
             border none
             top em(-10)
             outline: none
+
+            +md-block()
+                width em(30)
+                height em(30)
+                top em(-15)
 
             &.inactive
                 background-color #BABABA
@@ -366,11 +633,17 @@
                 transform: translateX(-50%)
                 margin 0 0 0 (10/10em)
 
+                +md-block()
+                    font-size 18px
+
         .ui-slider-horizontal .ui-slider-range-min
             border none
             height 4px 
             background-color #64A060
             margin-top -2px
+
+            +md-block()
+                height 6px
 
     &__title
         font-weight: 600;
@@ -378,12 +651,20 @@
         line-height: 150%;
         margin-bottom (6/14em)
 
+        +md-block()
+            font-size em(24)
+            margin-bottom (10/24em)
+
     &__total
         font-weight: 700;
         font-size: em(30)
         line-height: 150%;
         color #64A060
         margin-bottom (16/30em)
+
+        +md-block()
+            font-size em(50)
+            margin-bottom (30/50em)
 
         &--white
             color #fff
@@ -396,3 +677,13 @@
         padding 0 0 0 (50/10em)
         background embedurl('../img/content/calculator/icon-1.svg') 0 (8/10em) no-repeat
         background-size (27/10em) auto
+
+        +md-block()
+            font-size 1em
+            width em(443)
+            padding 0 0 0 em(85)
+            margin 0 0 em(30) em(38)
+
+        +lg-block()
+            width auto
+            margin 0 0 em(50)
