@@ -1,23 +1,15 @@
+include menu-list
 mixin menu(data)
     .panel(class=data.class)
         .panel__inner
-            .panel__menu-btn
+            .panel__menu-btn.menu-btn--js
 
             .panel__logo
                 a(href="/")
                     include logo.svg
 
             ul.panel__menu
-                li
-                    a(href="#about") о компании
-                li
-                    a(href="#projects") наши проекты
-                li
-                    a(href="#panno") готовые панно
-                li
-                    a(href="#calculator") калькулятор стоимости
-                li
-                    a(href="#checklist") чек-лист по уходу
+                +menu-list()
 
             .panel__right
                 .panel__phone

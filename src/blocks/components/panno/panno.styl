@@ -2,6 +2,20 @@
 
     +md-block()
         padding-bottom em(100)
+    
+    +lg-block()
+        padding em(60) 0 em(100)
+        position relative
+
+        &:before
+            content ''
+            position absolute
+            right 0
+            top em(-52)
+            width em(410)
+            height em(600)
+            background url('../img/content/panno/list-lg.png') 0 0 no-repeat
+            background-size contain
 
     &__header
         font-style: normal;
@@ -18,9 +32,17 @@
             line-height: 80%;
             margin-bottom (50/60em)
 
+        +lg-block()
+            margin-bottom 1em
+            line-height 100%
+
     &__items
         display flex
         flex-wrap: wrap
+
+        +lg-block()
+            width em(1552)
+            margin 0 auto
 
     &__item
         width em(159)
@@ -35,8 +57,17 @@
             min-width em(380)
             margin-bottom em(8)
 
+        +lg-block()
+            width em(358)
+            max-width em(358)
+            min-width em(358)
+            margin 0 em(15) em(30)
+
         &:nth-child(odd)
             margin-right auto
+
+            +lg-block()
+                margin-right em(15)
 
         &__img
             display block
@@ -53,67 +84,90 @@
             right 0
             top 0
             bottom 0
-            padding em(26)
             display flex
             flex-direction: column
             justify-content: center
             align-items: center
-            opacity 0
-            transition all 0.4s
-            background-color rgba(#000,0.5)
 
-        &__title
+.panno__item--panno
+    .panno__item__inner
+        opacity 0
+        transition all 0.4s
+        background-color rgba(#000,0.5)
+        padding em(26)
+        
+    .panno__item__title
+        font-size 1em
+        line-height 120%
+        color #fff
+        font-style: normal;
+        text-align: center;
+        margin-bottom em(30)
+
+        +md-block()
+            font-size: em(30)
+            margin-bottom (50/30em)
+
+    .panno__item__btn-wrap
+        text-align center
+
+    .panno__item__btn
+        display: inline-flex
+        font-style: normal;
+        font-weight: 600;
+        font-size: em(8)
+        line-height: (12/8em)
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        min-height: 4em
+        min-width: 12em
+        justify-content: center
+        align-items: center
+        border-radius: 1.2em
+        background-color transparent
+        transition: all 0.4s
+        text-decoration none
+        border 2px solid #fff
+
+        +md-block()
             font-size 1em
-            line-height 120%
-            color #fff
-            font-style: normal;
-            text-align: center;
-            margin-bottom em(30)
+            min-width: em(250)
+            min-height: em(70)
 
-            +md-block()
-                font-size: em(30)
-                margin-bottom (50/30em)
-
-        &__btn-wrap
-            text-align center
-
-            +lg-block()
-                position absolute
-                left 0
-                top em(144)
-                left 0
-                right 0
-
-        &__btn
-            display: inline-flex
-            font-style: normal;
-            font-weight: 600;
-            font-size: em(8)
-            line-height: (12/8em)
-            align-items: center;
-            text-align: center;
-            text-transform: uppercase;
-            color: #FFFFFF;
-            min-height: 4em
-            min-width: 12em
-            justify-content: center
-            align-items: center
-            border-radius: 1.2em
-            background-color transparent
-            transition: all 0.4s
-            text-decoration none
-            border 2px solid #fff
-
-            +md-block()
-                font-size 1em
-                min-width: em(250)
-                min-height: em(70)
-
-            &:hover
-                background-color #64A060
-                border-color #64A060
-
-.panno__item
+        &:hover
+            background-color #64A060
+            border-color #64A060
     &:hover
         .panno__item__inner
             opacity 1
+
+.panno__item--fact
+    .panno__item__inner
+        padding em(12)
+
+        +md-block()
+            padding em(28)
+
+    .panno__item__title
+        font-style: normal;
+        font-weight: 800;
+        font-size: em(20)
+        line-height: 100%;
+        color: #FFFFFF;
+
+        +md-block()
+            font-size em(46)
+
+        a
+            text-decoration none
+            color: #FFFFFF;
+            text-shadow: 0 0 10px rgba(#000,0.3)
+
+.panno__item--lg36
+
+    .panno__item__title
+        
+        +lg-block()
+            font-size em(36)

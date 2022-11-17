@@ -1,0 +1,23 @@
+mixin panno(data)
+    .panno__item(class!=attributes.class)
+        .panno__item__img-wrap
+            picture.panno__item____picture.panno__item__picture--sm.picture--sm
+                source(type="image/webp", data-srcset=data.sm + ".webp")
+                source(type="image/jpg", data-srcset=data.sm + "." + data.img_format)
+                img(data-src=data.sm + "." + data.img_format, alt=data.alt).panno__item__img
+            picture.panno__item____picture.panno__item__picture--md.picture--md
+                source(type="image/webp", data-srcset=data.md + ".webp")
+                source(type="image/jpg", data-srcset=data.md + "." + data.img_format)
+                img(data-src=data.md + "." + data.img_format, alt=data.alt).panno__item__img
+            picture.panno__item____picture.panno__item__picture--lg.picture--lg
+                source(type="image/webp", data-srcset=data.lg + ".webp")
+                source(type="image/jpg", data-srcset=data.lg + "." + data.img_format)
+                img(data-src=data.lg + "." + data.img_format, alt=data.alt).panno__item__img
+
+        .panno__item__inner
+            if data.title
+                .panno__item__title
+                    a(href=data.link, target="_blank")!=data.title
+            if data.btn_title && data.btn_link
+                .panno__item__btn-wrap
+                    a.panno__item__btn(href=data.btn_link)!=data.btn_title

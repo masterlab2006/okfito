@@ -1,0 +1,28 @@
+include menu-list
+
+.panel-mobile
+    .panel-mobile__mask
+    .panel-mobile__content
+        .panel-mobile__content__inner
+
+            .panel-mobile__close-btn.panel-mobile__close-btn--js
+
+            .panel-mobile__logo
+                a(href="/")
+                    include logo.svg
+
+            .panel-mobile__phone
+                a(href="tel:+74995530845") +7 (499) 553 08 45
+
+            .panel-mobile__time 9:00-21:00
+                    
+            .panel-mobile__mess
+                a(href="#") 
+                    include call.svg
+                a(href="#") 
+                    include tg.svg
+
+            ul.panel-mobile__menu
+                +menu-list()
+
+            .panel-mobile__img
