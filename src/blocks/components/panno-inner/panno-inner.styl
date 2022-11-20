@@ -1,0 +1,331 @@
+.panno-inner--section
+    +lg-block()
+        margin 0 em(200)
+        position relative
+
+.panno-inner
+
+    +lg-block()
+        display flex
+
+    &__left
+        position relative
+
+        +md-block()
+            width em(600)
+            min-width em(600)
+            max-width em(600)
+            margin 0 auto
+        
+        +lg-block()
+            margin 0 em(130) 0 0
+
+    &__right
+        padding em(20)
+
+        +md-block()
+            padding em(50) em(84) 0
+
+        +lg-block()
+            padding em(30) 0 0 0
+            min-width: em(650)
+            width: em(650)
+            max-width: em(650)
+
+    &__slider
+
+        +lg-block()
+            margin-bottom em(30)
+
+        &__title
+            font-style: normal;
+            font-weight: 800;
+            font-size: em(40)
+            line-height: 100%;
+            color: #FFFFFF;
+            position absolute
+            left (24/40em)
+            right (24/40em)
+            top 50%
+            transform: translateY(-50%)
+
+            +md-block()
+                font-size em(78)
+                left (44/78em)
+                right (44/78em)
+
+            &--lg36
+                font-size em(32)
+                left (24/32em)
+                right (24/32em)
+
+                +md-block()
+                    font-size em(60)
+                    left (44/60em)
+                    right (44/60em)
+
+        img
+            display block
+            width 100%
+            max-width: 100%
+            height auto
+
+        &-prev
+        &-next
+            position absolute
+            top 50%
+            cursor pointer
+            z-index 1
+
+            svg
+                display block
+                height auto
+                width em(25)
+
+                +md-block()
+                    width em(40)
+
+                path
+                    fill #fff
+
+            &:hover
+                svg
+                    path
+                        fill #64A060
+                        transition: all 0.4s
+
+        &-prev
+            left 1em
+            transform: translateY(-50%)
+
+            +md-block()
+                left em(30)
+
+        &-next
+            right 1em
+            transform: translateY(-50%) rotate(180deg)
+
+            +md-block()
+                right em(30)
+
+    
+    &__thumbs
+
+        &-wrap
+            position absolute
+            z-index 2
+            top em(398)
+            left em(44)
+            right em(44)
+
+            +md-block()
+                top em(724)
+                left em(84)
+                right em(84)
+
+        img
+            display block
+            width em(36)
+            max-width: 100%
+            height auto
+            margin 0 auto
+            border 1px solid #fff
+            box-sizing: border-box
+            border-radius: 20%
+            cursor pointer
+            user-select: none
+
+            +md-block()
+                width em(70)
+
+        .swiper-slide-thumb-active
+            img
+                border-width: 2px
+
+                +md-block()
+                    border-width: 3px
+
+    &__header
+        font-style: normal;
+        font-weight: 400;
+        font-size: em(24)
+        line-height: 100%;
+        text-align: center;
+        color: #000000;
+        font-family $ff2
+        margin-bottom (15/24em)
+
+        +md-block()
+            font-size em(50)
+            margin-bottom (20/50em)
+
+        +lg-block()
+            margin-bottom (30/50em)
+
+    &__location
+        font-style: normal;
+        font-weight: 400;
+        font-size: em(10)
+        line-height: (16/10em)
+        text-align: center;
+        color: #000000;
+        vertical-align: middle
+        margin-bottom (14/10em)
+
+        +md-block()
+            font-size 1em
+            line-height 150%
+            margin-bottom em(20)
+
+        &:before
+            content ''
+            display inline-flex
+            font-size (16/10em)
+            width em(12)
+            height em(16)
+            background embedurl('../img/content/location.svg') 50% 50% no-repeat
+            background-size contain
+            margin 0 em(10) 0 0
+            vertical-align: middle
+
+            +md-block()
+                font-size 1em
+                width em(18)
+                height em(20)
+                margin-right em(20)
+    
+    &__params
+        background-color #F5F5F5
+        border-radius: em(14)
+        margin-bottom em(14)
+        display flex
+        flex-wrap: wrap
+
+        +md-block()
+            max-width: em(400)
+            margin 0 auto em(20)
+
+    &__param
+        
+        &-item
+            display flex
+            flex 1 0 50%
+            flex-direction: column
+            align-items: center
+            padding em(6)
+            position relative
+
+            +md-block()
+                padding em(14)
+
+            &:nth-child(even)
+                &:before
+                    content ''
+                    position absolute
+                    left 0
+                    top em(8)
+                    bottom em(8)
+                    border-left 1px solid #E4E4E4
+
+                    +md-block()
+                        top em(15)
+                        bottom em(15)
+
+        &-title
+            font-style: normal;
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 150%;
+            text-align: center;
+            color: #AFAFAF;
+            text-align center
+            margin-bottom (2/10em)
+
+            +md-block()
+                font-size: em(14)
+                margin-bottom (4/14em)
+
+        &-value
+            font-style: normal;
+            font-weight: 600;
+            font-size: em(14)
+            line-height: 150%;
+            text-align: center;
+            color: #000000;
+
+            +md-block()
+                font-size em(20)
+
+    &__price
+        font-style: normal;
+        font-weight: 700;
+        font-size: em(30)
+        line-height: 150%;
+        text-align: center;
+        color: #64A060;
+        margin-bottom 0.5em
+
+        +md-block()
+            font-size em(40)
+
+        +lg-block()
+            margin-bottom (30/40em)
+
+    &__btn-row
+        text-align center
+        margin-bottom em(30)
+
+        +md-block()
+            margin-bottom em(50)
+    
+    &__btn
+        min-width: 20em
+
+    &__desc
+        p
+            font-style: normal;
+            font-weight: 400;
+            font-size: em(12)
+            line-height: 150%;
+            color: #000000;
+            margin-bottom 1.5em
+
+            +md-block()
+                font-size em(18)
+
+        ul
+            margin 0 0 em(18) em(24)
+            list-style disc
+
+            +md-block()
+                margin 0 0 em(18) em(30)
+
+            li
+                font-style: normal;
+                font-weight: 400;
+                font-size: em(12)
+                line-height: 150%;
+                color: #000000;
+
+                +md-block()
+                    font-size em(18)
+
+    &__path-wrap
+        display none
+
+        +md-block()
+            display block
+            padding: 1em em(84)
+
+            +lg-block()
+                padding: em(26) 0
+
+    &__navigation
+        display none
+        position fixed
+        z-index 1
+        right em(200)
+        top em(180)
+
+        +lg-block()
+            display block

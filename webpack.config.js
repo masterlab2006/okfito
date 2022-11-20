@@ -4,6 +4,7 @@ const webpack = require("webpack");
 module.exports = {    
     entry: {
         main: "./src/js/index.js",
+        inner: "./src/js/inner.js",
     },
 
     output: {

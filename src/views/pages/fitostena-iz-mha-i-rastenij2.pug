@@ -1,0 +1,100 @@
+extends ../layouts/default
+include ../../blocks/components/panno-inner/panno-inner-temp
+
+block variables
+	- const title = "Фитостена из мха и растений"
+
+block styles
+	link(rel="stylesheet" href='./styles/inner.css')
+
+block content
+	include ../../blocks/components/menu/menu-mobile
+	include ../../blocks/components/menu/menu
+	+menu({
+		class:'panel-fix panel-fix--inner'
+	})
+	+panno-inner({
+		'title':'Фитостена из&nbsp;мха и&nbsp;растений',
+		'location':'Одинцовский район, д.Лохино, ул 2ая Советская, д.11',
+		'price':'125 000 ₽',
+		'params': [
+			{
+				'title':'Площадь',
+				'value':'3,76 пог. м',
+			},
+			{
+				'title':'Сроки',
+				'value':'1 месяц',
+			},
+		],
+		'desc':`
+			<p>Ваши проекты не&nbsp;впечатляют</p>
+			<p>Ни&nbsp;для кого не&nbsp;новость, что жители крупных передовых мегаполисов заметно отличаются от&nbsp;людей из&nbsp;небольших городов. Их&nbsp;сложнее удивить, они многое видели, пробовали, посещали красивые места, знакомились с&nbsp;различной культурой. Когда такому человеку хочется внести изюминку в&nbsp;интерьер&nbsp;&mdash; это становится непростой задачей. Стандартные идеи и&nbsp;типичные решения здесь не&nbsp;подойдут. Важно не&nbsp;перемудрить и&nbsp;произвести эффект &laquo;вау&raquo;. При этом модные тенденции, экологичность имеют немаловажное значение.</p>
+			<p>
+				В&nbsp;таком случае, как упростить себе задание? Обратиться к&nbsp;специалисту по&nbsp;озеленению помещений. Создание панно из&nbsp;живых растений&nbsp;&mdash; это всегда уникальная авторская работа. Подбор цветов, рассадка в&nbsp;картине обсуждается под конкретный объект. Фитокартину можно разместить в&nbsp;любой комнате. Она экономит место и&nbsp;не&nbsp;захламляет пространство, при том что в&nbsp;1&nbsp;м2&nbsp;растёт 30-35 кустиков растительности. К&nbsp;тому&nbsp;же, можно использовать для маскировки недостатков и&nbsp;недочётов в&nbsp;комнате.<br />
+				Вместе с&nbsp;командой специалистов мы&nbsp;открыты к&nbsp;сотрудничеству с&nbsp;дизайнерами и&nbsp;архитекторами. Со&nbsp;своей стороны обеспечиваем:
+			</p>
+			<ul>
+				<li>готовые 3D&nbsp;модели для использования в&nbsp;визуализациях для заказчиков;</li>
+				<li>скидку 10-15% на&nbsp;реализацию плана по&nbsp;озеленению интерьера;</li>
+				<li>образцы зелени для демонстрации;</li>
+				<li>высокое качество материалов;</li>
+				<li>своевременное и&nbsp;профессиональное выполнение обязательств.</li>
+			</ul>
+			<p>Считаю, что деятельность должна зажигать, приносить удовлетворение и&nbsp;гордость за&nbsp;результат. Это вдохновляет, позволяет бесконечно развиваться и&nbsp;совершенствоваться в&nbsp;выбранном направлении.</p>
+			<p>
+				На&nbsp;фото<br />
+				Фитостена: 2830*1330мм <br />
+				Площадь покрытия: 3,76 кв.м<br />
+				Материл: мох натуральный стабилизированный(кочки,пластовой), амарант, николи ,миг ферн, брум, тополь, папоротник(два вида), лаванда.
+			</p>
+			<p>
+				Цена фитостены: 125 000руб<br />
+				Монтаж, доставка&nbsp;&mdash; обсуждаемо индивидуально.
+			</p>
+		`,
+		'slider': {
+			'alt': 'Фитостена из мха и растений',
+			slider : [
+				{img: './img/content/inner/11/1.jpg',},
+				{img: './img/content/inner/11/2.jpg',},
+				{img: './img/content/inner/11/3.jpg',},
+				{img: './img/content/inner/11/4.jpg',},
+				{img: './img/content/inner/11/5.jpg',},
+				{img: './img/content/inner/11/6.jpg',},
+				{img: './img/content/inner/11/7.jpg',},
+				{img: './img/content/inner/11/8.jpg',},
+				{img: './img/content/inner/11/9.jpg',},
+				{img: './img/content/inner/11/10.jpg',},
+			],
+			thumbs : [
+				{img: './img/content/inner/11/thumbs/1.png',},
+				{img: './img/content/inner/11/thumbs/2.png',},
+				{img: './img/content/inner/11/thumbs/3.png',},
+				{img: './img/content/inner/11/thumbs/4.png',},
+				{img: './img/content/inner/11/thumbs/5.png',},
+				{img: './img/content/inner/11/thumbs/6.png',},
+				{img: './img/content/inner/11/thumbs/7.png',},
+				{img: './img/content/inner/11/thumbs/8.png',},
+				{img: './img/content/inner/11/thumbs/9.png',},
+				{img: './img/content/inner/11/thumbs/10.png',},
+			],
+		},
+	})
+	include ../../blocks/components/footer-inner/footer-inner
+		
+block scripts
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js")
+	script(src="https://code.jquery.com/ui/1.13.2/jquery-ui.js")
+	script(src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js")
+	//- script(src="https://cdn.jsdelivr.net/npm/luxon@3.0.4/build/global/luxon.min.js")
+
+	//- link(rel="stylesheet" href="./styles/swiper-bundle.min.css")
+	//- https://unpkg.com/swiper/swiper-bundle.min.js
+	//- script(src="https://static.faberlic.com/fl_bloom/js/swiper-bundle.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/gsap.min.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/ScrollTrigger.min.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/ScrollToPlugin.min.js")
+	//- script(src="https://static.faberlic.com/scripts/swiper-bundle.min.js")
+	script(src="./js/inner.js")

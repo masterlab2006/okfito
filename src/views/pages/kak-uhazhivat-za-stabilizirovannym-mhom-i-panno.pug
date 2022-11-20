@@ -1,0 +1,65 @@
+extends ../layouts/default
+include ../../blocks/components/panno-inner/panno-inner-temp
+
+block variables
+	- const title = "Как ухаживать за стабилизированным мхом и панно"
+
+block styles
+	link(rel="stylesheet" href='./styles/inner.css')
+
+block content
+	include ../../blocks/components/menu/menu-mobile
+	include ../../blocks/components/menu/menu
+	+menu({
+		class:'panel-fix panel-fix--inner'
+	})
+	+panno-inner({
+		'title':'Как ухаживать за стабилизированным мхом и панно',
+		'title_class':'hidden',
+		'desc':`
+			<p>Панно из&nbsp;натуральных стабилизированных растений подобно обычной картине не&nbsp;требует ухода. Наверняка вы&nbsp;уже не&nbsp;раз слышали подобные утверждения. Но&nbsp;так&nbsp;ли это? Давайте разбираться.</p>
+            <p>Всё начинается с&nbsp;понимания, что происходит с&nbsp;живой растительностью во&nbsp;время стабилизации. Из&nbsp;неё извлекается сок, вместо него заполняется специальным составом с&nbsp;глицерином. Жидкость содержит антистатическое вещество и&nbsp;останавливает любые биологические процессы. Зелень как&nbsp;бы ставится на&nbsp;паузу, больше не&nbsp;подвержено увяданию, пожелтению, высыханию или гниению.</p>
+            <p>Законсервированный мох к&nbsp;тому&nbsp;же получает новые свойства. Становится эластичным, мягким на&nbsp;ощупь. Можно смело размещать внутри помещений. Благодаря анабиозу:</p>
+            <p>
+                Привлекательный внешний вид остаётся надолго.<br />
+                Абсолютно безопасны для взрослых, детей и&nbsp;животных.<br />
+                Не&nbsp;вызывает аллергию.<br />
+                Это неподходящая среда для насекомых и&nbsp;паразитов.<br />
+                Не&nbsp;притягивают пылинки.<br />
+                Обязательно тестируются и&nbsp;сертифицируются перед продажей.<br />
+                Отсутствие запаха&nbsp;&mdash; ещё один приятный бонус.<br />
+                Сохраняются около 10&nbsp;лет.
+            </p>
+            <p>Если с&nbsp;течением времени вам захочется освежить фитокартину, обрабатываем особым раствором и&nbsp;возвращаем первоначальное состояние.</p>
+            <p>В&nbsp;отопительный сезон и&nbsp;при влажности в&nbsp;комнате менее&nbsp;20% рекомендуется использовать увлажнитель воздуха.</p>
+            <p>В&nbsp;случае явного оседания пыли можно самостоятельно обдуть феном при включенном приборе для увлажнения, протереть гладкие листья влажной салфеткой или&nbsp;же вызвать флориста для сервисного обслуживания. Специалист быстро и&nbsp;аккуратно приведёт картину в&nbsp;порядок.</p>
+		`,
+		'slider': {
+			'alt': 'Как ухаживать за стабилизированным мхом и панно',
+			slider : [
+				{
+					img: './img/content/inner/12/1.jpg',
+					title: 'Как ухаживать за стабилизи-рованным мхом и панно',
+                    title_class: 'panno-inner__slider__title--lg36',
+				},
+			],
+		},
+		'btn2': 'заказать панно',
+	})
+	include ../../blocks/components/footer-inner/footer-inner
+		
+block scripts
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js")
+	script(src="https://code.jquery.com/ui/1.13.2/jquery-ui.js")
+	script(src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js")
+	//- script(src="https://cdn.jsdelivr.net/npm/luxon@3.0.4/build/global/luxon.min.js")
+
+	//- link(rel="stylesheet" href="./styles/swiper-bundle.min.css")
+	//- https://unpkg.com/swiper/swiper-bundle.min.js
+	//- script(src="https://static.faberlic.com/fl_bloom/js/swiper-bundle.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/gsap.min.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/ScrollTrigger.min.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/ScrollToPlugin.min.js")
+	//- script(src="https://static.faberlic.com/scripts/swiper-bundle.min.js")
+	script(src="./js/inner.js")

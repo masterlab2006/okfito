@@ -3,6 +3,9 @@ extends ../layouts/default
 block variables
 	- const title = "Okfito"
 
+block styles
+	link(rel="stylesheet" href='./styles/main.css')
+
 block content
 	include ../../blocks/components/menu/menu-mobile
 	include ../../blocks/components/menu/menu
@@ -11,7 +14,7 @@ block content
 	})
 	include ../../blocks/components/intro/intro	
 	+menu({
-		class:'panel-fix'
+		class:'panel-fix panel-fix--main'
 	})
 	include ../../blocks/components/about/about	
 	include ../../blocks/components/slider/slider

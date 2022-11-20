@@ -1,16 +1,18 @@
 let introSection = document.querySelector('.section--intro');
-let introSectionHeight = introSection.getBoundingClientRect().height;
-let panel = document.querySelector('.panel-fix');
+let introSectionHeight = introSection ? introSection.getBoundingClientRect().height : 0;
+let panel = document.querySelector('.panel-fix--main');
 let panelShowClass = 'panel-fix--show';
-$(window).on('scroll', function(){
-    let windowY = this.scrollY;
-    if( windowY >= introSectionHeight ){
-        panel.classList.add(panelShowClass);
-    }
-    else{
-        panel.classList.remove(panelShowClass);
-    }
-}).trigger('scroll');
+if( panel ){
+    $(window).on('scroll', function(){
+        let windowY = this.scrollY;
+        if( windowY >= introSectionHeight ){
+            panel.classList.add(panelShowClass);
+        }
+        else{
+            panel.classList.remove(panelShowClass);
+        }
+    }).trigger('scroll');
+}
 
 let body = document.querySelector('body');
 let bodyClass = 'noscroll';
@@ -31,15 +33,29 @@ $(document).on('click', function(e){
     };
 });
 
-$('a[href^="#scrollto"]').bind('click.smoothscroll',function (e) {
+$('a[href^="/#scrollto"]').bind('click.smoothscroll',function (e) {
     var target = this.hash,
         $target = $(target);
-
-    $('html, body').stop().animate( {
-        'scrollTop': $target.offset().top - panel.getBoundingClientRect().height
-    }, 900, 'swing', function () {
-        $('.panel-mobile__close-btn--js').trigger('click');
-        window.location.hash = target;
-    } );
+    if( $target.length ){
+        $('html, body').stop().animate( {
+            'scrollTop': $target.offset().top - panel.getBoundingClientRect().height
+        }, 900, 'swing', function () {
+            $('.panel-mobile__close-btn--js').trigger('click');
+            window.location.hash = target;
+        } );
+    }
 });
 
+$(function(){
+    setTimeout(function(){
+        var hash = location.hash;
+        var $target = $(hash);
+        if( $target.length ){
+            $('html, body').stop().animate( {
+                'scrollTop': $target.offset().top - panel.getBoundingClientRect().height
+            }, 900, 'swing', function () {
+                $('.panel-mobile__close-btn--js').trigger('click');
+            } );
+        }
+    }, 500)
+});

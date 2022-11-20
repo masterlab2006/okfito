@@ -1,0 +1,93 @@
+extends ../layouts/default
+include ../../blocks/components/panno-inner/panno-inner-temp
+
+block variables
+	- const title = "Панно с подсветкой и логотипом"
+
+block styles
+	link(rel="stylesheet" href='./styles/inner.css')
+
+block content
+	include ../../blocks/components/menu/menu-mobile
+	include ../../blocks/components/menu/menu
+	+menu({
+		class:'panel-fix panel-fix--inner'
+	})
+	+panno-inner({
+		'title':'Панно с&nbsp;подсветкой и&nbsp;логотипом',
+		'location':'Пресненская набережная, 12',
+		'price':'239 334 ₽',
+		'params': [
+			{
+				'title':'Площадь',
+				'value':'4,9 м²',
+			},
+			{
+				'title':'Сроки',
+				'value':'1 месяц',
+			},
+		],
+		'desc':`
+			<p>Недостаток связи с&nbsp;природой приводит к&nbsp;унынию и&nbsp;увеличивает стресс. После рабочего дня хочется оказаться подальше от&nbsp;шумного бегущего города... в&nbsp;лесу на&nbsp;зелёной опушке, на&nbsp;берегу океана с&nbsp;уютным шепотом волн, в&nbsp;просторном цветущем поле...</p>
+            <p>Есть способ перенестись в&nbsp;зону отдыха быстрее&nbsp;&mdash; панно из&nbsp;стабилизированных растений. Вдохнет жизнь в&nbsp;любое помещение, подарит чувство безопасности и&nbsp;первозданной красоты.</p>
+            <p>Картину можно собрать из&nbsp;одного вида мха, скомбинировать 2-3 (пластовой, ягель, кочки) между собой или с&nbsp;растениями (папоротник, амарант, питтоспорум, пендула, эвкалипт).</p>
+            <p>Проект зелёного панно обсуждается с&nbsp;дизайнером. После бесплатной консультации готовим визуализацию 2-3-х макетов для дома. 3D&nbsp;модели облегчают выбор панно, которое идеально впишется в&nbsp;интерьер и&nbsp;украсит комнату.</p>
+            <p>
+                Стоимость<br />
+                На&nbsp;фото<br />
+                Панно 2020*2420&nbsp;мм<br />
+                Площадь покрытия: 4,9 кв.м<br />
+                Материл: мох натуральный стабилизированный(кочки,пластовой) туя,николи ,миг ферн, брум , тополь, папоротник.            
+            </p>
+            <p>Цена инсталляции: 122&nbsp;500 руб</p>
+            <p>
+                Основа и&nbsp;объёмная рамка ПВХ(3мм) с&nbsp;накатанной плёнки, светодиодная подсветка с&nbsp;выключателем.<br />
+                Цена рамки : 34 124руб
+            </p>
+            <p>Объёмные световые элементы чёрного матового цвета, на&nbsp;подложке. Контурная подсветка. Материал- нержавеющая сталь.</p>
+            <p>
+                Цена логотипа: 65 710руб<br />
+                Монтаж: 12 000руб<br />
+                Доставка: 5000<br />
+                Стоимость общая : 239 334руб.<br />
+            </p>
+		`,
+		'slider': {
+			'alt': 'Панно с подсветкой и логотипом',
+			slider : [
+				{img: './img/content/inner/7/1.jpg',},
+				{img: './img/content/inner/7/2.jpg',},
+				{img: './img/content/inner/7/3.jpg',},
+				{img: './img/content/inner/7/4.jpg',},
+				{img: './img/content/inner/7/5.jpg',},
+				{img: './img/content/inner/7/6.jpg',},
+				{img: './img/content/inner/7/7.jpg',},
+			],
+			thumbs : [
+				{img: './img/content/inner/7/thumbs/1.png',},
+				{img: './img/content/inner/7/thumbs/2.png',},
+				{img: './img/content/inner/7/thumbs/3.png',},
+				{img: './img/content/inner/7/thumbs/4.png',},
+				{img: './img/content/inner/7/thumbs/5.png',},
+				{img: './img/content/inner/7/thumbs/6.png',},
+				{img: './img/content/inner/7/thumbs/7.png',},
+			],
+		},
+	})
+	include ../../blocks/components/footer-inner/footer-inner
+		
+block scripts
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js")
+	script(src="https://code.jquery.com/ui/1.13.2/jquery-ui.js")
+	script(src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js")
+	//- script(src="https://cdn.jsdelivr.net/npm/luxon@3.0.4/build/global/luxon.min.js")
+
+	//- link(rel="stylesheet" href="./styles/swiper-bundle.min.css")
+	//- https://unpkg.com/swiper/swiper-bundle.min.js
+	//- script(src="https://static.faberlic.com/fl_bloom/js/swiper-bundle.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/gsap.min.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/ScrollTrigger.min.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/ScrollToPlugin.min.js")
+	//- script(src="https://static.faberlic.com/scripts/swiper-bundle.min.js")
+	script(src="./js/inner.js")

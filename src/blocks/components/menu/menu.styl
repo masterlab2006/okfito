@@ -64,6 +64,9 @@
             display block
             margin 0
 
+        a
+            outline: none
+
         svg
             display block
             height auto
@@ -157,6 +160,7 @@
                 text-transform uppercase
                 position relative
                 padding-bottom em(12)
+                outline: none
             
                 &:after
                     opacity 0
@@ -180,9 +184,15 @@
     background-color #fff
     top 0
     border-bottom 1px solid #DCDCDC
-    opacity 0
-    transition: all 0.4s
-    transform translate3d(0, -100%, 0)
+
+    &--main
+        opacity 0
+        transition: all 0.4s
+        transform translate3d(0, -100%, 0)
+
+    &--inner
+        opacity 1
+        transform translate3d(0, 0, 0)
 
     &--show
         transform translate3d(0, 0, 0)
@@ -204,6 +214,10 @@
     .panel__logo
         +lg-block()
             display none
+
+        a
+            outline: none
+
         svg
             path
                 fill #64A060

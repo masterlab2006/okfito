@@ -1,0 +1,21 @@
+mixin panno-inner-slider(data)
+    .panno-inner__slider.swiper
+        .swiper-wrapper
+            each item, index in data.slider
+                .swiper-slide 
+                    img(src=item.img, alt=data.alt)
+                    if item.title
+                        .panno-inner__slider__title(class=item.title_class)!=item.title
+        if data.slider.length > 1
+            .panno-inner__slider-prev
+                include arr-slider.svg
+            .panno-inner__slider-next
+                include arr-slider.svg
+
+    if data.thumbs
+        .panno-inner__thumbs-wrap
+            .panno-inner__thumbs.swiper
+                .swiper-wrapper
+                    each item, index in data.thumbs
+                        .swiper-slide 
+                            img(src=item.img, alt=data.alt)

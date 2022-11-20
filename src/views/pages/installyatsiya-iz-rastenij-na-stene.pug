@@ -1,0 +1,90 @@
+extends ../layouts/default
+include ../../blocks/components/panno-inner/panno-inner-temp
+
+block variables
+	- const title = "Инсталляция из растений на стене"
+
+block styles
+	link(rel="stylesheet" href='./styles/inner.css')
+
+block content
+	include ../../blocks/components/menu/menu-mobile
+	include ../../blocks/components/menu/menu
+	+menu({
+		class:'panel-fix panel-fix--inner'
+	})
+	+panno-inner({
+		'title':'Инсталляция из&nbsp;растений на&nbsp;стене',
+		'location':'Проспект мира 188бк1',
+		'price':'40 000 ₽',
+		'params': [
+			{
+				'title':'Площадь',
+				'value':'1,5 пог. м',
+			},
+			{
+				'title':'Сроки',
+				'value':'1 месяц',
+			},
+		],
+		'desc':`
+			<p>Не&nbsp;знаете чем удивить, порадовать близких или хороших знакомых? А&nbsp;может хотите отличиться и&nbsp;быть в&nbsp;тренде? Фитопанно&nbsp;&mdash; оригинальный подарок, который восхищает и&nbsp;запоминается надолго. Роскошная зелень не&nbsp;просто красиво висит на&nbsp;стене, но&nbsp;и:</p>
+            <ul>
+                <li>увлажняет, очищает воздух;</li>
+                <li>формирует благоприятную обстановку;</li>
+                <li>убирает негативные эмоции;</li>
+                <li>экономит пространство;</li>
+                <li>маскирует дефекты и&nbsp;дополняет помещение;</li>
+                <li>поглощает шум;</li>
+                <li>живёт долго и&nbsp;без ухода;</li>
+                <li>производит эффект &laquo;вау!&raquo;.</li>
+            </ul>
+            <p>
+                С&nbsp;любовью и&nbsp;профессионализмом собираю зелёные панно вместе с&nbsp;командой уже 7&nbsp;лет. В&nbsp;начале проекта делаем визуализацию 3-х макетов в&nbsp;вашем интерьере. Показываем примеры работ и&nbsp;на&nbsp;основе понравившихся вариантов создаём уникальные композиции.
+            </p>
+            <p>
+                На&nbsp;фото<br />
+                Инсталляция на&nbsp;камне : 1,5 п.м (погонных метров)<br />
+                Материл: мох натуральный стабилизированный пластовой, амарант, аспарагус, пендула, николи,тики, тополь, папоротник, бамбук.
+            </p>
+            <p>Цена с&nbsp;декорированием на&nbsp;объекте: 40 000руб</p>
+		`,
+		'slider': {
+			'alt': 'Инсталляция из растений на стене',
+			slider : [
+				{img: './img/content/inner/10/1.jpg',},
+				{img: './img/content/inner/10/2.jpg',},
+				{img: './img/content/inner/10/3.jpg',},
+				{img: './img/content/inner/10/4.jpg',},
+				{img: './img/content/inner/10/5.jpg',},
+				{img: './img/content/inner/10/6.jpg',},
+				{img: './img/content/inner/10/7.jpg',},
+			],
+			thumbs : [
+				{img: './img/content/inner/10/thumbs/1.png',},
+				{img: './img/content/inner/10/thumbs/2.png',},
+				{img: './img/content/inner/10/thumbs/3.png',},
+				{img: './img/content/inner/10/thumbs/4.png',},
+				{img: './img/content/inner/10/thumbs/5.png',},
+				{img: './img/content/inner/10/thumbs/6.png',},
+				{img: './img/content/inner/10/thumbs/7.png',},
+			],
+		},
+	})
+	include ../../blocks/components/footer-inner/footer-inner
+		
+block scripts
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js")
+	script(src="https://code.jquery.com/ui/1.13.2/jquery-ui.js")
+	script(src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js")
+	//- script(src="https://cdn.jsdelivr.net/npm/luxon@3.0.4/build/global/luxon.min.js")
+
+	//- link(rel="stylesheet" href="./styles/swiper-bundle.min.css")
+	//- https://unpkg.com/swiper/swiper-bundle.min.js
+	//- script(src="https://static.faberlic.com/fl_bloom/js/swiper-bundle.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/gsap.min.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/ScrollTrigger.min.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/ScrollToPlugin.min.js")
+	//- script(src="https://static.faberlic.com/scripts/swiper-bundle.min.js")
+	script(src="./js/inner.js")

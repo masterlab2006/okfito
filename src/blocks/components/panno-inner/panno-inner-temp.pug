@@ -1,0 +1,44 @@
+include panno-inner-slider-temp
+mixin panno-inner(data)
+    section.panno-inner--section
+        .panno-inner__navigation
+            include ../navigation/navigation
+        .panno-inner__path-wrap
+            .path 
+                a.path__item.path__link(href="/") Главная
+                span.path__item.path__delimeter >
+                span.path__item.path__title!=data.title
+        .panno-inner
+            .panno-inner__left
+                +panno-inner-slider(data.slider)
+                if data.location && data.params
+                    div.lg-visible
+                        if data.location
+                            .panno-inner__location!=data.location
+                        if data.params.length
+                            .panno-inner__params
+                                each item, index in data.params
+                                    .panno-inner__param-item
+                                        .panno-inner__param-title!=item.title
+                                        .panno-inner__param-value!=item.value
+
+            .panno-inner__right
+                h1.panno-inner__header(class=data.title_class)!=data.title
+                if data.location
+                    .panno-inner__location.lg-hidden!=data.location
+                if data.params
+                    .panno-inner__params.lg-hidden
+                        each item, index in data.params
+                            .panno-inner__param-item
+                                .panno-inner__param-title!=item.title
+                                .panno-inner__param-value!=item.value
+                if data.price
+                    .panno-inner__price!=data.price
+                    .panno-inner__btn-row
+                        a.btn.panno-inner__btn(href="#") хочу такое панно
+                if data.desc
+                    .panno-inner__desc!=data.desc
+
+                if data.btn2
+                    .panno-inner__btn-row
+                        a.btn.panno-inner__btn(href="#") заказать панно

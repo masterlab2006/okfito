@@ -1,0 +1,90 @@
+extends ../layouts/default
+include ../../blocks/components/panno-inner/panno-inner-temp
+
+block variables
+	- const title = "Вертикальное озеленение"
+
+block styles
+	link(rel="stylesheet" href='./styles/inner.css')
+
+block content
+	include ../../blocks/components/menu/menu-mobile
+	include ../../blocks/components/menu/menu
+	+menu({
+		class:'panel-fix panel-fix--inner'
+	})
+	+panno-inner({
+		'title':'Вертикальное озеленение',
+		'location':'г.Красногорск ул. Парковая 8',
+		'price':'40 500 ₽',
+		'params': [
+			{
+				'title':'Площадь',
+				'value':'0,9 м²',
+			},
+			{
+				'title':'Сроки',
+				'value':'1 месяц',
+			},
+		],
+		'desc':`
+			<p>Вертикальное озеленение&nbsp;&mdash; чудесный способ рационально использовать пространство, создать неповторимую естественную красоту, увеличить уровень кислорода и&nbsp;свежести.</p>
+			<p>Благодаря французскому ботанику и&nbsp;дизайнеру Патрику Бланка началось активное развитие направления.</p>
+			<p>Фитостена, панно вмещают 35-40 растений на&nbsp;1&nbsp;кв.&nbsp;м! Это компактно, полезно и&nbsp;эффектно.</p>
+			<p>Озеленение бывает:</p>
+			<ul>
+				<li>Естественным (используется живая растительность).</li>
+				<li>Флористическим (из&nbsp;стабилизированных растений).</li>
+				<li>Зелёные насаждения используются в&nbsp;домах, офисах, террасах, фотозонах.</li>
+			</ul>
+			<p>Мох&nbsp;&mdash; отличный вариант для вертикальных панелей. Низкорослый, компактный, не&nbsp;загружает стену. А&nbsp;еще у&nbsp;него нет корней, влагу получает из&nbsp;воздуха, не&nbsp;нуждается в&nbsp;грунте. Пластовой, кочками, ягель&nbsp;&mdash; разная структура и&nbsp;цвета. Для меня плоский похож на&nbsp;пазл. Им&nbsp;интересно и&nbsp;захватывающе собирать единую картину.</p>
+			<p>Важно правильно подобрать растительность, чтобы композиция радовала стойким привлекательным внешним видом. Здесь нужен опыт и&nbsp;знания.</p>
+
+			<p>На&nbsp;фото<br >
+			Панно 1290*700мм <br >
+			Материл: мох натуральный стабилизированный(кочки,пластовой) папирус, николи ,миг ферн, брум , тополь декоративные ветви,соцветия(два вида)</p>
+			<p>
+			Цена изделия: 40 500руб.<br >
+			Рамка со&nbsp;светодиодной подсветкой: 35 000руб<br >
+			Монтаж, доставка&nbsp;&mdash; обсуждаемо индивидуально.
+			</p>
+		`,
+		'slider': {
+			'alt': 'Вертикальное озеленение',
+			slider : [
+				{img: './img/content/inner/2/1.jpg',},
+				{img: './img/content/inner/2/2.jpg',},
+				{img: './img/content/inner/2/3.jpg',},
+				{img: './img/content/inner/2/4.jpg',},
+				{img: './img/content/inner/2/5.jpg',},
+				{img: './img/content/inner/2/6.jpg',},
+				{img: './img/content/inner/2/7.jpg',},
+			],
+			thumbs : [
+				{img: './img/content/inner/2/thumbs/1.png',},
+				{img: './img/content/inner/2/thumbs/2.png',},
+				{img: './img/content/inner/2/thumbs/3.png',},
+				{img: './img/content/inner/2/thumbs/4.png',},
+				{img: './img/content/inner/2/thumbs/5.png',},
+				{img: './img/content/inner/2/thumbs/6.png',},
+				{img: './img/content/inner/2/thumbs/7.png',},
+			],
+		},
+	})
+	include ../../blocks/components/footer-inner/footer-inner
+		
+block scripts
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js")
+	script(src="https://code.jquery.com/ui/1.13.2/jquery-ui.js")
+	script(src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js")
+	//- script(src="https://cdn.jsdelivr.net/npm/luxon@3.0.4/build/global/luxon.min.js")
+
+	//- link(rel="stylesheet" href="./styles/swiper-bundle.min.css")
+	//- https://unpkg.com/swiper/swiper-bundle.min.js
+	//- script(src="https://static.faberlic.com/fl_bloom/js/swiper-bundle.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/gsap.min.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/ScrollTrigger.min.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/ScrollToPlugin.min.js")
+	//- script(src="https://static.faberlic.com/scripts/swiper-bundle.min.js")
+	script(src="./js/inner.js")

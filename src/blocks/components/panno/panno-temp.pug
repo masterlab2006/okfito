@@ -20,4 +20,4 @@ mixin panno(data)
                     a(href=data.link, target="_blank")!=data.title
             if data.btn_title && data.btn_link
                 .panno__item__btn-wrap
-                    a.panno__item__btn(href=data.btn_link)!=data.btn_title
+                    a.panno__item__btn(href=data.btn_link, target="_blank")!=data.btn_title

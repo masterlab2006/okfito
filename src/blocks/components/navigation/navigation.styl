@@ -1,0 +1,30 @@
+.navigation
+    &__prev
+    &__next
+        display block
+        width em(70)
+        height em(70)
+        border 2px solid #BABABA
+        border-radius: 50%
+        display flex
+        align-items: center
+        justify-content: center
+        transition: all 0.4s
+        background-color rgba(#fff, 0.95)
+
+        &:hover
+            background-color #64A060
+            border-color #64A060
+
+            path
+                fill #fff
+
+        svg
+            display block
+            height auto
+            width em(30)
+
+
+    &__next
+        transform: rotate(180deg)
+        margin-top em(20)

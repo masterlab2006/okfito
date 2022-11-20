@@ -1,0 +1,85 @@
+extends ../layouts/default
+include ../../blocks/components/panno-inner/panno-inner-temp
+
+block variables
+	- const title = "Озеленение ванной комнаты"
+
+block styles
+	link(rel="stylesheet" href='./styles/inner.css')
+
+block content
+	include ../../blocks/components/menu/menu-mobile
+	include ../../blocks/components/menu/menu
+	+menu({
+		class:'panel-fix panel-fix--inner'
+	})
+	+panno-inner({
+		'title':'Озеленение ванной комнаты',
+		'location':'ул. Профсоюзная до 68 к3',
+		'price':'63 840 ₽',
+		'params': [
+			{
+				'title':'Площадь',
+				'value':'1,68 м²',
+			},
+			{
+				'title':'Сроки',
+				'value':'1 месяц',
+			},
+		],
+		'desc':`
+			<p>Ежедневные повторяющиеся дела и&nbsp;обязанности загоняют в&nbsp;круг. Лишают возможности сделать передышку, обратиться к&nbsp;себе. Через время приходит апатия и&nbsp;сковывает по&nbsp;рукам и&nbsp;ногам. Именно поэтому важно обращаться к&nbsp;истокам.</p>
+            <p>Человек инстинктивно тянется к&nbsp;природе. Солнечный свет, чистая вода, деревья, растения, цветы воздействуют на&nbsp;эмоциональное и&nbsp;физическое состояние организма.</p>
+            <p>С&nbsp;развитием цифровых технологий ускорился ритм жизни. Нас как-будто вытолкнули из&nbsp;уютного оазиса в&nbsp;жаркую жестокую пустыню. Комнатные растения, водопад, камин, мебель из&nbsp;дерева, камни, декор из&nbsp;натуральных материалов, домашние питомцы создают связь с&nbsp;природой.</p>
+            <p>Помогают переключиться, насладиться естественностью, подпитаться энергией леса у&nbsp;себя дома. Зелёные растения создают комфортную атмосферу, очищают, увлажняют воздух, поддерживают здоровый микроклимат.</p>
+            <p>Даже небольшое добавление природных материалов положительно влияет на&nbsp;психоэмоциональное состояние.</p>
+            <p>
+                На&nbsp;фото<br />
+                Панно 2800*600мм<br />
+                Материл: мох натуральный стабилизированный(кочки,пластовой) амарант, туя,николи ,миг ферн, брум , тополь декоративные ветви, папоротник (два вида)
+            </p>
+            <p>
+                Цена изделия: 63 840руб.<br />
+                Контурная рамка: 23 000руб<br />
+                Монтаж, доставка&nbsp;&mdash; обсуждаемо индивидуально.
+            </p>
+		`,
+		'slider': {
+			'alt': 'Озеленение ванной комнаты',
+			slider : [
+				{img: './img/content/inner/5/1.jpg',},
+				{img: './img/content/inner/5/2.jpg',},
+				{img: './img/content/inner/5/3.jpg',},
+				{img: './img/content/inner/5/4.jpg',},
+				{img: './img/content/inner/5/5.jpg',},
+				{img: './img/content/inner/5/6.jpg',},
+				{img: './img/content/inner/5/7.jpg',},
+			],
+			thumbs : [
+				{img: './img/content/inner/5/thumbs/1.png',},
+				{img: './img/content/inner/5/thumbs/2.png',},
+				{img: './img/content/inner/5/thumbs/3.png',},
+				{img: './img/content/inner/5/thumbs/4.png',},
+				{img: './img/content/inner/5/thumbs/5.png',},
+				{img: './img/content/inner/5/thumbs/6.png',},
+				{img: './img/content/inner/5/thumbs/7.png',},
+			],
+		},
+	})
+	include ../../blocks/components/footer-inner/footer-inner
+		
+block scripts
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js")
+	script(src="https://code.jquery.com/ui/1.13.2/jquery-ui.js")
+	script(src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js")
+	//- script(src="https://cdn.jsdelivr.net/npm/luxon@3.0.4/build/global/luxon.min.js")
+
+	//- link(rel="stylesheet" href="./styles/swiper-bundle.min.css")
+	//- https://unpkg.com/swiper/swiper-bundle.min.js
+	//- script(src="https://static.faberlic.com/fl_bloom/js/swiper-bundle.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/gsap.min.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/ScrollTrigger.min.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/ScrollToPlugin.min.js")
+	//- script(src="https://static.faberlic.com/scripts/swiper-bundle.min.js")
+	script(src="./js/inner.js")

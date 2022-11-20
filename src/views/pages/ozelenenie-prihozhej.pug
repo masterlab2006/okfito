@@ -1,0 +1,86 @@
+extends ../layouts/default
+include ../../blocks/components/panno-inner/panno-inner-temp
+
+block variables
+	- const title = "Озеленение прихожей"
+
+block styles
+	link(rel="stylesheet" href='./styles/inner.css')
+
+block content
+	include ../../blocks/components/menu/menu-mobile
+	include ../../blocks/components/menu/menu
+	+menu({
+		class:'panel-fix panel-fix--inner'
+	})
+	+panno-inner({
+		'title':'Озеленение прихожей',
+		'location':'Проспект мира 188бк1',
+		'price':'94 000 ₽',
+		'params': [
+			{
+				'title':'Площадь',
+				'value':'3 м²',
+			},
+			{
+				'title':'Сроки',
+				'value':'1 месяц',
+			},
+		],
+		'desc':`
+			<p>
+                Скучный интерьер<br />
+                Кажется, что всё уже было?<br />
+                Надоели однотипные проекты?<br />
+                Хочется придать живости и&nbsp;уникальности комнате?
+            </p>
+            <p>Когда долго работаешь в&nbsp;одном направлении, со&nbsp;временем &laquo;замыливается&raquo; глаз и&nbsp;становится сложнее создавать запоминающийся дизайн. Дом&nbsp;&mdash; это про личное, душевное. Здесь важно отразить характер помещения и&nbsp;делать его особенным. Привычные материалы не&nbsp;дают желанный эффект.</p>
+            <p>Есть отличная идея, как внести изюминку в&nbsp;интерьер&nbsp;&mdash; панно из&nbsp;стабилизированных растений. У&nbsp;меня в&nbsp;наличии всего несколько образцовых картин, потому что каждая разрабатывается под конкретного заказчика и&nbsp;отражает его индивидуальность. Использую натуральную растительность с&nbsp;сертификатами качества.</p>
+            <p>С&nbsp;удовольствием сотрудничаю с&nbsp;дизайнерами по&nbsp;всем видам озеленения пространства. За&nbsp;плечами десятки эксклюзивных конструкций под заданный размер и&nbsp;пожелания. На&nbsp;выходе получите единичный экземпляр, сделанный профессионально и&nbsp;с&nbsp;любовью.</p>
+            <p>Панно может быть только их&nbsp;мха (ягель, кочки, пластовой) или с&nbsp;добавлением папоротников (5&nbsp;разновидностей), амаранта (3&nbsp;цвета), тики, туи, питтоспорума, тополя, Пендулы, эвкалипта Николи. Возможно вставить веточки, гальку как дополнительный декор.</p>
+            <p>Начинаем с&nbsp;детального обсуждения предпочтений. Показываю примеры работ, и&nbsp;клиент выбирает какой вариант ему ближе. После этого разрабатываю 2-3 персональных макета и&nbsp;внедряю их&nbsp;в&nbsp;обстановку с&nbsp;помощью 3D&nbsp;визуализации. Так вырисовывается чёткая картинка. После согласования необходимых деталей, приступаю к&nbsp;сбору заказа.</p>
+            <p>
+                На&nbsp;фото <br />
+                Инсталляция между декоративными сотами: 3&nbsp;кв.мМатерил: мох натуральный стабилизированный(кочки,пластовой), пендула, николи, тики, брум, тополь, диосми белый, папоротник, бамбук.
+            </p>
+            <p>Цена с&nbsp;декорированием на&nbsp;объекте: 94 000руб</p>
+		`,
+		'slider': {
+			'alt': 'Озеленение прихожей',
+			slider : [
+				{img: './img/content/inner/9/1.jpg',},
+				{img: './img/content/inner/9/2.jpg',},
+				{img: './img/content/inner/9/3.jpg',},
+				{img: './img/content/inner/9/4.jpg',},
+				{img: './img/content/inner/9/5.jpg',},
+				{img: './img/content/inner/9/6.jpg',},
+				{img: './img/content/inner/9/7.jpg',},
+			],
+			thumbs : [
+				{img: './img/content/inner/9/thumbs/1.png',},
+				{img: './img/content/inner/9/thumbs/2.png',},
+				{img: './img/content/inner/9/thumbs/3.png',},
+				{img: './img/content/inner/9/thumbs/4.png',},
+				{img: './img/content/inner/9/thumbs/5.png',},
+				{img: './img/content/inner/9/thumbs/6.png',},
+				{img: './img/content/inner/9/thumbs/7.png',},
+			],
+		},
+	})
+	include ../../blocks/components/footer-inner/footer-inner
+		
+block scripts
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js")
+	script(src="https://code.jquery.com/ui/1.13.2/jquery-ui.js")
+	script(src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js")
+	//- script(src="https://cdn.jsdelivr.net/npm/luxon@3.0.4/build/global/luxon.min.js")
+
+	//- link(rel="stylesheet" href="./styles/swiper-bundle.min.css")
+	//- https://unpkg.com/swiper/swiper-bundle.min.js
+	//- script(src="https://static.faberlic.com/fl_bloom/js/swiper-bundle.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/gsap.min.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/ScrollTrigger.min.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/ScrollToPlugin.min.js")
+	//- script(src="https://static.faberlic.com/scripts/swiper-bundle.min.js")
+	script(src="./js/inner.js")

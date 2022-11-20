@@ -9,15 +9,15 @@ section.section--calculator#scrollto-calculator
                         .calculator__size__item
                             .calculator__size__title Ширина, м
                             .calculator__size__input
-                                input(type="text", placeholder="0м")
+                                input.calculator--width(type="text", placeholder="0м")
                         .calculator__size__item
                             .calculator__size__title Длина, м
                             .calculator__size__input
-                                input(type="text", placeholder="0м")
+                                input.calculator--length(type="text", placeholder="0м")
                         .calculator__size__item
                             .calculator__size__title Плащадь, м²
                             .calculator__size__input
-                                input(type="text", placeholder="м²")
+                                input.calculator--square(type="text", placeholder="м²")
                         .calculator__size__note Впишите размеры длины и ширины для рассчёта площади
                     .calculator__delivery
                         .calculator__delivery__item
@@ -36,7 +36,7 @@ section.section--calculator#scrollto-calculator
                                     .calculator__mox__title Пластовый мох
                                     .calculator__mox__inner
                                         .calculator__mox__input
-                                        .calculator__mox__value 0
+                                        .calculator__mox__value(data-name="formation") 0
 
                             .calculator__mox__item
                                 .calculator__mox__left
@@ -45,7 +45,7 @@ section.section--calculator#scrollto-calculator
                                     .calculator__mox__title Ягель мох
                                     .calculator__mox__inner
                                         .calculator__mox__input
-                                        .calculator__mox__value 0
+                                        .calculator__mox__value(data-name="yagel") 0
 
                             .calculator__mox__item
                                 .calculator__mox__left
@@ -54,7 +54,7 @@ section.section--calculator#scrollto-calculator
                                     .calculator__mox__title Кочки мох
                                     .calculator__mox__inner
                                         .calculator__mox__input
-                                        .calculator__mox__value 0
+                                        .calculator__mox__value(data-name="bump") 0
 
                 .calculator__row
                     .calculator__more
@@ -79,7 +79,7 @@ section.section--calculator#scrollto-calculator
                             .calculator__more__input
                             .calculator__more__value 0
                 .calculator__row.calculator__row--btn.sm-visible
-                    a(href="#").btn Рассчитать стоимость
+                    a(href="#").btn.calculator--sum Рассчитать стоимость
 
             .calculator__right
                 .calculator__row.calculator__row--total
@@ -91,6 +91,6 @@ section.section--calculator#scrollto-calculator
                 .calculator__row
                     .calculator__note В стоимость входит 3&nbsp;варианта&nbsp;эскиза макета 3&nbsp;000 ₽.#[br](при заключении договора сумма возвращается)
                 .calculator__row.calculator__row--btn.calculator__row--btn-first.sm-hidden
-                    a(href="#").btn Рассчитать стоимость
+                    a(href="#").btn.btn.calculator--sum Рассчитать стоимость
                 .calculator__row.calculator__row--btn
                     a(href="#").btn заказать проект

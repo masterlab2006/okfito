@@ -1,0 +1,90 @@
+extends ../layouts/default
+include ../../blocks/components/panno-inner/panno-inner-temp
+
+block variables
+	- const title = "Фитостена из мха и растений"
+
+block styles
+	link(rel="stylesheet" href='./styles/inner.css')
+
+block content
+	include ../../blocks/components/menu/menu-mobile
+	include ../../blocks/components/menu/menu
+	+menu({
+		class:'panel-fix panel-fix--inner'
+	})
+	+panno-inner({
+		'title':'Фитостена из&nbsp;мха и&nbsp;растений',
+		'location':'Никопольская дом 4',
+		'price':'536 294 ₽',
+		'params': [
+			{
+				'title':'Площадь',
+				'value':'14,113 м²',
+			},
+			{
+				'title':'Сроки',
+				'value':'1 месяц',
+			},
+		],
+		'desc':`
+			<p>
+                Больше жизни!<br />
+                А&nbsp;вы&nbsp;умеете ухаживать за&nbsp;комнатными цветами? Многие любят&nbsp;их, но&nbsp;из-за недостатка знаний о&nbsp;правильном уходе и&nbsp;банальной нехватки времени, растения гибнут. Хорошая новость в&nbsp;том, что это поправимо, если обзавестись стабилизированными. На&nbsp;вид совсем не&nbsp;уступают живым собратьям.
+            </p>
+            <p>Зелёное панно многослойно. Первыми раскладываю кочки, соблюдая правила композиции и&nbsp;пропорции. Затем под них подбираю основу из&nbsp;пластового мха. Складываю его как кусочки пазла. После чего начинается этап расстановки веточек, папоротников. Здесь важно сделать в&nbsp;меру и&nbsp;не&nbsp;перекрыть акценты. Чтобы не&nbsp;смотрелось однообразно и&nbsp;скучно, продумываю и&nbsp;направляю листья в&nbsp;разные стороны.</p>
+            <p>Особенность картины из&nbsp;стабилизированных растений в&nbsp;постоянстве. Собранная картинка застывает и&nbsp;сохраняется до&nbsp;10&nbsp;лет. &laquo;Спящая&raquo; растительность не&nbsp;продолжит рост, не&nbsp;выровняется, если задать неестественное направление. Фитопанно должно дарить ощущение целостности, красоты и&nbsp;натуральности, а&nbsp;не&nbsp;производить впечатление повисшего веника.</p>
+            <p>Гармоничная картинка как будто оживает на&nbsp;стене и&nbsp;вдыхает жизнь в&nbsp;помещение. Восхищает, радует глаз, наполняет позитивными вибрациями, освежает комнату, придаёт изюминку.</p>
+            <p>Я&nbsp;отношу зелёные картины к&nbsp;природному искусству. Кому-то по&nbsp;душе с&nbsp;пышной растительностью, другие предпочитают более консервативные, чтобы ничего не&nbsp;свисало или торчало из&nbsp;рамки. Каждая&nbsp;&mdash; неповторима и&nbsp;индивидуальна, это как отражение натуры человека.</p>
+            <p>Всегда начинаем с&nbsp;подробного обсуждения. Во&nbsp;время общения выясняю предпочтения и&nbsp;предлагаю несколько примеров, чтобы точнее понять, что нравится. После этого составляю 2 &minus;3 макета с&nbsp;выбранным наполнением и&nbsp;делаю 3D&nbsp;визуализацию в&nbsp;интерьер клиента.</p>
+            <p>Определяется с&nbsp;финальным вариантом и&nbsp;приступаю к&nbsp;сборке проекта.</p>
+            <p>
+                На&nbsp;фото<br />
+                Фитостена: 5645*2500мм<br />
+                Площадь покрытия: 14,113 кв.м<br />
+                Материл: мох натуральный стабилизированный(кочки,пластовой), пендула, николи ,миг ферн, брум, тополь декоративные ветви, соцветия(пять видов)папоротники( три вида) пальмвые листья
+            </p>
+            <p>
+                Цена фитостены: 536 294руб<br />
+                Монтаж, доставка&nbsp;&mdash; обсуждаемо индивидуально.
+            </p>
+		`,
+		'slider': {
+			'alt': 'Фитостена из мха и растений',
+			slider : [
+				{img: './img/content/inner/8/1.jpg',},
+				{img: './img/content/inner/8/2.jpg',},
+				{img: './img/content/inner/8/3.jpg',},
+				{img: './img/content/inner/8/4.jpg',},
+				{img: './img/content/inner/8/5.jpg',},
+				{img: './img/content/inner/8/6.jpg',},
+				{img: './img/content/inner/8/7.jpg',},
+			],
+			thumbs : [
+				{img: './img/content/inner/8/thumbs/1.png',},
+				{img: './img/content/inner/8/thumbs/2.png',},
+				{img: './img/content/inner/8/thumbs/3.png',},
+				{img: './img/content/inner/8/thumbs/4.png',},
+				{img: './img/content/inner/8/thumbs/5.png',},
+				{img: './img/content/inner/8/thumbs/6.png',},
+				{img: './img/content/inner/8/thumbs/7.png',},
+			],
+		},
+	})
+	include ../../blocks/components/footer-inner/footer-inner
+		
+block scripts
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js")
+	script(src="https://code.jquery.com/ui/1.13.2/jquery-ui.js")
+	script(src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js")
+	//- script(src="https://cdn.jsdelivr.net/npm/luxon@3.0.4/build/global/luxon.min.js")
+
+	//- link(rel="stylesheet" href="./styles/swiper-bundle.min.css")
+	//- https://unpkg.com/swiper/swiper-bundle.min.js
+	//- script(src="https://static.faberlic.com/fl_bloom/js/swiper-bundle.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/gsap.min.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/ScrollTrigger.min.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/ScrollToPlugin.min.js")
+	//- script(src="https://static.faberlic.com/scripts/swiper-bundle.min.js")
+	script(src="./js/inner.js")

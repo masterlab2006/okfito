@@ -1,0 +1,60 @@
+extends ../layouts/default
+include ../../blocks/components/panno-inner/panno-inner-temp
+
+block variables
+	- const title = "Что такое стабилизированный мох?"
+
+block styles
+	link(rel="stylesheet" href='./styles/inner.css')
+
+block content
+	include ../../blocks/components/menu/menu-mobile
+	include ../../blocks/components/menu/menu
+	+menu({
+		class:'panel-fix panel-fix--inner'
+	})
+	+panno-inner({
+		'title':'Что такое стабилизированный мох?',
+		'title_class':'hidden',
+		'desc':`
+			<p>Стабилизация&nbsp;&mdash; это замена соков растения на&nbsp;специальную жидкость, которая тормозит процесс гибели и&nbsp;разрушения клеток. Поэтому цветки сохраняют очарование, свежий вид и&nbsp;не&nbsp;вянут до&nbsp;5&nbsp;лет. Как правило, в&nbsp;качестве такого средства используют глицерин, также подходит солевой или промышленный раствор, парафин. Забальзамированный цветок выглядит как свежесрезанный бутон. Лепестки остаются нежными и&nbsp;эластичными. Ничего сверхъестественного: только законы физики и&nbsp;биохимии, обычные ингредиенты.</p>
+			<p>Стабилизация&nbsp;&mdash; революция в&nbsp;области флористического дизайна. Это уникальная технология по&nbsp;созданию &laquo;спящих&raquo; растений, цветов, мха методом обезвоживания в&nbsp;период созревания и&nbsp;цветения. Жидкость заменяют на&nbsp;раствор глицерина и&nbsp;красителя. Выделю главные плюсы &laquo;законсервированных&raquo; растений</p>
+			<ul>
+				<li>Не&nbsp;требуют ухода: живут без полива, удобрения, обрезки, опрыскивания, солнечного света</li>
+				<li>Долговечны: остаются свежими, мягкими, эластичными до&nbsp;10&nbsp;лет</li>
+				<li>Гипоаллергенны: нет пыльцы, не&nbsp;заводятся паразиты, отталкивают пыль</li>
+				<li>Органичны: натуральные растения с&nbsp;улучшенными свойствами с&nbsp;насыщенным окрасом (естественным или ярким)</li>
+				<li>Безопасны для людей и&nbsp;животных: продукция тестируется и&nbsp;сертифицируется </li>
+				<li>Отсутствует сезонность</li>
+				<li>Эстетика и&nbsp;красота: создаются зелёные шедевры и&nbsp;эффектные цветочные композиции</li>
+			</ul>
+			<p>Как видите, стабилизированный мох, растения и&nbsp;цветы&nbsp;&mdash; простое решение для ценителей прекрасного без траты времени и&nbsp;сил на&nbsp;их&nbsp;поддержание. Остаётся только наслаждаться.</p>
+		`,
+		'slider': {
+			'alt': 'Что такое стабилизированный мох?',
+			slider : [
+				{
+					img: './img/content/inner/6/1.jpg',
+					title: 'Что такое стабилизи-рованный мох?',
+				},
+			],
+		},
+		'btn2': 'заказать панно',
+	})
+	include ../../blocks/components/footer-inner/footer-inner
+
+block scripts
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js")
+	script(src="https://code.jquery.com/ui/1.13.2/jquery-ui.js")
+	script(src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js")
+	//- script(src="https://cdn.jsdelivr.net/npm/luxon@3.0.4/build/global/luxon.min.js")
+
+	//- link(rel="stylesheet" href="./styles/swiper-bundle.min.css")
+	//- https://unpkg.com/swiper/swiper-bundle.min.js
+	//- script(src="https://static.faberlic.com/fl_bloom/js/swiper-bundle.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/gsap.min.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/ScrollTrigger.min.js")
+	//- script(src="https://static.faberlic.com/fl_bloom/js/ScrollToPlugin.min.js")
+	//- script(src="https://static.faberlic.com/scripts/swiper-bundle.min.js")
+	script(src="./js/inner.js")
