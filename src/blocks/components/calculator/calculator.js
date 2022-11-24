@@ -19,6 +19,7 @@ let mox = {
 // выберите Вид растений цена за м2 
 let morePrice = 0;
 let deliveryPrice = 0;
+let sliderMax = 100;
 // functions
 $.fn.caret = function (begin, end) {
     var range;
@@ -280,6 +281,11 @@ $(document).keyFilter('.calculator__size__input input', {
     type: 'float'
 });
 
+
+// calculator
+
+// $( ".calculator__mox__input" ).eq(1).slider( "option", "max", 50 );
+
 $('.calculator__mox__input').slider({
     min: 0,
     max: 100,
@@ -313,7 +319,51 @@ $('.calculator__mox__input').slider({
         $input.html(0)
         handle.addClass('inactive');
     },
+    stop: function( event, ui ) {
+    },
 });
+
+$( '.calculator__mox__input[data-input="formation"]' ).on( "slidestop", function( event, ui ) {
+    var $value = ui.value;
+    var $this = $(this);
+
+    var moreValue = $('.calculator__more__input').slider('value') || 0;
+    var yagelValue = $( '.calculator__mox__input[data-input="yagel"]' ).slider('value') || 0;
+    var bumpValue = $( '.calculator__mox__input[data-input="bump"]' ).slider('value') || 0;
+
+    sliderMax = 100 - moreValue - yagelValue - bumpValue;
+
+    if( sliderMax > 0 ){
+        if ( $value >= sliderMax ){
+            $this.slider( "value", sliderMax );
+            $value = sliderMax;
+        }
+        else{
+            $value = ui.value;
+        }
+    }
+    else{
+        $value = 0;
+        $this.slider( "value", $value );
+    }
+
+    var $par = $this.closest('.calculator__mox__item');
+    var $img = $par.find('.calculator__mox__img');
+    var $input = $par.find('.calculator__mox__value');
+    var handle = $this.find('.ui-slider-handle');
+
+    handle.attr('data-value', $value + '%');
+    $input.html($value);
+    if( $value == 0 ){
+        handle.addClass('inactive');
+        $img.removeClass('active')
+    }
+    else{
+        handle.removeClass('inactive');
+        $img.addClass('active')
+    }
+});
+
 
 $('.calculator__more__input').slider({
     min: 0,
@@ -345,9 +395,6 @@ $('.calculator__more__input').slider({
         handle.addClass('inactive');
     },
 });
-
-// calculator
-
 
 $(document).on('click', '.calculator__more__item', function(e){
     e.preventDefault();
@@ -394,7 +441,6 @@ $(document).on('keyup', '.calculator--width, .calculator--length', function(){
 $(document).on('keyup', '.calculator--square', function(){
     var width = $('.calculator--width');
     var length = $('.calculator--length');
-    var square = $('.calculator--square');
 
     var squareVal = $(this).val();
     if( squareVal ){
