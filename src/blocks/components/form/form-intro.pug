@@ -1,0 +1,13 @@
+.form-intro__wrap(styles="display: none;").form-intro__wrap--intro
+    .form-intro
+        .form-intro__header Оставьте контактный телефон и&nbsp;мы&nbsp;с&nbsp;вами свяжемся
+        form(action="#").form.form--intro
+                .form__item.form__item--required
+                    input(type="text", name="name", placeholder="ВАШЕ ИМЯ", required)
+                    .form__note * Заполните поле «Ваше имя»
+                .form__item.form__item--required
+                    input(type="text", name="phone", placeholder="+ 7 (000) 000 00 00", required)
+                    .form__note * Заполните поле «Телефон»
+                .form__item.form__item--btn
+                    button(value="перезвоните мне").btn.btn--intro перезвоните мне
+        .form-intro__success Ваша завяка принята!

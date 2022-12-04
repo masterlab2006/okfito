@@ -66,12 +66,15 @@
 	background-color #64A060
 	text-transform uppercase
 	cursor pointer
+	border 1px solid #64A060
+	font-family $ff
 
 	&:hover
 	&:active
 	&:focus
 		background-color #40763D
 		outline: none
+		border-color #40763D
 
 	+md-block()
 		font-size 1em
@@ -79,3 +82,13 @@
 		min-width: em(300)
 		min-height: em(70)
 		height: em(70)
+
+	&--white
+		border-color: #fff
+		background-color transparent
+
+		&:hover
+		&:active
+		&:focus
+			background-color #64A060
+			border-color #64A060

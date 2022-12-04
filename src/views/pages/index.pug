@@ -7,6 +7,8 @@ block styles
 	link(rel="stylesheet" href='./styles/main.css')
 
 block content
+	include ../../blocks/components/form/form-intro
+	include ../../blocks/components/form/form-ready-made
 	include ../../blocks/components/menu/menu-mobile
 	include ../../blocks/components/menu/menu
 	+menu({
@@ -29,6 +31,7 @@ block scripts
 	script(src="https://code.jquery.com/ui/1.13.2/jquery-ui.js")
 	script(src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js")
 	script(src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js")
+	script(src="https://okfito.ru/js/jquery.mask.js")
 	//- script(src="https://cdn.jsdelivr.net/npm/luxon@3.0.4/build/global/luxon.min.js")
 
 	//- link(rel="stylesheet" href="./styles/swiper-bundle.min.css")

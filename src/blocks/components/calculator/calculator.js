@@ -159,7 +159,6 @@ function getSquare(){
     else if( width != '' && width != 0 && length != '' && length != 0 ){
         $square = parseFloat( width * length );
     }
-
     return $square
 }
 
@@ -224,6 +223,42 @@ function setMore(){
             value = 80;
             morePrice = 37000;
         }
+
+        var ostatok = 100 - value;
+        var count = 0;
+        var sortedList = $('.calculator__mox__input').sort(function(lhs, rhs){
+            return parseInt($(lhs).slider("value"),10) - parseInt($(rhs).slider("value"),10);
+        });
+        var sum = 0;
+        $('.calculator__mox__input').each(function() {
+            var val = parseFloat($(this).slider("value")) || 0;
+            if (val) {
+                count++;
+            }
+            sum += val;
+        });
+
+        if (sum > ostatok) {
+            var raznit = sum - ostatok;
+            sortedList.each(function() {
+                var currV =  $(this).slider("value");
+                if (currV) {
+                    var vich = Math.floor(raznit / count);
+                    console.log(vich);                
+        
+                    if (currV > vich) {
+                        $(this).slider( "value", currV - vich);
+                        raznit -= vich;
+                    } else {
+                        $(this).slider( "value", 0);
+                        raznit -= currV;
+                    }            
+        
+                    count--;
+                }
+            })
+        }
+
         if( value ){
             $('.calculator__more__input').slider('value', value);
             $('.calculator__more__value').html(value);
@@ -244,12 +279,14 @@ function validate(){
     var inputWidth = $('.calculator--width');
     var inputLength = $('.calculator--length');
     var inputSquare = $('.calculator--square');
+    var isValid = true;
 
     if( inputWidth.val() != '' && inputWidth.val() != 0 ){
-        inputWidth.removeClass('error')
+        inputWidth.removeClass('error');
     }
     else{
-        inputWidth.addClass('error')
+        inputWidth.addClass('error');
+        isValid = false;
     }
 
     if( inputLength.val() != '' && inputLength.val() != 0 ){
@@ -257,6 +294,7 @@ function validate(){
     }
     else{
         inputLength.addClass('error')
+        isValid = false;
     }
 
     if( inputSquare.val() != '' && inputSquare.val() != 0 ){
@@ -266,50 +304,54 @@ function validate(){
     }
     else{
         inputSquare.addClass('error');
+        isValid = false;
     }
+    return isValid
 }
 
 function calculate(){
-    // console.log( getDeliveryPrice() );
-    // console.log( getMorePrice() );
+    var square = getSquare();
+    var deliveryPrice = getDeliveryPrice();
+    var square = getSquare();
     validate();
-    // console.log(getSquare());
 }
 // functions end
 
-$(document).keyFilter('.calculator__size__input input', {
+$(document).keyFilter('.calculator__size__input input, input[name="square"]', {
     type: 'float'
 });
-
 
 // calculator
 
 // $( ".calculator__mox__input" ).eq(1).slider( "option", "max", 50 );
+
+var change = function( event, ui ) {
+    var $this = $(this);
+    var $par = $this.closest('.calculator__mox__item');
+    var $img = $par.find('.calculator__mox__img');
+    var $value = ui.value;
+    var $input = $par.find('.calculator__mox__value');
+    var handle = $this.find('.ui-slider-handle');
+
+    handle.attr('data-value', $value + '%');
+    $input.html($value);
+    if( $value == 0 ){
+        handle.addClass('inactive');
+        $img.removeClass('active')
+    }
+    else{
+        handle.removeClass('inactive');
+        $img.addClass('active')
+    }
+};
 
 $('.calculator__mox__input').slider({
     min: 0,
     max: 100,
     value: 0,
     range: "min",
-    slide: function( event, ui ) {
-        var $this = $(this);
-        var $par = $this.closest('.calculator__mox__item');
-        var $img = $par.find('.calculator__mox__img');
-        var $value = ui.value;
-        var $input = $par.find('.calculator__mox__value');
-        var handle = $this.find('.ui-slider-handle');
-
-        handle.attr('data-value', $value + '%');
-        $input.html($value);
-        if( $value == 0 ){
-            handle.addClass('inactive');
-            $img.removeClass('active')
-        }
-        else{
-            handle.removeClass('inactive');
-            $img.addClass('active')
-        }
-    },
+    change: change,
+    slide: change,
     create: function( event, ui ) {
         var $this = $(this);
         var handle = $this.find('.ui-slider-handle');
@@ -364,6 +406,87 @@ $( '.calculator__mox__input[data-input="formation"]' ).on( "slidestop", function
     }
 });
 
+$( '.calculator__mox__input[data-input="yagel"]' ).on( "slidestop", function( event, ui ) {
+    var $value = ui.value;
+    var $this = $(this);
+
+    var moreValue = $('.calculator__more__input').slider('value') || 0;
+    var yagelValue = $( '.calculator__mox__input[data-input="formation"]' ).slider('value') || 0;
+    var bumpValue = $( '.calculator__mox__input[data-input="bump"]' ).slider('value') || 0;
+
+    sliderMax = 100 - moreValue - yagelValue - bumpValue;
+
+    if( sliderMax > 0 ){
+        if ( $value >= sliderMax ){
+            $this.slider( "value", sliderMax );
+            $value = sliderMax;
+        }
+        else{
+            $value = ui.value;
+        }
+    }
+    else{
+        $value = 0;
+        $this.slider( "value", $value );
+    }
+
+    var $par = $this.closest('.calculator__mox__item');
+    var $img = $par.find('.calculator__mox__img');
+    var $input = $par.find('.calculator__mox__value');
+    var handle = $this.find('.ui-slider-handle');
+
+    handle.attr('data-value', $value + '%');
+    $input.html($value);
+    if( $value == 0 ){
+        handle.addClass('inactive');
+        $img.removeClass('active')
+    }
+    else{
+        handle.removeClass('inactive');
+        $img.addClass('active')
+    }
+});
+
+$( '.calculator__mox__input[data-input="bump"]' ).on( "slidestop", function( event, ui ) {
+    var $value = ui.value;
+    var $this = $(this);
+
+    var moreValue = $('.calculator__more__input').slider('value') || 0;
+    var yagelValue = $( '.calculator__mox__input[data-input="formation"]' ).slider('value') || 0;
+    var bumpValue = $( '.calculator__mox__input[data-input="yagel"]' ).slider('value') || 0;
+
+    sliderMax = 100 - moreValue - yagelValue - bumpValue;
+
+    if( sliderMax > 0 ){
+        if ( $value >= sliderMax ){
+            $this.slider( "value", sliderMax );
+            $value = sliderMax;
+        }
+        else{
+            $value = ui.value;
+        }
+    }
+    else{
+        $value = 0;
+        $this.slider( "value", $value );
+    }
+
+    var $par = $this.closest('.calculator__mox__item');
+    var $img = $par.find('.calculator__mox__img');
+    var $input = $par.find('.calculator__mox__value');
+    var handle = $this.find('.ui-slider-handle');
+
+    handle.attr('data-value', $value + '%');
+    $input.html($value);
+    if( $value == 0 ){
+        handle.addClass('inactive');
+        $img.removeClass('active')
+    }
+    else{
+        handle.removeClass('inactive');
+        $img.addClass('active')
+    }
+});
 
 $('.calculator__more__input').slider({
     min: 0,
@@ -371,7 +494,7 @@ $('.calculator__more__input').slider({
     value: 0,
     range: "min",
     disabled: true,
-    slide: function( event, ui ) {
+    change: function( event, ui ) {
         var $this = $(this);
         var $par = $this.closest('.calculator__more');
         var $value = ui.value;

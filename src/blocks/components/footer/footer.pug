@@ -2,16 +2,18 @@ footer.footer
     .footer__form-wrap
         .footer__form-title Заполните форму, чтобы скачать 3D-модель панно
         form(action="#").form
-            .form__item
+            .form__item.form__item--required
                 input(type="text", name="name", placeholder="ВАШЕ ИМЯ", required)
                 .form__note * Заполните поле «Ваше имя»
-            .form__item
+            .form__item.form__item--required
                 input(type="text", name="byuro", placeholder="НАЗВАНИЕ БЮРО", required)
                 .form__note * Заполните поле «Название бюро»
-            .form__item
-                input(type="number", name="inn", placeholder="ИНН", required)
-                .form__note * Заполните поле «ИНН»
+            .form__item.form__item--required
+                input(type="text", name="inn", placeholder="ИНН", required)
+                .form__note * Заполните поле «ИНН» 10 цифр
             .form__item.form__item--btn
-                input(type="submit", value="скачать", placeholder="скачать").btn
+                //- input(type="submit", value="скачать", placeholder="скачать").btn
+                button(value="скачать").btn.btn--footer скачать
+        .form-intro__success Ваша завяка принята!
     
     include ../share/share

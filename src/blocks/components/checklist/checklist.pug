@@ -4,17 +4,19 @@ section.checklist--section#scrollto-checklist
             h2.checklist__header Чек-лист по уходу #[span.md-nowrap за&nbsp;фитостеной из&nbsp;живых] и&nbsp;стабилизированных растений
             .checklist__title Заполните форму, чтобы скачать презентацию
             form(action="#").form.form--checklist
-                .form__item
+                .form__item.form__item--required
                     input(type="text", name="name", placeholder="ВАШЕ ИМЯ", required)
                     .form__note * Заполните поле «Ваше имя»
-                .form__item
+                .form__item.form__item--required
                     input(type="text", name="city", placeholder="ГОРОД", required)
                     .form__note * Заполните поле «Город»
-                .form__item
+                .form__item.form__item--required
                     input(type="text", name="phone", placeholder="+ 7 (000) 000 00 00", required)
                     .form__note * Заполните поле «Телефон»
-                .form__item
+                .form__item.form__item--required
                     input(type="text", name="square", placeholder="РАЗМЕР ПАННО, М²", required)
                     .form__note * Заполните поле «Размер панно»
                 .form__item.form__item--btn
-                    input(type="submit", value="скачать", placeholder="скачать").btn
+                    input(type="submit", value="скачать", placeholder="скачать").btn.btn--checklist
+
+            .form-intro__success Ваша завяка принята!
