@@ -73,6 +73,7 @@ h1, h2, h3, h4, h5, h6, ul
 
 input[type="text"]
 input[type="number"]
+textarea
     background: #FFFFFF;
     border: 1px solid #AFAFAF;
     width 100%
@@ -95,6 +96,9 @@ input[type="number"]
         font-size em(18)
         height (70/18em)
         padding 0 (54/18em) 0 (54/18em)
+
+textarea
+    height 300px
 
 ::placeholder
     color: #AFAFAF;
@@ -122,3 +126,63 @@ input[type="number"]
 
 b
     font-weight 700
+
+.form
+    display block
+    max-width: em(220)
+    margin 0 auto
+
+    +md-block()
+        max-width em(400)
+    
+    +lg-block()
+        max-width none
+        display flex
+        flex-wrap: wrap
+        justify-content: space-between
+
+    &__item
+        position relative
+
+        +lg-block()
+            width: em(400)
+            max-width: em(400)
+            min-width: em(400)
+
+        &--btn
+            text-align center
+            margin-top em(30)
+
+            +md-block()
+                margin-top em(50)
+
+            +lg-block()
+                // margin-top em(50)
+                margin-left auto
+                margin-right auto
+
+        & + &:not(.form__item--btn)
+            margin-top em(20)
+
+            +md-block()
+                margin-top em(30)
+
+            +lg-block()
+                margin-top 0
+
+    &__note
+        position absolute
+        font-size em(8)
+        color #000
+        left (30/8em)
+        top 100%
+        margin-top (4/8em)
+        display none
+        font-family $ff
+
+        +md-block()
+            font-size em(10)
+            margin-top (10/10em)
+
+        +lg-block()
+            left 5.4em

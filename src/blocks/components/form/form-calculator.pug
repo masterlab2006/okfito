@@ -1,6 +1,6 @@
-.form-intro__wrap(styles="display: none;").form-intro__wrap--ready-made
-    .form-intro.form-intro--ready-made
-        .form-intro__header Заполните форму,#[br]чтобы скачать прайс
+.form-intro__wrap(styles="display: none;").form-intro__wrap--calculator
+    .form-intro
+        .form-intro__header Оставьте контактный телефон и&nbsp;мы&nbsp;с&nbsp;вами свяжемся
         form(action="#").form.form--intro
                 .form__item.form__item--required
                     input(type="text", name="name", placeholder="ВАШЕ ИМЯ", required)
@@ -8,6 +8,8 @@
                 .form__item.form__item--required
                     input(type="text", name="phone", placeholder="+ 7 (000) 000 00 00", required)
                     .form__note * Заполните поле «Телефон»
+                .form__item.hidden
+                    textarea(name="data")#textarea
                 .form__item.form__item--btn
-                    button(value="перезвоните мне").btn.btn--ready-made скачать прайс
+                    button(value="перезвоните мне").btn.btn--calculator перезвоните мне
         .form-intro__success Ваша завяка принята!

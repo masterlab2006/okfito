@@ -1,7 +1,7 @@
 import "./import/modules";
 import "./import/components";
 function imgResize() {
-    if ($(window).width() < 768) {
+    if ($(window).width() < 576) {
         var picSM = $(".picture--sm").children();
 
         picSM.each(function(i,v){

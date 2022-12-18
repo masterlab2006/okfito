@@ -19,7 +19,7 @@
  */
 
 /* правим функцию requestAnimationFrame */
-var myo = (function(window, document, undefined) {
+window.myo = (function(window, document, undefined) {
     var
         $win = $(window),
         stack = [],
@@ -420,7 +420,7 @@ var myo = (function(window, document, undefined) {
         }, 2000);
     }
     var formSuccessReadyMade = function(){
-        $('.form-intro').addClass('active');
+        $('.form-intro--ready-made').addClass('active');
         setTimeout(function(){
             $('.fl-popover__close').trigger('click');
             window.open(
@@ -459,6 +459,38 @@ var myo = (function(window, document, undefined) {
                 $('.form-intro').removeClass('active');
             },
         });
+    });
+
+    $(document).on('click', '[href="#form-popup-calculator"]', function (e) {
+        e.preventDefault();
+        
+        var isActive = $(this).hasClass('active');
+        if ( !isActive ){
+            $('.calculator--sum').trigger('click');
+            var isActive2 = $(this).hasClass('active');
+            if ( isActive2 ){
+                myo.open({
+                    clas: 'form-popup',
+                    elem: '.form-intro__wrap--calculator',
+                    beforeOpen: function(){
+                    },
+                    afterClose: function(){
+                        $('.form-intro').removeClass('active');
+                    },
+                });
+            }
+        }
+        else{
+            myo.open({
+                clas: 'form-popup',
+                elem: '.form-intro__wrap--calculator',
+                beforeOpen: function(){
+                },
+                afterClose: function(){
+                    $('.form-intro').removeClass('active');
+                },
+            });
+        }
     });
     
     $(document).on('click', '.btn--intro', function (e) {
@@ -550,6 +582,72 @@ var myo = (function(window, document, undefined) {
                 data : $form.serialize(),
                 statusCode: {
                     200: formSuccessChecklist
+                }
+            });
+        }
+    });
+
+    // form calculator
+    $(document).on('click', '.btn--calculator', function (e) {
+        e.preventDefault();
+        var $this = $(this);
+        var $form = $this.closest('form');
+        var requiredItems = $form.find('.form__item--required');
+        var moxs = $('.calculator__mox__item');
+        var mores = $('.calculator__more__item.active');
+        var square = $('.totalSquare');
+        var delivery = $('.calculator__delivery__title.active');
+        var total = $('.totalSum');
+        var textarea = $('#textarea');
+        var result = '';
+        
+
+        var mox = "";
+        moxs.each(function(){
+            var $this = $(this);
+            var value = $this.find('.calculator__mox__input').slider('value');
+            var title = $this.find('.calculator__mox__title').text();
+            if ( value > 0 ){
+                mox = mox + `${title} : ${value}%;<br>`;
+            }
+        });
+        if ( mox == "" ){
+            mox = 'Не выбрано пользователем<br>';
+        }
+
+        var more = "";
+        var moreCounter = 1;
+        mores.each(function(){
+            var $this = $(this);
+            var title = $this.text();
+            more = more + `${moreCounter}) ${title}; <br>`;
+            moreCounter++;
+        });
+        if ( more == "" ){
+            more = 'Не выбрано пользователем';
+        }
+        
+        var deliveryTitle = 'Не выбрана пользователем<br>';
+        if ( delivery.length ){
+            deliveryTitle = delivery.text();
+        }
+        
+        var squareValue = square.text();
+        var totalValue = total.text();
+
+        result = `<br><br>Вид покрытия: <br> ${mox}
+                <br>Вид растений: <br> ${more}
+                <br>Доставка: ${deliveryTitle}
+                <br>Площадь: ${squareValue} м²
+                <br>Сумма: ${totalValue} ₽`;
+        textarea.val(result);
+        if ( validate(requiredItems) ){
+            $.ajax({
+                type : 'POST',
+                url : 'https://okfito.ru/form-calculator.php',
+                data : $form.serialize(),
+                statusCode: {
+                    200: formSuccess
                 }
             });
         }

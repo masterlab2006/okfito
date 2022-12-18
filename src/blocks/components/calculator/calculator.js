@@ -1,5 +1,4 @@
 // vars
-
 // выберите Вид покрытия цена за м2
 // formation Пластовый мох
 // yagel Ягель мох
@@ -7,17 +6,21 @@
 let mox = {
     "formation" : {
         "price": "16000",
+        "name": "Пластовый мох",
     },
     "yagel" : {
         "price": "19250",
+        "name": "Ягель мох",
     },
     "bump" : {
         "price": "35000",
+        "name": "Кочки мох",
     },
 }
 
 // выберите Вид растений цена за м2 
 let morePrice = 0;
+let moxPrice = 0;
 let deliveryPrice = 0;
 let sliderMax = 100;
 // functions
@@ -244,7 +247,6 @@ function setMore(){
                 var currV =  $(this).slider("value");
                 if (currV) {
                     var vich = Math.floor(raznit / count);
-                    console.log(vich);                
         
                     if (currV > vich) {
                         $(this).slider( "value", currV - vich);
@@ -310,10 +312,68 @@ function validate(){
 }
 
 function calculate(){
-    var square = getSquare();
-    var deliveryPrice = getDeliveryPrice();
-    var square = getSquare();
+
     validate();
+
+    var square = getSquare();
+    var morePrice = getMorePrice();
+    var moreValue = $('.calculator__more__input').slider('value') || 0;
+
+    var formationPrice = mox.formation.price;
+    var formationValue = $('[data-input="formation"]').slider('value') || 0;
+
+    var yagelPrice = mox.yagel.price;
+    var yagelValue = $('[data-input="yagel"]').slider('value') || 0;
+
+    var bumpPrice = mox.bump.price;
+    var bumpValue = $('[data-input="bump"]').slider('value') || 0;
+
+    var deliveryPrice = getDeliveryPrice();
+    var is100 = false;
+    
+    var info = '';
+    var total;
+    var totalMore = 0;
+    var totalformation = 0;
+    var totalYagel = 0;
+    var totalBump = 0;
+    var totalDelivery = deliveryPrice;
+
+    if( moreValue + formationValue + yagelValue + bumpValue == 100 ){
+        is100 = true;
+    }
+    
+    if ( square == 0 ){
+        myo.open({
+            clas: 'form-popup',
+            html: `<div class="form-intro">
+                        <div class="popup-mess">Впишите размеры длины и ширины для рассчёта площади</div>
+                    </div>
+                    `,
+        });
+        $('a[href="#form-popup-calculator"]').removeClass('active');
+    }
+    else if ( !is100 ){
+        myo.open({
+            clas: 'form-popup',
+            html: `<div class="form-intro">
+                        <div class="popup-mess">Площадь покрытия не 100%</div>
+                    </div>
+                    `,
+        });
+        $('a[href="#form-popup-calculator"]').removeClass('active');
+    }
+    else{
+        $('a[href="#form-popup-calculator"]').addClass('active');
+        totalMore = square * morePrice * moreValue / 100;
+        totalformation = square * formationPrice * formationValue / 100;
+        totalYagel = square * yagelPrice * yagelValue / 100;
+        totalBump = square * bumpPrice * bumpValue / 100;
+        total = parseInt(totalMore + totalformation + totalYagel + totalBump + parseInt(totalDelivery)).toLocaleString('ru');
+        $('.totalSum').html( total );
+        $('.totalSquare').html( square );
+    }
+        
 }
 // functions end
 
