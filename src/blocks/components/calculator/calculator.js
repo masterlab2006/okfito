@@ -422,131 +422,173 @@ $('.calculator__mox__input').slider({
         handle.addClass('inactive');
     },
     stop: function( event, ui ) {
+        var $value = ui.value;
+        var $this = $(this);
+        var $name = $this.attr('data-name');
+        var $lostValue = 0;
+
+        var moreValue = $('.calculator__more__input').slider('value') || 0;
+
+        sliderMax = 100 - moreValue;
+        
+        // if( sliderMax > 0 ){
+        //     if ( $value >= sliderMax ){
+        //         $this.slider( "value", sliderMax );
+        //         $value = sliderMax;
+        //     }
+        //     else{
+        //         $value = ui.value;
+        //     }
+        // }
+        // else {
+        //     $value = 0;
+        //     $this.slider( "value", $value );
+        // }
+
+
+
+        var $par = $this.closest('.calculator__mox__item');
+        var $img = $par.find('.calculator__mox__img');
+        var $input = $par.find('.calculator__mox__value');
+        var handle = $this.find('.ui-slider-handle');
+
+        handle.attr('data-value', $value + '%');
+
+        $input.html($value);
+
+        if( $value == 0 ){
+            handle.addClass('inactive');
+            $img.removeClass('active')
+        }
+        else{
+            handle.removeClass('inactive');
+            $img.addClass('active')
+        }
     },
 });
 
-$( '.calculator__mox__input[data-input="formation"]' ).on( "slidestop", function( event, ui ) {
-    var $value = ui.value;
-    var $this = $(this);
+// $( '.calculator__mox__input[data-input="formation"]' ).on( "slidestop", function( event, ui ) {
+//     var $value = ui.value;
+//     var $this = $(this);
 
-    var moreValue = $('.calculator__more__input').slider('value') || 0;
-    var yagelValue = $( '.calculator__mox__input[data-input="yagel"]' ).slider('value') || 0;
-    var bumpValue = $( '.calculator__mox__input[data-input="bump"]' ).slider('value') || 0;
+//     var moreValue = $('.calculator__more__input').slider('value') || 0;
+//     var yagelValue = $( '.calculator__mox__input[data-input="yagel"]' ).slider('value') || 0;
+//     var bumpValue = $( '.calculator__mox__input[data-input="bump"]' ).slider('value') || 0;
 
-    sliderMax = 100 - moreValue - yagelValue - bumpValue;
+//     sliderMax = 100 - moreValue - yagelValue - bumpValue;
 
-    if( sliderMax > 0 ){
-        if ( $value >= sliderMax ){
-            $this.slider( "value", sliderMax );
-            $value = sliderMax;
-        }
-        else{
-            $value = ui.value;
-        }
-    }
-    else{
-        $value = 0;
-        $this.slider( "value", $value );
-    }
+//     if( sliderMax > 0 ){
+//         if ( $value >= sliderMax ){
+//             $this.slider( "value", sliderMax );
+//             $value = sliderMax;
+//         }
+//         else{
+//             $value = ui.value;
+//         }
+//     }
+//     else{
+//         $value = 0;
+//         $this.slider( "value", $value );
+//     }
 
-    var $par = $this.closest('.calculator__mox__item');
-    var $img = $par.find('.calculator__mox__img');
-    var $input = $par.find('.calculator__mox__value');
-    var handle = $this.find('.ui-slider-handle');
+//     var $par = $this.closest('.calculator__mox__item');
+//     var $img = $par.find('.calculator__mox__img');
+//     var $input = $par.find('.calculator__mox__value');
+//     var handle = $this.find('.ui-slider-handle');
 
-    handle.attr('data-value', $value + '%');
-    $input.html($value);
-    if( $value == 0 ){
-        handle.addClass('inactive');
-        $img.removeClass('active')
-    }
-    else{
-        handle.removeClass('inactive');
-        $img.addClass('active')
-    }
-});
+//     handle.attr('data-value', $value + '%');
+//     $input.html($value);
+//     if( $value == 0 ){
+//         handle.addClass('inactive');
+//         $img.removeClass('active')
+//     }
+//     else{
+//         handle.removeClass('inactive');
+//         $img.addClass('active')
+//     }
+// });
 
-$( '.calculator__mox__input[data-input="yagel"]' ).on( "slidestop", function( event, ui ) {
-    var $value = ui.value;
-    var $this = $(this);
+// $( '.calculator__mox__input[data-input="yagel"]' ).on( "slidestop", function( event, ui ) {
+//     var $value = ui.value;
+//     var $this = $(this);
 
-    var moreValue = $('.calculator__more__input').slider('value') || 0;
-    var yagelValue = $( '.calculator__mox__input[data-input="formation"]' ).slider('value') || 0;
-    var bumpValue = $( '.calculator__mox__input[data-input="bump"]' ).slider('value') || 0;
+//     var moreValue = $('.calculator__more__input').slider('value') || 0;
+//     var yagelValue = $( '.calculator__mox__input[data-input="formation"]' ).slider('value') || 0;
+//     var bumpValue = $( '.calculator__mox__input[data-input="bump"]' ).slider('value') || 0;
 
-    sliderMax = 100 - moreValue - yagelValue - bumpValue;
+//     sliderMax = 100 - moreValue - yagelValue - bumpValue;
 
-    if( sliderMax > 0 ){
-        if ( $value >= sliderMax ){
-            $this.slider( "value", sliderMax );
-            $value = sliderMax;
-        }
-        else{
-            $value = ui.value;
-        }
-    }
-    else{
-        $value = 0;
-        $this.slider( "value", $value );
-    }
+//     if( sliderMax > 0 ){
+//         if ( $value >= sliderMax ){
+//             $this.slider( "value", sliderMax );
+//             $value = sliderMax;
+//         }
+//         else{
+//             $value = ui.value;
+//         }
+//     }
+//     else{
+//         $value = 0;
+//         $this.slider( "value", $value );
+//     }
 
-    var $par = $this.closest('.calculator__mox__item');
-    var $img = $par.find('.calculator__mox__img');
-    var $input = $par.find('.calculator__mox__value');
-    var handle = $this.find('.ui-slider-handle');
+//     var $par = $this.closest('.calculator__mox__item');
+//     var $img = $par.find('.calculator__mox__img');
+//     var $input = $par.find('.calculator__mox__value');
+//     var handle = $this.find('.ui-slider-handle');
 
-    handle.attr('data-value', $value + '%');
-    $input.html($value);
-    if( $value == 0 ){
-        handle.addClass('inactive');
-        $img.removeClass('active')
-    }
-    else{
-        handle.removeClass('inactive');
-        $img.addClass('active')
-    }
-});
+//     handle.attr('data-value', $value + '%');
+//     $input.html($value);
+//     if( $value == 0 ){
+//         handle.addClass('inactive');
+//         $img.removeClass('active')
+//     }
+//     else{
+//         handle.removeClass('inactive');
+//         $img.addClass('active')
+//     }
+// });
 
-$( '.calculator__mox__input[data-input="bump"]' ).on( "slidestop", function( event, ui ) {
-    var $value = ui.value;
-    var $this = $(this);
+// $( '.calculator__mox__input[data-input="bump"]' ).on( "slidestop", function( event, ui ) {
+//     var $value = ui.value;
+//     var $this = $(this);
 
-    var moreValue = $('.calculator__more__input').slider('value') || 0;
-    var yagelValue = $( '.calculator__mox__input[data-input="formation"]' ).slider('value') || 0;
-    var bumpValue = $( '.calculator__mox__input[data-input="yagel"]' ).slider('value') || 0;
+//     var moreValue = $('.calculator__more__input').slider('value') || 0;
+//     var yagelValue = $( '.calculator__mox__input[data-input="formation"]' ).slider('value') || 0;
+//     var bumpValue = $( '.calculator__mox__input[data-input="yagel"]' ).slider('value') || 0;
 
-    sliderMax = 100 - moreValue - yagelValue - bumpValue;
+//     sliderMax = 100 - moreValue - yagelValue - bumpValue;
 
-    if( sliderMax > 0 ){
-        if ( $value >= sliderMax ){
-            $this.slider( "value", sliderMax );
-            $value = sliderMax;
-        }
-        else{
-            $value = ui.value;
-        }
-    }
-    else{
-        $value = 0;
-        $this.slider( "value", $value );
-    }
+//     if( sliderMax > 0 ){
+//         if ( $value >= sliderMax ){
+//             $this.slider( "value", sliderMax );
+//             $value = sliderMax;
+//         }
+//         else{
+//             $value = ui.value;
+//         }
+//     }
+//     else{
+//         $value = 0;
+//         $this.slider( "value", $value );
+//     }
 
-    var $par = $this.closest('.calculator__mox__item');
-    var $img = $par.find('.calculator__mox__img');
-    var $input = $par.find('.calculator__mox__value');
-    var handle = $this.find('.ui-slider-handle');
+//     var $par = $this.closest('.calculator__mox__item');
+//     var $img = $par.find('.calculator__mox__img');
+//     var $input = $par.find('.calculator__mox__value');
+//     var handle = $this.find('.ui-slider-handle');
 
-    handle.attr('data-value', $value + '%');
-    $input.html($value);
-    if( $value == 0 ){
-        handle.addClass('inactive');
-        $img.removeClass('active')
-    }
-    else{
-        handle.removeClass('inactive');
-        $img.addClass('active')
-    }
-});
+//     handle.attr('data-value', $value + '%');
+//     $input.html($value);
+//     if( $value == 0 ){
+//         handle.addClass('inactive');
+//         $img.removeClass('active')
+//     }
+//     else{
+//         handle.removeClass('inactive');
+//         $img.addClass('active')
+//     }
+// });
 
 $('.calculator__more__input').slider({
     min: 0,

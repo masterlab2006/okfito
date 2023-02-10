@@ -4,10 +4,18 @@
         form(action="#").form.form--intro
                 .form__item.form__item--required
                     input(type="text", name="name", placeholder="ВАШЕ ИМЯ", required)
-                    .form__note * Заполните поле «Ваше имя»
+                    .form__note #[span(style="color: red;") *] Заполните поле «Ваше имя»
                 .form__item.form__item--required
                     input(type="text", name="phone", placeholder="+ 7 (000) 000 00 00", required)
-                    .form__note * Заполните поле «Телефон»
+                    .form__note #[span(style="color: red;") *] Заполните поле «Телефон»
+
+                .form__item.form__item--required.form__item--checkbox
+                    label
+                        input(type="checkbox", name="personal", required)
+                        span.form__item__checkbox__span
+                        span.form__item__checkbox__title Нажимая кнопку Перезвоните мне, я #[a(href="#", target="_blank") даю согласие] на обработку моих персональных данных
+                    .form__note #[span(style="color: red;") *] Это поле является обязательным
+
                 .form__item.form__item--btn
                     button(value="перезвоните мне").btn.btn--intro перезвоните мне
         .form-intro__success Ваша завяка принята!

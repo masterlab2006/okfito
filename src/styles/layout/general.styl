@@ -116,6 +116,10 @@ textarea
         background: #FFEAEA;
         border: 1px solid #FFB7B7;
 
+    .form__item__checkbox__span
+        box-shadow: 0 0 10px 0 red
+        border-color red
+
 .md-nowrap
 
     +md-block()
@@ -169,6 +173,72 @@ b
 
             +lg-block()
                 margin-top 0
+
+        &--checkbox
+            label
+                cursor pointer
+                display flex
+                padding: 0 em(20)
+                align-items: center
+                position relative
+
+                +md-block()
+                    padding: 0 em(15)
+
+                input
+                    opacity 0
+                    position absolute
+                    z-index -1
+
+                    &:checked + .form__item__checkbox__span
+                        border-color #64A060
+                        background-color #64A060
+                        box-shadow: none
+
+        &__checkbox
+
+            &__span
+                border: 1px solid #BABABA
+                display block
+                min-width: em(15)
+                min-height em(15)
+                max-width: em(15)
+                max-height em(15)
+                width em(15)
+                height em(15)
+                margin-right em(15)
+                position relative
+
+                +md-block()
+                    min-width: em(30)
+                    min-height em(30)
+                    max-width: em(30)
+                    max-height em(30)
+                    width em(30)
+                    height em(30)
+                    margin-right em(20)
+
+                &:before
+                    position absolute
+                    content ''
+                    left 0
+                    right 0
+                    top 0
+                    bottom 0
+                    background-image embedurl('../img/content/checkbox.svg')
+                    background-repeat no-repeat
+                    background-position 50% 50%
+                    background-size contain
+
+
+            &__title
+                font-family: $ff
+                font-size: 0.5em
+                line-height: 150%;
+
+                +md-block()
+                    font-size em(10)
+                
 
     &__note
         position absolute

@@ -402,6 +402,16 @@ window.myo = (function(window, document, undefined) {
                 }
                 
             }
+            else if( name == 'personal' ){
+                var isChecked = input.prop('checked');
+                if( isChecked ){
+                    item.removeClass('error');
+                }
+                else{
+                    item.addClass('error');
+                    validatedSucsess = false;
+                }
+            }
             else if ( value && name != 'phone' && name != 'inn' ){
                 item.removeClass('error');
             }
@@ -463,10 +473,10 @@ window.myo = (function(window, document, undefined) {
 
     $(document).on('click', '[href="#form-popup-calculator"]', function (e) {
         e.preventDefault();
-        
+
         var isActive = $(this).hasClass('active');
         if ( !isActive ){
-            $('.calculator--sum').trigger('click');
+            $('.calculator--sum').eq(0).trigger('click');
             var isActive2 = $(this).hasClass('active');
             if ( isActive2 ){
                 myo.open({
