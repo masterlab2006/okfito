@@ -16,6 +16,14 @@ section.checklist--section#scrollto-checklist
                 .form__item.form__item--required
                     input(type="text", name="square", placeholder="РАЗМЕР ПАННО, М²", required)
                     .form__note * Заполните поле «Размер панно»
+
+                .form__item.form__item--required.form__item--checkbox
+                    label
+                        input(type="checkbox", name="personal", required)
+                        span.form__item__checkbox__span
+                        span.form__item__checkbox__title Нажимая кнопку Перезвоните мне, я #[a(href="#", target="_blank") даю согласие] на обработку моих персональных данных
+                    .form__note #[span(style="color: red;") *] Это поле является обязательным
+                    
                 .form__item.form__item--btn
                     input(type="submit", value="скачать", placeholder="скачать").btn.btn--checklist
 
