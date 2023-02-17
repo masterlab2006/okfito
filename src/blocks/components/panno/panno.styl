@@ -147,6 +147,17 @@
     .panno__item__inner
         padding em(12)
 
+        &:before
+            position absolute
+            content ''
+            left 0
+            right 0
+            top 0
+            bottom 0
+            opacity 0
+            transition all 0.4s
+            background-color rgba(#000,0.5)
+
         +md-block()
             padding em(28)
 
@@ -156,6 +167,11 @@
         font-size: em(20)
         line-height: 100%;
         color: #FFFFFF;
+        position relative
+        margin-bottom 1em
+        transition: all 0.4s
+
+        transform: translate3d(0, (24/20em), 0)
 
         +md-block()
             font-size em(46)
@@ -165,9 +181,56 @@
             color: #FFFFFF;
             text-shadow: 0 0 10px rgba(#000,0.3)
 
+    .panno__item__btn-wrap
+        text-align center
+        position relative
+        opacity 0
+
+    .panno__item__btn
+        display: inline-flex
+        font-style: normal;
+        font-weight: 600;
+        font-size: em(8)
+        line-height: (12/8em)
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        min-height: 4em
+        min-width: 12em
+        justify-content: center
+        align-items: center
+        border-radius: 1.2em
+        background-color transparent
+        transition: all 0.4s
+        text-decoration none
+        border 2px solid #fff
+
+        +md-block()
+            font-size 1em
+            min-width: em(250)
+            min-height: em(70)
+
+        &:hover
+            background-color #64A060
+            border-color #64A060
+
+    &:hover
+        .panno__item__inner
+            &:before
+                opacity 1
+        
+        .panno__item__btn-wrap
+            opacity 1
+
+        .panno__item__title
+            transform: translate3d(0, 0, 0)
+
 .panno__item--lg36
 
     .panno__item__title
-        
-        +lg-block()
+
+        font-size 1em
+
+        +md-block()
             font-size em(36)

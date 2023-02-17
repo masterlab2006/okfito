@@ -23,3 +23,47 @@ if( items.length > 1 ){
         centeredSlides: true,
     });
 }
+
+/* pager */
+
+let pages = [
+    '/ozelenenie-vannoj-komnaty.html',
+    '/vertikalnoe-ozelenenie.html',
+    '/uglovoe-ozelenenie.html',
+    '/panno-s-rasteniyami-v-spalne.html',
+    '/ozelenenie-vannoj-komnaty2.html',
+    '/chto-takoe-stabilizi-rovannyj-moh.html',
+    '/panno-s-podsvetkoj-i-logotipom.html',
+    '/fitostena-iz-mha-i-rastenij.html',
+    '/ozelenenie-prihozhej.html',
+    '/installyatsiya-iz-rastenij-na-stene.html',
+    '/fitostena-iz-mha-i-rastenij2.html',
+    '/kak-uhazhivat-za-stabilizirovannym-mhom-i-panno.html',
+];
+
+let href = document.location.href;
+
+let prev = document.querySelector('.navigation__prev');
+let next = document.querySelector('.navigation__next');
+
+let prevHref = '';
+let nextHref = '';
+
+for (let i = 0; i < pages.length; i++){
+    if ( href.indexOf( pages[i] ) !== -1 ){
+        if( i == 0 ){
+            prevHref = pages[ pages.length - 1 ];
+            nextHref = pages[ i + 1 ];
+        }
+        else if( i == pages.length - 1 ){
+            prevHref = pages[ i - 1 ];
+            nextHref = pages[ 0 ];
+        }
+        else{
+            prevHref = pages[ i - 1 ];
+            nextHref = pages[ i + 1 ];
+        }
+    }
+}
+prev.setAttribute('href', nextHref);
+next.setAttribute('href', prevHref);

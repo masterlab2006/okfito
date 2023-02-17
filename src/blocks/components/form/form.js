@@ -430,7 +430,7 @@ window.myo = (function(window, document, undefined) {
         }, 2000);
     }
     var formSuccessReadyMade = function(){
-        $('.form-intro--ready-made').addClass('active');
+        // $('.form-intro--ready-made').addClass('active');
         setTimeout(function(){
             $('.fl-popover__close').trigger('click');
             window.open(
@@ -521,7 +521,13 @@ window.myo = (function(window, document, undefined) {
         }
     });
 
-    $(document).on('blur', '.form__item--required input', function (e) {
+    $(document).on('blur', '.form__item--required input[type="text"]', function (e) {
+        var input = $(this);
+        var requiredItem = input.closest('.form__item--required');
+        validate(requiredItem);
+    });
+
+    $(document).on('click', '.form__item--required input[type="checkbox"]', function (e) {
         var input = $(this);
         var requiredItem = input.closest('.form__item--required');
         validate(requiredItem);
