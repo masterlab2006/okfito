@@ -1,0 +1,102 @@
+extends ../layouts/default
+include ../../blocks/components/panno-inner/panno-inner-temp
+
+block variables
+	- const title = "Оформление зоны ресепшен"
+
+block styles
+	link(rel="stylesheet" href='./styles/inner.css')
+
+block content
+	include ../../blocks/components/form/form-intro
+	include ../../blocks/components/menu/menu-mobile
+	include ../../blocks/components/menu/menu
+	+menu({
+		class:'panel-fix panel-fix--inner'
+	})
+	+panno-inner({
+		'title':'Оформление зоны ресепшен',
+		'location':'Никопольская, д. 4',
+		'price':'232 800 ₽',
+		'params': [
+			{
+				'title':'Площадь',
+				'value':'6,7 м²',
+			},
+			{
+				'title':'Сроки',
+				'value':'1 месяц',
+			},
+		],
+		'desc':`
+			<p>Всё больше растений и&nbsp;зелени появляется в&nbsp;домах, салонах, ресторанах, отелях, банках, офисах и&nbsp;общественных местах. Озеленение&nbsp;&mdash; это не&nbsp;тренд, а&nbsp;постоянное изменение. Это долговременное и&nbsp;необходимое движение к&nbsp;лучшему. Осознание необходимости единения с&nbsp;природой и&nbsp;невозможности нормального существования человека вне&nbsp;её. Именно поэтому обстановка без зелёной растительности производит впечатление неживой, в&nbsp;ней чувствуется нехватка уюта и&nbsp;безопасности.</p>			
+			<p>
+				Современные технологии и&nbsp;нетипичные дизайнерские решения дают удивительные возможности реализовать самые смелые задумки. Панно и&nbsp;фитостены из&nbsp;стабилизированных растений решают сразу несколько задач:
+			</p>
+			<ul>
+				<li>берегут ваше время, так как не&nbsp;нуждаются в&nbsp;уходе;</li>
+				<li>гарантированно радуют глаз сочными природными оттенками;</li>
+				<li>производят эффект &laquo;вау!&raquo;;</li>
+				<li>экономят пространство и&nbsp;дарят визуальную чистоту благодаря вертикальному размещению;</li>
+				<li>создают тёплую, благоприятную атмосферу;</li>
+				<li>сохраняют свежий роскошный вид до&nbsp;10&nbsp;лет;</li>
+				<li>служат знаком отличия, так как каждая работа уникальна и&nbsp;создаётся под пожелания клиента.</li>
+			</ul>
+			<p>
+				Композиция изготавливается индивидуально исходя из&nbsp;предпочтений заказчика, размеров и&nbsp;бюджета.
+			</p>
+			<p>
+				На&nbsp;фото: панно из&nbsp;стабилизированного мха кочки
+				<br />
+				Размер: 2950*435&nbsp;мм ; 2550*865&nbsp;мм; 2550*505&nbsp;мм; 2550*680мм;
+				<br />
+				Общей площадью 6,7 кв.м
+				<br />
+				Декорирование панелей стабилизированным мхом КОЧКИ
+				<br />
+				30 000/201 000;
+			</p>
+			<p>
+				Основа ПВХ:<br />
+				1 500,00/ 10&nbsp;050
+			</p>
+			<p>
+				Монтаж:<br />
+				2 500,00/ 16&nbsp;750
+			</p>
+			<p>
+				Доставка по&nbsp;Москве: 5 000​
+			</p>
+			<p>
+				ИТОГО: 232&nbsp;800
+			</p>
+		`,
+		'slider': {
+			'alt': 'Панно с растениями в спальне',
+			slider : [
+				{img: './img/content/inner/4/1.jpg',},
+				{img: './img/content/inner/4/2.jpg',},
+				{img: './img/content/inner/4/3.jpg',},
+				{img: './img/content/inner/4/4.jpg',},
+				{img: './img/content/inner/4/5.jpg',},
+				{img: './img/content/inner/4/6.jpg',},
+				{img: './img/content/inner/4/7.jpg',},
+			],
+			thumbs : [
+				{img: './img/content/inner/4/thumbs/1.png',},
+				{img: './img/content/inner/4/thumbs/2.png',},
+				{img: './img/content/inner/4/thumbs/3.png',},
+				{img: './img/content/inner/4/thumbs/4.png',},
+				{img: './img/content/inner/4/thumbs/5.png',},
+				{img: './img/content/inner/4/thumbs/6.png',},
+				{img: './img/content/inner/4/thumbs/7.png',},
+			],
+		},
+	})
+	include ../../blocks/components/footer-inner/footer-inner
+		
+block scripts
+	script(src="https://okfito.ru/js/jquery.js")
+	script(src="https://okfito.ru/js/swiper-bundle.js")
+	script(src="https://okfito.ru/js/jquery.mask.js")
+	script(src="./js/inner.js")

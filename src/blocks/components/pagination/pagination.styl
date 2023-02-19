@@ -1,0 +1,66 @@
+.paginationjs
+    padding: em(30) 0
+
+    +md-block()
+        padding: em(50) 0 em(30)
+
+    &-pages
+
+        ul
+            display flex
+            justify-content: center
+
+            li
+                margin 0 em(7)
+                min-width em(28)
+                height em(28)
+                border-radius: em(6)
+                border 1px solid #A5A5A5
+                display flex
+                justify-content: center
+                align-items: center
+                cursor pointer
+
+                +md-block()
+                    min-width em(40)
+                    height em(40)
+
+                &.paginationjs-page.active
+                    background-color #64A060
+                    border-color: #64A060
+                    margin 0 em(10)
+
+                    a
+                        color #fff
+
+                a
+                    font-weight 500
+                    color #000
+                    font-size em(12)
+
+                    +md-block()
+                        font-size em(18)
+
+                &.paginationjs-next
+                &.paginationjs-prev
+                    background-color #F4F4F4
+
+                    a
+                        font-size em(16)
+                        min-width em(28)
+                        height em(28)
+                        display flex
+                        justify-content: center
+                        align-items: center
+                        background embedurl('../img/content/pagination/next.svg') center center no-repeat
+                        background-size em(5) auto
+
+                        +md-block()
+                            font-size em(16)
+                            min-width em(40)
+                            height em(40)
+                            background-size em(6) auto
+
+
+                &.paginationjs-prev
+                    transform: rotate(180deg)

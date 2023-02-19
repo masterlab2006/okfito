@@ -20,8 +20,8 @@
       $mail_header.= "From: okfito.ru <informer@$server>\r\n";
       $mail_header.= "Reply-to: Reply to Name <reply@$server>\r\n";
       
-      $to = "axel.shin@gmail.com";
-      // $to = "axel.shin@gmail.com, okfitogreen@gmail.com";
+      // $to = "axel.shin@gmail.com";
+      $to = "okfitogreen@gmail.com";
       $subject = "Заявка на скачивание файла готовые панно: $server";
       
       $message = "
