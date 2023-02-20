@@ -7,15 +7,18 @@ mixin panno-inner(data)
             .path 
                 a.path__item.path__link(href="/") Главная
                 span.path__item.path__delimeter >
-                span.path__item.path__title!=data.title
+                if data.pathTitle
+                    span.path__item.path__title!=data.pathTitle
+                else
+                    span.path__item.path__title!=data.title
         .panno-inner
             .panno-inner__left
                 +panno-inner-slider(data.slider)
-                if data.location && data.params
+                if data.location || data.params
                     div.lg-visible
                         if data.location
                             .panno-inner__location!=data.location
-                        if data.params.length
+                        if data.params
                             .panno-inner__params
                                 each item, index in data.params
                                     .panno-inner__param-item

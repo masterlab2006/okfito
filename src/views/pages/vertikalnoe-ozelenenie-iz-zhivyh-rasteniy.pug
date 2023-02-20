@@ -1,0 +1,82 @@
+extends ../layouts/default
+include ../../blocks/components/panno-inner/panno-inner-temp
+
+block variables
+	- const title = "Вертикальное озеленение из живых растений"
+
+block styles
+	link(rel="stylesheet" href='./styles/inner.css')
+
+block content
+	include ../../blocks/components/form/form-intro
+	include ../../blocks/components/menu/menu-mobile
+	include ../../blocks/components/menu/menu
+	+menu({
+		class:'panel-fix panel-fix--inner'
+	})
+	+panno-inner({
+		'title':'Вертикальное озеленение из&nbsp;живых растений',
+		'location':'Никопольская, д. 4',
+		'price':'42 000 ₽',
+		'desc':`
+			<p>
+				Одинаковая одежда, однотипные квартиры, идентичная обстановка, мебель, посуда остались в&nbsp;советском прошлом. Сейчас&nbsp;же время экологичности, минимализма и&nbsp;свободного пространства. В&nbsp;интерьере нужна изюминка, отличительная черта. Дом&nbsp;&mdash; отражение человека, его стиля жизни и&nbsp;нрава. Мы&nbsp;живём в&nbsp;эпоху ценности личности и&nbsp;она должна чувствоваться во&nbsp;всём. Вместе с&nbsp;тем не&nbsp;следует забывать о&nbsp;гармонии и&nbsp;балансе в&nbsp;помещении. Здесь важно не&nbsp;перестараться, чтобы не&nbsp;скатиться в&nbsp;безвкусицу или хаос.
+                <br />
+                Нотку оригинальности способна привнести фитостена.
+			</p>
+            <p>
+                Произведение из&nbsp;комнатных цветов попадает сразу во&nbsp;все тренды.
+			</p>
+			<ul>
+                <li>это практичный фитодизайн;</li>
+                <li>экономит место благодаря вертикальному размещению;</li>
+                <li>обеспечивает визуальную чистоту пространства;</li>
+                <li>освежает и&nbsp;вдыхает жизнь в&nbsp;комнату;</li>
+                <li>поглощает шум и&nbsp;вредные излучения от&nbsp;техники;</li>
+                <li>гармонизирует интерьер;</li>
+                <li>вызывает положительные эмоции;</li>
+                <li>дарит ощущение близости к&nbsp;природе.</li>
+			</ul>
+			<p>
+                С&nbsp;вас пожелания, с&nbsp;нас реализация проекта и&nbsp;поддержание привлекательной картинки. Гарантируем, вы&nbsp;будете довольны экологичныму решению.
+                <br />
+                Цена указана с&nbsp;учётом использованной растительности, изготовления и&nbsp;монтажа специальной фитоконструкции с&nbsp;автополивом.
+                <br />
+                Освещение светодиодными лампами с&nbsp;определённым спектром для развития зелёных кустиков и&nbsp;сервисное обслуживание оплачиваются дополнительно. Как правило, достаточно проверять состояние фитопанно и&nbsp;проводить уходовые процедуры раз в&nbsp;месяц.
+			</p>
+			<p>
+				Стоимость 1&nbsp;кв.&nbsp;м&nbsp;зависит от&nbsp;количества сортов высаженных растений. На&nbsp;этой площади помещается 30-35&nbsp;цветков.
+			</p>
+            <p>
+                1-2 разновидности&nbsp;&mdash; от&nbsp;42тыс руб., 5-12&nbsp;&mdash; от&nbsp;48К руб., с&nbsp;цветущими&nbsp;&mdash; от&nbsp;52К руб.
+			</p>
+		`,
+		'slider': {
+			'alt': 'Вертикальное озеленение из живых растений',
+			slider : [
+				{img: './img/content/inner/4/1.jpg',},
+				{img: './img/content/inner/4/2.jpg',},
+				{img: './img/content/inner/4/3.jpg',},
+				{img: './img/content/inner/4/4.jpg',},
+				{img: './img/content/inner/4/5.jpg',},
+				{img: './img/content/inner/4/6.jpg',},
+				{img: './img/content/inner/4/7.jpg',},
+			],
+			thumbs : [
+				{img: './img/content/inner/4/thumbs/1.png',},
+				{img: './img/content/inner/4/thumbs/2.png',},
+				{img: './img/content/inner/4/thumbs/3.png',},
+				{img: './img/content/inner/4/thumbs/4.png',},
+				{img: './img/content/inner/4/thumbs/5.png',},
+				{img: './img/content/inner/4/thumbs/6.png',},
+				{img: './img/content/inner/4/thumbs/7.png',},
+			],
+		},
+	})
+	include ../../blocks/components/footer-inner/footer-inner
+		
+block scripts
+	script(src="https://okfito.ru/js/jquery.js")
+	script(src="https://okfito.ru/js/swiper-bundle.js")
+	script(src="https://okfito.ru/js/jquery.mask.js")
+	script(src="./js/inner.js")

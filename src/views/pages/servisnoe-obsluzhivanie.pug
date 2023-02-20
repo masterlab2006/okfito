@@ -1,0 +1,74 @@
+extends ../layouts/default
+include ../../blocks/components/panno-inner/panno-inner-temp
+
+block variables
+	- const title = "Сервисное обслуживание"
+
+block styles
+	link(rel="stylesheet" href='./styles/inner.css')
+
+block content
+	include ../../blocks/components/form/form-intro
+	include ../../blocks/components/menu/menu-mobile
+	include ../../blocks/components/menu/menu
+	+menu({
+		class:'panel-fix panel-fix--inner'
+	})
+	+panno-inner({
+		'title':'Сервисное обслуживание',
+		'desc':`
+			<p>
+                Замечали, что интерьер с&nbsp;живыми цветами всегда больше располагает. Например, когда приходите в&nbsp;ресторан, тянет занять столик поближе к&nbsp;растениям. Кажется, что там как-то уютнее, душевнее, милее. Они действительно влияют на&nbsp;атмосферу в&nbsp;комнате, очищают и&nbsp;улучшают&nbsp;её.
+			</p>
+            <p>
+                Занятому активному человеку часто не&nbsp;хватает времени на&nbsp;уход за&nbsp;комнатными цветами. Некоторые уверены, что в&nbsp;их&nbsp;квартире любой цветок ждёт гибель. Обычно так и&nbsp;происходит по&nbsp;ряду причин: неправильный полив, размещение, освещение, болезни, вредители. На&nbsp;помощь приходит вертикальное озеленение. На&nbsp;1&nbsp;м2&nbsp;стены можно разместить 30-35&nbsp;кустиков. Растительность помещается в&nbsp;специальную фитоконструкцию с&nbsp;подсветкой, автополивом в&nbsp;необходимом объёме по&nbsp;таймеру. Осмотр и&nbsp;комплексный уход за&nbsp;культурами проводит биолог во&nbsp;время сервиса одни&nbsp;&mdash; два раза в&nbsp;месяц. Контроль и&nbsp;замена питательного раствора.. Сбор и&nbsp;обрезка листьев. Проверка системы полива. Подтяжка кустов и&nbsp;направление точки роста.
+                <br />
+                Ваша задача наслаждаться оригинальным полезным украшением помещения.
+                <br />
+                А&nbsp;ещё это неординарный эффектный подарок, который 100% порадует и&nbsp;запомнится надолго. Натуральный кусочек прекрасного никого не&nbsp;оставит равнодушным. Второй такой фитокартины нет, потому что каждая работа уникальна и&nbsp;существует в&nbsp;одном экземпляре.
+			</p>
+            <p>
+				Стоимость 1&nbsp;кв.&nbsp;м&nbsp;зависит от&nbsp;количества сортов высаженных кустиков:
+                <br />
+                1-2 разновидности от&nbsp;42&nbsp;тыс. руб.
+                <br />
+                5-12 видов от&nbsp;45&nbsp;тыс. руб.
+                <br />
+                с&nbsp;цветущими растениями от&nbsp;52&nbsp;тыс. руб.
+                <br />
+                Включено: растительность, изготовление, монтаж фитомодуля с&nbsp;автополивом.
+                <br />
+                Дополнительно: светодиодные лампы со&nbsp;спектром для хорошего роста зелени, сервисное обслуживание.
+                <br />
+                На&nbsp;сегодняшний день живые комнатные цветы&nbsp;&mdash; самая доступная, надёжная и&nbsp;стабильная связь человека с&nbsp;природой. Благодаря этому контакту можно соединиться с&nbsp;естественной гармонией и&nbsp;зарядиться их&nbsp;чистой энергией.
+			</p>
+		`,
+		'slider': {
+			'alt': 'Сервисное обслуживание',
+			slider : [
+				{img: './img/content/inner/4/1.jpg',},
+				{img: './img/content/inner/4/2.jpg',},
+				{img: './img/content/inner/4/3.jpg',},
+				{img: './img/content/inner/4/4.jpg',},
+				{img: './img/content/inner/4/5.jpg',},
+				{img: './img/content/inner/4/6.jpg',},
+				{img: './img/content/inner/4/7.jpg',},
+			],
+			thumbs : [
+				{img: './img/content/inner/4/thumbs/1.png',},
+				{img: './img/content/inner/4/thumbs/2.png',},
+				{img: './img/content/inner/4/thumbs/3.png',},
+				{img: './img/content/inner/4/thumbs/4.png',},
+				{img: './img/content/inner/4/thumbs/5.png',},
+				{img: './img/content/inner/4/thumbs/6.png',},
+				{img: './img/content/inner/4/thumbs/7.png',},
+			],
+		},
+	})
+	include ../../blocks/components/footer-inner/footer-inner
+		
+block scripts
+	script(src="https://okfito.ru/js/jquery.js")
+	script(src="https://okfito.ru/js/swiper-bundle.js")
+	script(src="https://okfito.ru/js/jquery.mask.js")
+	script(src="./js/inner.js")

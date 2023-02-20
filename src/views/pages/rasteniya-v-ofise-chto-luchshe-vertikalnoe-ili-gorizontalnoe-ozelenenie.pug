@@ -1,0 +1,119 @@
+extends ../layouts/default
+include ../../blocks/components/panno-inner/panno-inner-temp
+
+block variables
+	- const title = "Растения в офисе. Что лучше: вертикальное или горизонтальное озеленение?"
+
+block styles
+	link(rel="stylesheet" href='./styles/inner.css')
+
+block content
+	include ../../blocks/components/form/form-intro
+	include ../../blocks/components/menu/menu-mobile
+	include ../../blocks/components/menu/menu
+	+menu({
+		class:'panel-fix panel-fix--inner'
+	})
+	+panno-inner({
+		'pathTitle':'Растения в офисе. Что лучше: вертикальное или горизонтальное озеленение?',
+        'title':'Растения в офисе.<br />Что лучше: вертикальное<br />или горизонтальное<br />озеленение?',
+		'location':'ул. Волгоградский пр-т., 32/3 к4',
+		'price':'250 000 ₽',
+		'params': [
+			{
+				'title':'Площадь',
+				'value':'4,96 м²',
+			},
+			{
+				'title':'Сроки',
+				'value':'1 месяц',
+			},
+		],
+		'desc':`
+			<p>
+				Комнатные растения&nbsp;&mdash; желанный атрибут в&nbsp;интерьере. Их&nbsp;достоинства неоспоримы. Цветы не&nbsp;просто красивы, но&nbsp;и&nbsp;приносят пользу для психоэмоционального и&nbsp;физического здоровья человека, меняют атмосферу в&nbsp;доме. Именно поэтому на&nbsp;протяжении веков люди украшают зеленью жилища, создают оранжереи и&nbsp;зимние сады.
+			</p>
+            <p>
+                К&nbsp;сожалению, не&nbsp;все могут позволить себе обилие живой растительности из-за нехватки времени, знаний об&nbsp;уходе, места для расстановки, отсутствия подходящих условий. Так что&nbsp;же делать, если хочется вырастить собственный оазис? Выбираем оптимальный способ размещения растений.
+			</p>
+            <p>
+                Горизонтальное озеленение&nbsp;&mdash; знакомое с&nbsp;детства расположение цветочных горшков на&nbsp;подоконниках, предметах мебели, полу.
+			</p>
+            <p>
+				Плюсы:
+			</p>
+			<ul>
+                <li>Доступность&nbsp;&mdash; используются существующие поверхности.</li>
+                <li>Самостоятельный уход.</li>
+			</ul>
+            <p>
+				Минусы:
+			</p>
+			<ul>
+                <li>Занимает полезную площадь.</li>
+                <li>Нужен постоянный полив, удобрение, опрыскивание, обрезка, удаление сухих листьев.</li>
+                <li>Недостаток визуальной чистоты.</li>
+			</ul>
+			<p>
+                Вертикальное озеленение&nbsp;&mdash; размещение домашних цветов на&nbsp;стенах (фитоконструкции) и&nbsp;специальных приспособлениях (подвесные кашпо, стойки, опоры).
+			</p>
+            <p>
+				Плюсы:
+			</p>
+			<ul>
+                <li>Экономия пространства.</li>
+                <li>Украшение и&nbsp;изюминка интерьера</li>
+                <li>Шумоизоляция.</li>
+                <li>Автоматический полив и&nbsp;удобрение.</li>
+                <li>Применимо в&nbsp;комнатах любого размера.</li>
+			</ul>
+            <p>
+				НА&nbsp;ФОТО
+			</p>
+            <ul>
+                <li>
+                    Фитостены 2шт
+                    <br />
+                    Размер 900* 2758мм; Общая S&nbsp;&mdash; 4,96м2
+                    <br />
+                    &mdash;&nbsp;растения &laquo;Стандарт&raquo; H25&nbsp;&mdash; 30&nbsp;см&nbsp;&mdash; 45&nbsp;шт;
+                    <br />
+                    &mdash;&nbsp;система полива( насос, таймера, шланг, соединители, капельницы)
+                </li>
+                <li>Монтаж фитоконструкций и&nbsp;пусконаладочные работы</li>
+                <li>Прожектор шинопроводный, трековый TL- LBX &minus;4&nbsp;шт</li>
+                <li>Гарантийное сервисное обслуживание фитостен 2&nbsp;раза в&nbsp;месяц ( в&nbsp;подарок 1&nbsp;месяц )</li>
+			</ul>
+            <p>
+                ИТОГО 250 000руб
+			</p>
+		`,
+		'slider': {
+			'alt': 'Растения в офисе. Что лучше: вертикальное или горизонтальное озеленение?',
+			slider : [
+				{img: './img/content/inner/4/1.jpg',},
+				{img: './img/content/inner/4/2.jpg',},
+				{img: './img/content/inner/4/3.jpg',},
+				{img: './img/content/inner/4/4.jpg',},
+				{img: './img/content/inner/4/5.jpg',},
+				{img: './img/content/inner/4/6.jpg',},
+				{img: './img/content/inner/4/7.jpg',},
+			],
+			thumbs : [
+				{img: './img/content/inner/4/thumbs/1.png',},
+				{img: './img/content/inner/4/thumbs/2.png',},
+				{img: './img/content/inner/4/thumbs/3.png',},
+				{img: './img/content/inner/4/thumbs/4.png',},
+				{img: './img/content/inner/4/thumbs/5.png',},
+				{img: './img/content/inner/4/thumbs/6.png',},
+				{img: './img/content/inner/4/thumbs/7.png',},
+			],
+		},
+	})
+	include ../../blocks/components/footer-inner/footer-inner
+		
+block scripts
+	script(src="https://okfito.ru/js/jquery.js")
+	script(src="https://okfito.ru/js/swiper-bundle.js")
+	script(src="https://okfito.ru/js/jquery.mask.js")
+	script(src="./js/inner.js")

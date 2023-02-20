@@ -39,6 +39,14 @@ let pages = [
     '/installyatsiya-iz-rastenij-na-stene.html',
     '/fitostena-iz-mha-i-rastenij2.html',
     '/kak-uhazhivat-za-stabilizirovannym-mhom-i-panno.html',
+    '/oformlenie-zony-resepshen.html',
+    '/ozelenenie-dlya-kabineta-rukovoditelya.html',
+    '/kak-uhazhivat-za-bonsay.html',
+    '/rasteniya-v-ofise-chto-luchshe-vertikalnoe-ili-gorizontalnoe-ozelenenie.html',
+    '/vertikalnoe-ozelenenie-iz-zhivyh-rasteniy.html',
+    '/servisnoe-obsluzhivanie.html',
+    '/ozelenenie-peregovornoy-komnaty.html',
+    '/zhivye-rasteniya-dlya-kabineta.html',
 ];
 
 let href = document.location.href;
