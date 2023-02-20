@@ -21,7 +21,6 @@ $('#pagination-container').pagination({
     callback: function(data, pagination) {
         var html = template(data);
         $('#panno__items').html(html);
-        console.log(clicked)
         if( clicked != 0 ){
             var $target = $('#scrollto-projects');
             if( $target.length ){
@@ -32,6 +31,6 @@ $('#pagination-container').pagination({
             }
         }
         $(window).trigger('resize');
-        clicked++;
+        clicked = 1;
     }
 })
