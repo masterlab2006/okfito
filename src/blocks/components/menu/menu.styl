@@ -190,6 +190,9 @@
         transition: all 0.4s
         transform translate3d(0, -100%, 0)
 
+        *
+            pointer-events: none
+
     &--inner
         opacity 1
         transform translate3d(0, 0, 0)
@@ -197,6 +200,9 @@
     &--show
         transform translate3d(0, 0, 0)
         opacity 1
+
+        *
+            pointer-events auto
 
     +lg-block()
         padding 0
@@ -469,6 +475,7 @@
 
 
 .panel-mobile--active
+
     .panel-mobile__mask
         display block
         opacity 1

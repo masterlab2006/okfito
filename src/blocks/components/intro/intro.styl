@@ -1,18 +1,40 @@
 
 .intro
-
-	background url(../img/content/intro/intro-sm.jpg) center center no-repeat
-	background-size cover
 	position relative
 	z-index 1
+	overflow hidden
+
+	&:after
+		position absolute
+		left 0
+		top 0
+		right 0
+		bottom 0
+		content ''
+		background url(../img/content/intro/intro-sm.jpg) center center no-repeat
+		background-size cover
+		animation-duration: 80s
+		animation-name: scale-bg
+		animation-fill-mode: forwards;
+		animation-iteration-count: 1;
 
 	+md-block()
-		background url(../img/content/intro/intro-md.jpg) center center no-repeat
-		background-size cover
+		&:after
+			background url(../img/content/intro/intro-md.jpg) center center no-repeat
+			background-size cover
 	
 	+lg-block()
-		background url(../img/content/intro/intro-lg.jpg) center center no-repeat
-		background-size cover
+		&:after
+			background url(../img/content/intro/intro-lg.jpg) center center no-repeat
+			background-size cover
+			animation-duration: 120s
+			animation-name: scale-bg
+			animation-fill-mode: forwards;
+			animation-iteration-count: 1;
+
+	> *
+		position relative
+		z-index 2
 
 	&__inner
 		display flex
@@ -77,3 +99,18 @@
 
 		+lg-block()
 			max-width: (650/24em)
+
+@keyframes scale-bg
+	100%
+		-webkit-transform: scale(2.0);
+		transform: scale(2.0);
+
+@-webkit-keyframes scale-bg
+	100%
+		-webkit-transform: scale(2.0);
+		transform: scale(2.0);
+
+@-moz-keyframes scale-bg
+	100%
+		-webkit-transform: scale(2.0);
+		transform: scale(2.0);

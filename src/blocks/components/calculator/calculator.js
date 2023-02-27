@@ -141,6 +141,11 @@ $.fn.keyFilter = function (selector, settings) {
             settings.callback(input);
         });
 
+        $this.on('change', selector, function () {
+            var input = $(this);
+            settings.callback(input);
+        });
+
         $this.on('blur', selector, function () {
             var input = $(this);
             if (input.val() === '') {
@@ -557,8 +562,8 @@ $(document).on('keyup', '.calculator--width, .calculator--length', function(){
     var length = $('.calculator--length');
     var square = $('.calculator--square');
 
-    var widthVal = parseFloat(width.val());
-    var lengthVal = parseFloat(length.val());
+    var widthVal = width.val().replace(/,/g, '.');
+    var lengthVal = length.val().replace(/,/g, '.');
 
     var $square = 0;
 

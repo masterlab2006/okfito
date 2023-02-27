@@ -1,8 +1,11 @@
 .paginationjs
-    padding: em(30) 0
+    padding: em(20) 0 em(30)
 
     +md-block()
-        padding: em(50) 0 em(30)
+        padding: em(30) 0 em(30)
+
+    +lg-block()
+        padding 0
 
     &-pages
 
@@ -24,6 +27,10 @@
                 +md-block()
                     min-width em(40)
                     height em(40)
+
+                +lg-block()
+                    &:last-child
+                        margin-right 0
 
                 &.paginationjs-page.active
                     background-color #64A060

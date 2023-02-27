@@ -30,7 +30,23 @@ $('#pagination-container').pagination({
                 } );
             }
         }
+        if( pagination.pageNumber == pagination.pageRange ){
+            $('.panno__show-btn').hide();
+        }
+        else{
+            $('.panno__show-btn').show();
+        }
         $(window).trigger('resize');
         clicked = 1;
     }
 })
+
+$(document).on('click', '.panno__show-btn', function(e){
+    e.preventDefault();
+    var $this = $(this);
+    var html = template(pannosArr);
+    $('#panno__items').html(html);
+    $this.hide();
+    $('#pagination-container').hide();
+    $(window).trigger('resize');
+});
